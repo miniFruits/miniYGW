@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/classification/classification",
+    "pages/home/home",
+    "pages/cardexchange/cardexchange",
+    "pages/cart/cart",
+    "pages/user/user"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFDD55",
+    "navigationBarTitleText": "依谷热卖",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

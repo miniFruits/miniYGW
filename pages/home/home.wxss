@@ -1,0 +1,6 @@
+/* pages/home/home.wxss */
+.top-nav{
+  height: 77rpx;
+  background: green;
+  
+}
