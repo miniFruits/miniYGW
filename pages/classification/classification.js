@@ -1,5 +1,5 @@
 // pages/classification/classification.js
-Page({
+Component({
 
   /**
    * 页面的初始数据
@@ -33,7 +33,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    
   },
 
   /**
