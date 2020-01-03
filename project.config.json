@@ -23,9 +23,9 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.9.4",
-	"appid": "wxe0d8367ee5259b89",
-	"projectname": "ygw",
+	"libVersion": "2.10.0",
+	"appid": "wxddce823c48d530ae",
+	"projectname": "egu",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
