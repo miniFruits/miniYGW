@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/classification/classification",
+    "pages/cardexchange/cardexchange",
+    "pages/cart/cart",
+    "pages/user/user"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFDD55",
+    "navigationBarTitleText": "依谷热卖",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath":"pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/classification/classification",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/cardexchange/cardexchange",
+        "text": "卡兑换"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
