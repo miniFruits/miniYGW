@@ -20,7 +20,7 @@ Page({
    */
   onReady: function () {
    
-    console.log(getCurrentPages())
+    // console.log(getCurrentPages())
   },
 
   /**

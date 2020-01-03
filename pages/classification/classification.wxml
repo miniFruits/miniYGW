@@ -1,2 +1,10 @@
-<!--pages/classification/classification.wxml-->
-<text>pages/classification/classification.wxml</text>
+<view>
+  <view class="header">
+    <view class="nav-l">
+    </view>
+    <view class="nav-title">
+    </view>
+    <view class="nav-r">
+    </view>
+  </view>
+</view>
