@@ -1,6 +1,19 @@
 /* pages/home/home.wxss */
+.top{
+width: 100%;
+overflow-x: scroll;
+display: flex;
+}
 .top-bar{
+  flex:0 0 auto;
+  width: 100rpx;
   height: 77rpx;
-  background: green;
-  
+  font-size: 25.76rpx;
+  padding: 0 8.75rpx;
+  font-weight: 700;
+  line-height: 77rpx;
+  color: #555;
+}
+.active.top-bar{
+  color: #000;
 }
