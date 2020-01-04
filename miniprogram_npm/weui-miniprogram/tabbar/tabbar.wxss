@@ -1,0 +1,62 @@
+.weui-tabbar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 96.56rpx;
+  z-index: 500;
+  background-color: #fff;
+}
+
+.weui-tabbar:before {
+  content: " ";
+  height: 1px;
+  border-top: 1rpx solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.weui-tabbar__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  font-size: 0;
+  padding: 0px;
+  color: rgba(0, 0, 0, 0.5);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* .weui-tabbar__item:last-child {
+   padding: 0px;
+} */
+
+.weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon,
+.weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon>i,
+.weui-tabbar__item.weui-bar__item_on .weui-tabbar__label {
+  color: #fc0909;
+}
+
+.weui-tabbar__icon {
+  display: inline-block;
+  width: 44.8rpx;
+  height: 44.8rpx;
+  margin-bottom: 2px;
+}
+
+i.weui-tabbar__icon, .weui-tabbar__icon>i {
+  font-size: 23.52rpx;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.weui-tabbar__icon image {
+  width: 100%;
+  height: 100%;
+}
+
+.weui-tabbar__label {
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 23.52rpx;
+}
