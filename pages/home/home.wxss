@@ -1,5 +1,5 @@
 /* pages/home/home.wxss */
-.top-nav{
+.top-bar{
   height: 77rpx;
   background: green;
   
