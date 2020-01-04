@@ -20,16 +20,15 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		}
+		},
+		"nodeModules": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.0",
 	"appid": "wxe0d8367ee5259b89",
-<<<<<<< HEAD
-	"projectname": "egu",
-=======
+
 	"projectname": "ygw",
->>>>>>> diaolu20200103
+
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
