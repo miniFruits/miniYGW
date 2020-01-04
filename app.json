@@ -4,7 +4,8 @@
     "pages/classify/classify",
     "pages/cardexchange/cardexchange",
     "pages/cart/cart",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/details/details"
   ],
   "tabBar": {
     "list": [
