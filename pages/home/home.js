@@ -5,14 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+     classify:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+     wx.request({
+       url: 'http://api.egu365.com/goods/classify',
+       success:(result)=>{
+         console.log(result.data.list)
+          this.setData({
+            classify: result.data.list
+          })
+       }
+     })
   },
 
   /**
@@ -63,5 +71,8 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+   handleSelect() {
+    console.log(4)
   }
 })
