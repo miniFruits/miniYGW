@@ -101,9 +101,6 @@
               <text>{{item.goodsName}}</text>
             </view>
         </block>
-         
-        
-          
       </view>
    </view>
 </view>
