@@ -26,13 +26,9 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.10.0",
 	"appid": "wxe0d8367ee5259b89",
-<<<<<<< HEAD
 
 	"projectname": "ygw",
 
-=======
-	"projectname": "ygw",
->>>>>>> 5e7002b2325fdc630a387e5387a6c329328423d2
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
