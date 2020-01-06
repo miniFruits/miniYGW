@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/details/details",
     "pages/home/home",
     "pages/classify/classify",
     "pages/cardexchange/cardexchange",
