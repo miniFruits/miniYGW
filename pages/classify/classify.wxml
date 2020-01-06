@@ -1,0 +1,13 @@
+<view>
+  <view class="header">
+    <view class="nav-l">
+
+    </view>
+    <view class="nav-title">
+    </view>
+    <view class="nav-r">
+    </view>
+  </view>
+  456
+  <view bind:tap="handleclick">详情</view>
+</view>

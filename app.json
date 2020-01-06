@@ -1,11 +1,45 @@
 {
   "pages": [
-    "pages/classification/classification",
     "pages/home/home",
+    "pages/classify/classify",
     "pages/cardexchange/cardexchange",
     "pages/cart/cart",
     "pages/user/user"
   ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "/assets/images/home.png",
+        "selectedIconPath": "/assets/images/home_light.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "iconPath": "/assets/images/classify.png",
+        "selectedIconPath": "/assets/images/classify_light.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/cardexchange/cardexchange",
+        "iconPath": "/assets/images/card.png",
+        "selectedIconPath": "/assets/images/card_light.png",
+        "text": "卡兑换"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "/assets/images/cart.png",
+        "selectedIconPath": "/assets/images/cart_light.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "/assets/images/my.png",
+        "selectedIconPath": "/assets/images/my_light.png",
+        "text": "用户"
+      }
+    ]
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#FFDD55",
