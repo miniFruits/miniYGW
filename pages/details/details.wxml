@@ -1,2 +1,57 @@
-<!--pages/details/details.wxml-->
-<text>pages/details/details.wxml</text>
+<view class="goods-detail">
+  <!-- 导航 -->
+  <view class="nav">
+    <view class="nav-l">
+      <view class="icon icon-zuo lucency">
+        <image src="//sh1.hoopchina.com.cn/fis_static/shihuomobile/static/common/widget/header/head_back_b142dc1.png"></image>
+      </view>
+    </view>
+    <view class="nav-title">
+      <text>和の鳗A级蒲烧鳗鱼中腹--150g</text>
+    </view>
+    <view class="nav-r">
+      <view class="icon icon-omit lucency">
+        <image src="//sh1.hoopchina.com.cn/fis_static/shihuomobile/static/common/widget/header/head_list_4a4f511.png"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 内容区 -->
+  <view class="content-nt">
+  <!-- 轮播图 -->
+    <view class="van-swipe">
+       <swiper 
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" 
+        interval="{{interval}}" 
+        duration="{{duration}}"
+        class="banner"
+       >
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <image src="{{item.imgSrc}}" class="img-box"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!-- 价格信息 -->
+    <view class="price-name">
+      <view class="price-lab-collect flx">
+        <view class="price">78.00</view>
+        <view class="lab flx-1 ellipsis"></view>
+        <view class="collect">
+          <view class="icon icon-collect">
+          <image src="//s0.meituan.net/bs/?f=myfe/canary:/asgard/images/movie/star-not-graded.png"></image></view>
+          <view>收藏</view>
+        </view>
+      </view>
+      <view class="self-support">
+        自营 
+        <view class="morrow">次日达</view>
+        <view class="express">深圳平湖仓</view>
+      </view>
+      <view class="goods-name flx"></view>
+    </view>
+  </view>
+  <!-- 底部导航 -->
+  <view class="van-goods-action"></view>
+</view>
