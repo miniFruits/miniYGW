@@ -1,1 +1,280 @@
 /* pages/classification/classification.wxss */
+page{
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 1596607 */
+  src: url('//at.alicdn.com/t/font_1596607_lusyb3k2d98.eot');
+  src: url('//at.alicdn.com/t/font_1596607_lusyb3k2d98.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1596607_lusyb3k2d98.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1596607_lusyb3k2d98.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1596607_lusyb3k2d98.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1596607_lusyb3k2d98.svg#iconfont') format('svg');
+}
+
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.back::before{
+  content: "\e7e0";
+  font-size: 44.8rpx;
+}
+.more::before{
+  content: "\e684";
+  font-size: 44.8rpx;
+}
+
+.search-icon::before{
+  content: "\e65c";
+  color: #666;
+  background-color: transparent;
+}
+
+.cart::before{
+  content: "\e6af";
+  color: #fff;
+}
+
+.genre-list{
+  width: 100%;
+  height:100%;
+  background: #fff;
+  overflow: hidden;
+}
+
+.header{
+  width: 100%;
+  height: 77rpx;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  background: #fff;
+}
+
+.nav-l,.nav-r{
+  width: 77rpx;
+  height: 77rpx;
+}
+
+.back,.more{
+  width: 77rpx;
+  height: 77rpx;
+  text-align: center;
+  line-height: 77rpx;
+}
+
+.nav-title{
+  flex: 1
+}
+
+.search-box{
+  width: 100%;
+  max-width: 100%;
+}
+
+.van-search{
+  width: 100%;
+  padding: 9.24rpx 25.2rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.search-content{
+  flex: 1;
+  display: flex;
+  background-color: #f7f8fa;
+  padding-left: 17.5rpx;
+  border-radius: 28rpx;
+}
+
+.search-sell{
+  flex: 1;
+  display: flex;
+  padding: 8.75rpx 17.5rpx 8.75rpx 0;
+  background-color: transparent;
+}
+.search-icon{
+  margin-right: 8rpx;
+}
+
+.search-input{
+  color: #666;
+  text-align: left;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  font-size: 26rpx;
+}
+
+.bodyed{
+  width: 100%;
+  height: 77rpx;
+  overflow: hidden;
+  position: fixed;
+  background: #fff;
+  z-index: 99;
+  top: 77rpx;
+  left: 0;
+}
+
+.body-content{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+}
+
+.body-item{
+  flex:0 0 22%;
+  height:100%;
+  line-height: 77rpx;
+  color:#666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left:8.75rpx;
+  margin-right: 8.75rpx;
+  font-size: 24.25rpx;
+}
+
+.body-item-light{
+  color: #fb1116;
+  font-size: 26.88rpx;
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+  padding-top: 154rpx;
+}
+
+.flx-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.menu{
+  width: 24%;
+  height: 100%;
+  color: #909090;
+  background: #fcfcfc;
+}
+
+.menu-item{
+  width: 100%;
+  height: 89.6rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 27rpx;
+}
+
+.menu-item-light{
+  color: #242424;
+  background-color: #fff;
+}
+
+.menu-content-list{
+  width:76%;
+  margin-bottom: 200rpx;
+  overflow: auto;
+}
+
+.flx{
+  height: 228.82rpx;
+  display: flex;
+  border-bottom: 2rpx solid #f6f6f6;
+}
+
+.goods-img{
+  width: 220.88rpx;
+  height: 220.88rpx;
+  padding: 9.6rpx;
+}
+
+.goods-img image{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.goods-info{
+  flex:1;
+  overflow: hidden;
+}
+
+.goods-name{
+  color: #303030;
+  height: 42rpx;
+  font-size: 26.32rpx;
+  line-height: 42rpx;
+  margin-top: 22.4rpx;
+  padding:0 14.2rpx;
+}
+
+.ellipsis{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.goods-slogan{
+  color: #939393;
+  height: 34rpx;
+  font-size: 22.4rpx;
+  line-height: 34rpx;
+  padding: 0 14.2rpx;
+}
+
+.self-support{
+  height:51.1rpx;
+  color: red;
+  font-size: 19.2rpx;
+  padding: 22.2rpx 14.2rpx 0rpx;
+}
+.morrow{
+  display: inline;
+  color: #fff;
+  background-color: red;
+  border-radius: 15.6rpx;
+  padding: 0 7.8rpx;
+  margin: 0 10.4rpx;
+}
+.express{
+  display: inline;
+  margin: 0 7.8rpx;
+  color: #af52ef;
+}
+.price-cart{
+  display: flex;
+  height: 62.9rpx;
+  padding-left: 14.2rpx;
+}
+.goods-price{
+  width: 252.52rpx;
+  height: 62.9rpx;
+  color: red;
+  font-size: 31.2rpx;
+}
+.price-cart .cart{
+  width: 46.8rpx;
+  height: 46.8rpx;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+

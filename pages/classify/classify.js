@@ -5,42 +5,27 @@ Component({
    * 页面的初始数据
    */
   data: {
-
+    biglist:[],
+    leftlist:[],
+    titlelist:[],
+    indexflag:0
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  lifetimes:{
+    attached:function(){
+      wx.request({
+        url: 'http://api.egu365.com/goods/classify',
+        success: (result) => {
+          this.setData({
+            biglist:result.data.list
+          })
+          console.log(this.data.biglist)
+          this.leftfilter()
+          this.titlefilter()
+        }
+      })
+      
+    }
   },
 
   /**
@@ -64,10 +49,44 @@ Component({
 
   },
   methods:{
-    handleclick(){
-      wx.navigateTo({
-        url: '/pages/details/details',
+    leftfilter(){
+      let list = this.data.biglist;
+      let result=[];
+      if (list){
+        for (var i = 0; i < list.length; i++){
+          let obj={};
+          obj.tname=list[i].tname;
+          obj.tid=list[i].tid;
+          result.push(obj);
+        }
+        this.setData({
+          leftlist:result
+        })
+      }
+    },
+    titlefilter(){
+      let list = this.data.biglist;
+      let title = list[this.data.indexflag].bcProductTypeEos;
+      let result = [];
+      if (title) {
+        for (var i = 0; i < title.length; i++) {
+          let obj = {};
+          obj.tname = title[i].tname;
+          obj.tid = title[i].tid;
+          result.push(obj);
+        }
+        this.setData({
+          titlelist: result
+        })
+
+      }
+    },
+
+    checkoutclick(e){
+      this.setData({
+        indexflag: e.target.dataset.indexs
       })
+      this.titlefilter()
     }
   }
 })
