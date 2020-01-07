@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 1600172 */
+  src: url('//at.alicdn.com/t/font_1600172_6sdpobfkgfm.eot');
+  src: url('//at.alicdn.com/t/font_1600172_6sdpobfkgfm.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1600172_6sdpobfkgfm.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1600172_6sdpobfkgfm.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1600172_6sdpobfkgfm.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1600172_6sdpobfkgfm.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:28rpx;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* 导航 */
 .nav {
   background: none;
   box-shadow: none;
@@ -24,20 +42,19 @@
   display: inline-block;
   width: 60rpx;
   height: 60rpx;
-  line-height: 50rpx;
+  line-height: 58rpx;
   text-align: center;
   color: #fff;
-  /* background-color: rgba(0,0,0,.4); */
+  background-color: rgba(0,0,0,.4);
   border-radius: 50%;
 }
-.icon {
-  font-size: 44.8rpx;
-  font-family: "egu-icon", serif !important;
-  font-style: normal;
+.back::before {
+  content: "\e6db";
+  font-size: 46rpx;
 }
-.icon image {
-  width: 100%;
-  height: 100%;
+.more::before {
+  content: "\e6a8";
+  font-size: 60rpx;
 }
 .nav-title {
   color: #444;
@@ -48,11 +65,12 @@
   text-overflow: ellipsis;
   /* opacity: 0; */
 }
-
+/* 内容区 */
 .content-nt {
   background-color: #fcfcfc;
   width: 100%;
 }
+/* 轮播 */
 .van-swipe {
   overflow: hidden;
   position: relative;
@@ -66,7 +84,7 @@
   width: 100%;
   height: 750rpx;
 }
-
+/* 价格信息 */
 .price-name {
   background-color: #fff;
   padding: 28rpx 24rpx;
@@ -104,21 +122,22 @@
   flex: 1;
 }
 .collect {
-  text-align: center;
   font-size: 24rpx;
   font-weight: 400;
   padding-left: 14rpx;
   line-height: normal;
+  text-align: center;
 }
 .icon-collect{
   width: 28rpx;
   height: 28rpx;
   line-height: 28rpx;
+  
 }
-.icon-collect image {
-  margin-left: 10rpx;
-  width: 28rpx;
-  height: 28rpx;
+.star::before {
+  margin-left: 8rpx;
+  content: "\e61d";
+  font-size: 34rpx;
 }
 .self-support  {
   height: 100rpx;
@@ -146,4 +165,185 @@
   font-size: 26rpx;
   font-weight: 700;
   line-height: 44rpx;
+}
+/* 优惠 */
+.goods-promotion {
+  background-color: #fff;
+  padding: 20rpx 24rpx;
+  line-height: 40rpx;
+  margin-bottom: 24rpx;
+}
+.column-name {
+  color: #858585;
+  font-size: 24rpx;
+  padding-right: 14rpx;
+  min-width: 67rpx;
+}
+.promotion {
+  color: #383838;
+  width: calc(100% - 67rpx);
+  font-size: 24rpx;
+}
+.jian{
+  margin-bottom: 0;
+}
+.manjian {
+  width: 89rpx;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.man {
+  width: calc(100% - 89rpx);
+}
+.van-tag {
+  padding: 2rpx 8rpx;
+  color: rgb(255, 0, 0);
+  font-size: 24rpx;
+  line-height: normal;
+  border-radius: 6rpx;
+  display: inline-block;
+  position: relative;
+  border: 1rpx solid red;
+}
+
+.eject {
+  height: 80%;
+  text-align: left;
+  border-top-left-radius: 12rpx;
+  border-top-right-radius: 12rpx;
+}
+.van-popup--bottom {
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  right: auto;
+  left: 50%;
+  transform: translate3d(-50%,0,0);
+}
+.van-popup {
+  position: fixed;
+  max-height: 100%;
+  overflow-y: auto;
+  background-color: #fff;
+  transition: .3s ease-out;
+}
+.eject-nav {
+  color: #555;
+  padding: 22rpx 16rpx 12rpx 16rpx;
+}
+.name {
+  color: #444;
+  text-align: center;
+  font-size: 34rpx;
+}
+.close-bt {
+  line-height: inherit;
+  font-size: 40rpx;
+  padding-left: 22rpx;
+}
+.close{
+  position: relative;
+  font: .875rem/1 vant-icon;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+}
+.close::before {
+  content: "\e61a";
+  font-size: 39rpx;
+}
+.eject-sub {
+  height: calc(100% - 68rpx);
+  background-color: #fcfcfc;
+  overflow-y: scroll;
+}
+.block {
+  padding-left: 22rpx;
+}
+.block-title {
+  color: #757575;
+  font-size: 30rpx;
+  padding: 14rpx 0;
+}
+.arrow {
+  width: 92%;
+  background: #fff;
+  padding: 11rpx 22rpx 11rpx 11rpx;
+}
+.arrow::after {
+  position: absolute;
+  right: 1.5%;
+  top: calc(50% - 5.5rpx);
+  content: "";
+  display: inline-block;
+  width: 13rpx;
+  height: 13rpx;
+  border-top: .08rem solid #444;
+  border-right: .08rem solid #444;
+  transform: rotate(45deg);
+}
+.block-vessel {
+  position: relative;
+  color: #444;
+  font-size: 27rpx;
+  margin-bottom: 17rpx;
+}
+.van-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+/* 时效 */
+.margin-bottom {
+  margin-bottom: 24rpx;
+  background-color: #fff;
+  padding: 20rpx 24rpx;
+  line-height: 40rpx;
+}
+.column-name {
+  color: #858585;
+  font-size: 24rpx;
+  padding-right: 14rpx;
+  min-width: 67rpx;
+}
+.aging {
+    color: #1d1d1d;
+    font-size: 24rpx;
+}
+.aging>view {
+  font-weight: bold;
+}
+.chosen{
+  color: red;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+/* 送至 */
+.column {
+  background-color: #fff;
+  padding: 20rpx 24rpx;
+  line-height: 40rpx;
+}
+.send-area {
+  color: #383838;
+  font-size: 24rpx;
+}
+.diqu>text{
+  padding-right: 11rpx;
+}
+.xianhuo {
+  color: #ff0f0f;
+  padding-top: 6rpx;
+  font-size: 24rpx;
+}
+.zuobiao:before{
+  content: "\e637";
+  color: red;
 }

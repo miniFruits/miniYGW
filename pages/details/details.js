@@ -7,10 +7,11 @@ Component({
     vertical: false,
     autoplay: false,
     interval: 2000,
-    duration: 500
+    duration: 500,
+    youhui:'none'
   },
 
-  lifetimes:{
+  lifetimes: {
     attached:function(){
       // 轮播图
       wx.request({
@@ -21,6 +22,19 @@ Component({
             background:result.data.list
           })
         }
+      })
+    }
+  },
+
+  methods: {
+    youhuiShow: function (){
+      this.setData({
+        youhui:'block'
+      })
+    },
+    youhuiHidden: function (){
+      this.setData({
+        youhui: 'none'
       })
     }
   }
