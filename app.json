@@ -1,10 +1,11 @@
 {
   "pages": [
-    "pages/user/user",
     "pages/home/home",
     "pages/classify/classify",
     "pages/cardexchange/cardexchange",
-    "pages/cart/cart"
+    "pages/cart/cart",
+    "pages/user/user",
+    "pages/details/details"
   ],
   "tabBar": {
     "list": [
