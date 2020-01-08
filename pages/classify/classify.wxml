@@ -25,200 +25,40 @@
 
   <view class="bodyed">
     <view class="body-content">
-      <view class="body-item">全部</view>
-      <view class="body-item ellipsis" wx:for="{{titlelist}}" wx:key="tid" data-tid="{{item.tid}}" bindtap="titleclick" data-indexs="index">{{item.tname}}</view>
-      
+      <!-- 头部列表渲染 -->
+      <view class="{{titlexindex===index?'body-item ellipsis body-item-light':'body-item ellipsis'}}" wx:for="{{titlelist}}" wx:key="tid" data-tid="{{item.tid}}" bindtap="titleclick" data-indexs="{{index}}">{{item.tname}}</view>
     </view>
   </view>
 
   <view class="content">
     <view class="flx-container">
       <view class="menu">
-        <view class="{{index===indexflag?'menu-item menu-item-light':'menu-item'}}" wx:for="{{leftlist}}" wx:key="tid" bindtap="checkoutclick" data-tid="{{item.tid}}" data-indexs="index">
+        <!-- 左边列表渲染 -->
+        <view class="{{index===indexflag?'menu-item menu-item-light':'menu-item'}}" wx:for="{{leftlist}}" wx:key="tid" bindtap="leftclick" data-tid="{{item.tid}}" data-indexs="{{index}}">
           {{item.tname}}
         </view>
       </view>
       <view class="menu-content-list">
-        <view class="flx">
+        <!-- 内容的渲染 -->
+        <view class="flx" wx:for="{{contentlist}}" wx:key="id" data-tid="{{item.id}}" bindtap="clicktodetails">
           <view class="goods-img">
-            <image src="http://oss.egu365.com/upload/c188002d8858480e8ae7cfe0f31c328a.jpg" />
+            <image src="{{item.bigImg}}" />
           </view>
           <view class="goods-info">
-            <view class="goods-name ellipsis">依谷稻花香大米2.5kg （新米）</view>
-            <view class="goods-slogan ellipsis">基地直供 长粒稻花香 15-18℃恒温存储 高端品质大米 绵软芳香 粘软适口</view>
+            <view class="goods-name ellipsis">{{item.goodsName}}</view>
+            <view class="goods-slogan ellipsis">{{item.slogan}}</view>
             <view class="self-support">
               自营 
               <view class="morrow">次日达</view>
               <view class="express">深圳平湖仓</view>
             </view>
             <view class="price-cart flx">
-              <view class="goods-price flx-1">￥79.90</view>
+              <view class="goods-price flx-1">￥{{item.salePrice}}</view>
               <view class="iconfont cart"></view>
             </view>
           </view>
         </view>
-        <view class="flx">
-          <view class="goods-img">
-            <image src="http://oss.egu365.com/upload/c188002d8858480e8ae7cfe0f31c328a.jpg" />
-          </view>
-          <view class="goods-info">
-            <view class="goods-name ellipsis">依谷稻花香大米2.5kg （新米）</view>
-            <view class="goods-slogan ellipsis">基地直供 长粒稻花香 15-18℃恒温存储 高端品质大米 绵软芳香 粘软适口</view>
-            <view class="self-support">
-              自营 
-              <view class="morrow">次日达</view>
-              <view class="express">深圳平湖仓</view>
-            </view>
-            <view class="price-cart flx">
-              <view class="goods-price flx-1">￥79.90</view>
-              <view class="iconfont cart"></view>
-            </view>
-          </view>
-        </view>
-        <view class="flx">
-          <view class="goods-img">
-            <image src="http://oss.egu365.com/upload/c188002d8858480e8ae7cfe0f31c328a.jpg" />
-          </view>
-          <view class="goods-info">
-            <view class="goods-name ellipsis">依谷稻花香大米2.5kg （新米）</view>
-            <view class="goods-slogan ellipsis">基地直供 长粒稻花香 15-18℃恒温存储 高端品质大米 绵软芳香 粘软适口</view>
-            <view class="self-support">
-              自营 
-              <view class="morrow">次日达</view>
-              <view class="express">深圳平湖仓</view>
-            </view>
-            <view class="price-cart flx">
-              <view class="goods-price flx-1">￥79.90</view>
-              <view class="iconfont cart"></view>
-            </view>
-          </view>
-        </view>
-        <view class="flx">
-          <view class="goods-img">
-            <image src="http://oss.egu365.com/upload/c188002d8858480e8ae7cfe0f31c328a.jpg" />
-          </view>
-          <view class="goods-info">
-            <view class="goods-name ellipsis">依谷稻花香大米2.5kg （新米）</view>
-            <view class="goods-slogan ellipsis">基地直供 长粒稻花香 15-18℃恒温存储 高端品质大米 绵软芳香 粘软适口</view>
-            <view class="self-support">
-              自营 
-              <view class="morrow">次日达</view>
-              <view class="express">深圳平湖仓</view>
-            </view>
-            <view class="price-cart flx">
-              <view class="goods-price flx-1">￥79.90</view>
-              <view class="iconfont cart"></view>
-            </view>
-          </view>
-        </view>
-        <view class="flx">
-          <view class="goods-img">
-            <image src="http://oss.egu365.com/upload/c188002d8858480e8ae7cfe0f31c328a.jpg" />
-          </view>
-          <view class="goods-info">
-            <view class="goods-name ellipsis">依谷稻花香大米2.5kg （新米）</view>
-            <view class="goods-slogan ellipsis">基地直供 长粒稻花香 15-18℃恒温存储 高端品质大米 绵软芳香 粘软适口</view>
-            <view class="self-support">
-              自营 
-              <view class="morrow">次日达</view>
-              <view class="express">深圳平湖仓</view>
-            </view>
-            <view class="price-cart flx">
-              <view class="goods-price flx-1">￥79.90</view>
-              <view class="iconfont cart"></view>
-            </view>
-          </view>
-        </view>
-        <view class="flx">
-          <view class="goods-img">
-            <image src="http://oss.egu365.com/upload/c188002d8858480e8ae7cfe0f31c328a.jpg" />
-          </view>
-          <view class="goods-info">
-            <view class="goods-name ellipsis">依谷稻花香大米2.5kg （新米）</view>
-            <view class="goods-slogan ellipsis">基地直供 长粒稻花香 15-18℃恒温存储 高端品质大米 绵软芳香 粘软适口</view>
-            <view class="self-support">
-              自营 
-              <view class="morrow">次日达</view>
-              <view class="express">深圳平湖仓</view>
-            </view>
-            <view class="price-cart flx">
-              <view class="goods-price flx-1">￥79.90</view>
-              <view class="iconfont cart"></view>
-            </view>
-          </view>
-        </view>
-        <view class="flx">
-          <view class="goods-img">
-            <image src="http://oss.egu365.com/upload/c188002d8858480e8ae7cfe0f31c328a.jpg" />
-          </view>
-          <view class="goods-info">
-            <view class="goods-name ellipsis">依谷稻花香大米2.5kg （新米）</view>
-            <view class="goods-slogan ellipsis">基地直供 长粒稻花香 15-18℃恒温存储 高端品质大米 绵软芳香 粘软适口</view>
-            <view class="self-support">
-              自营 
-              <view class="morrow">次日达</view>
-              <view class="express">深圳平湖仓</view>
-            </view>
-            <view class="price-cart flx">
-              <view class="goods-price flx-1">￥79.90</view>
-              <view class="iconfont cart"></view>
-            </view>
-          </view>
-        </view>
-        <view class="flx">
-          <view class="goods-img">
-            <image src="http://oss.egu365.com/upload/c188002d8858480e8ae7cfe0f31c328a.jpg" />
-          </view>
-          <view class="goods-info">
-            <view class="goods-name ellipsis">依谷稻花香大米2.5kg （新米）</view>
-            <view class="goods-slogan ellipsis">基地直供 长粒稻花香 15-18℃恒温存储 高端品质大米 绵软芳香 粘软适口</view>
-            <view class="self-support">
-              自营 
-              <view class="morrow">次日达</view>
-              <view class="express">深圳平湖仓</view>
-            </view>
-            <view class="price-cart flx">
-              <view class="goods-price flx-1">￥79.90</view>
-              <view class="iconfont cart"></view>
-            </view>
-          </view>
-        </view>
-        <view class="flx">
-          <view class="goods-img">
-            <image src="http://oss.egu365.com/upload/c188002d8858480e8ae7cfe0f31c328a.jpg" />
-          </view>
-          <view class="goods-info">
-            <view class="goods-name ellipsis">依谷稻花香大米2.5kg （新米）</view>
-            <view class="goods-slogan ellipsis">基地直供 长粒稻花香 15-18℃恒温存储 高端品质大米 绵软芳香 粘软适口</view>
-            <view class="self-support">
-              自营 
-              <view class="morrow">次日达</view>
-              <view class="express">深圳平湖仓</view>
-            </view>
-            <view class="price-cart flx">
-              <view class="goods-price flx-1">￥79.90</view>
-              <view class="iconfont cart"></view>
-            </view>
-          </view>
-        </view>
-        <view class="flx">
-          <view class="goods-img">
-            <image src="http://oss.egu365.com/upload/c188002d8858480e8ae7cfe0f31c328a.jpg" />
-          </view>
-          <view class="goods-info">
-            <view class="goods-name ellipsis">依谷稻花香大米2.5kg （新米）</view>
-            <view class="goods-slogan ellipsis">基地直供 长粒稻花香 15-18℃恒温存储 高端品质大米 绵软芳香 粘软适口</view>
-            <view class="self-support">
-              自营 
-              <view class="morrow">次日达</view>
-              <view class="express">深圳平湖仓</view>
-            </view>
-            <view class="price-cart flx">
-              <view class="goods-price flx-1">￥79.90</view>
-              <view class="iconfont cart"></view>
-            </view>
-          </view>
-        </view>
+        
       </view>
       
     </view>
