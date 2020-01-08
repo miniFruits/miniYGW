@@ -1,1 +1,349 @@
-/* pages/details/details.wxss */
+@font-face {
+  font-family: 'iconfont';  /* project id 1600172 */
+  src: url('//at.alicdn.com/t/font_1600172_6sdpobfkgfm.eot');
+  src: url('//at.alicdn.com/t/font_1600172_6sdpobfkgfm.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1600172_6sdpobfkgfm.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1600172_6sdpobfkgfm.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1600172_6sdpobfkgfm.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1600172_6sdpobfkgfm.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:28rpx;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* 导航 */
+.nav {
+  background: none;
+  box-shadow: none;
+  color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  width: 100%;
+  height: 77rpx;
+}
+.nav-l, .nav-r, .nav-title {
+  position: relative;
+  width: 77rpx;
+  height: 100%;
+  text-align: center;
+  line-height: 77rpx;
+  font-size: 25.2rpx;
+}
+.lucency {
+  position: absolute;
+  top: calc(50% - 25rpx);
+  left: calc(50% - 25rpx);
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 58rpx;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0,0,0,.4);
+  border-radius: 50%;
+}
+.back::before {
+  content: "\e6db";
+  font-size: 46rpx;
+}
+.more::before {
+  content: "\e6a8";
+  font-size: 60rpx;
+}
+.nav-title {
+  color: #444;
+  font-size: 32rpx;
+  flex: 1;   
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /* opacity: 0; */
+}
+/* 内容区 */
+.content-nt {
+  background-color: #fcfcfc;
+  width: 100%;
+}
+/* 轮播 */
+.van-swipe {
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+  height: 750rpx;
+}
+.banner{
+  height: 750rpx;
+}
+.img-box {
+  width: 100%;
+  height: 750rpx;
+}
+/* 价格信息 */
+.price-name {
+  background-color: #fff;
+  padding: 28rpx 24rpx;
+  border-top: 2rpx solid #dadada;
+  border-bottom: 2rpx solid #dadada;
+}
+.flx {
+  display: flex;
+}
+.price-lab-collect {
+  color: #625e5f;
+  height: 62rpx;
+}
+.price {
+  color: #ec231b;
+  font-size: 50rpx;
+  line-height: 62rpx;
+  font-weight: 700;
+}
+.price:before {
+  content: "\FFE5";
+  font-size: 34rpx;
+}
+.lab {
+  line-height: 72rpx;
+  padding-left: 14rpx;
+  font-size: 24rpx;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.flx-1 {
+  flex: 1;
+}
+.collect {
+  font-size: 24rpx;
+  font-weight: 400;
+  padding-left: 14rpx;
+  line-height: normal;
+  text-align: center;
+}
+.icon-collect{
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  
+}
+.star::before {
+  margin-left: 8rpx;
+  content: "\e61d";
+  font-size: 34rpx;
+}
+.self-support  {
+  height: 100rpx;
+  line-height: 100rpx;
+  color: red;
+  font-size: 24rpx;
+  display: flex;
+}
+.morrow {
+  color: #fff;
+  background-color: red;
+  border-radius: 17rpx;
+  padding: 0 11rpx;
+  margin: 0 8.4rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  margin-top: 34rpx;
+}
+.express {
+  color: #af52ef;
+  margin: 0 8.4rpx;
+}
+.goods-name {
+  color: #262626;
+  font-size: 26rpx;
+  font-weight: 700;
+  line-height: 44rpx;
+}
+/* 优惠 */
+.goods-promotion {
+  background-color: #fff;
+  padding: 20rpx 24rpx;
+  line-height: 40rpx;
+  margin-bottom: 24rpx;
+}
+.column-name {
+  color: #858585;
+  font-size: 24rpx;
+  padding-right: 14rpx;
+  min-width: 67rpx;
+}
+.promotion {
+  color: #383838;
+  width: calc(100% - 67rpx);
+  font-size: 24rpx;
+}
+.jian{
+  margin-bottom: 0;
+}
+.manjian {
+  width: 89rpx;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.man {
+  width: calc(100% - 89rpx);
+}
+.van-tag {
+  padding: 2rpx 8rpx;
+  color: rgb(255, 0, 0);
+  font-size: 24rpx;
+  line-height: normal;
+  border-radius: 6rpx;
+  display: inline-block;
+  position: relative;
+  border: 1rpx solid red;
+}
+
+.eject {
+  height: 80%;
+  text-align: left;
+  border-top-left-radius: 12rpx;
+  border-top-right-radius: 12rpx;
+}
+.van-popup--bottom {
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  right: auto;
+  left: 50%;
+  transform: translate3d(-50%,0,0);
+}
+.van-popup {
+  position: fixed;
+  max-height: 100%;
+  overflow-y: auto;
+  background-color: #fff;
+  transition: .3s ease-out;
+}
+.eject-nav {
+  color: #555;
+  padding: 22rpx 16rpx 12rpx 16rpx;
+}
+.name {
+  color: #444;
+  text-align: center;
+  font-size: 34rpx;
+}
+.close-bt {
+  line-height: inherit;
+  font-size: 40rpx;
+  padding-left: 22rpx;
+}
+.close{
+  position: relative;
+  font: .875rem/1 vant-icon;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+}
+.close::before {
+  content: "\e61a";
+  font-size: 39rpx;
+}
+.eject-sub {
+  height: calc(100% - 68rpx);
+  background-color: #fcfcfc;
+  overflow-y: scroll;
+}
+.block {
+  padding-left: 22rpx;
+}
+.block-title {
+  color: #757575;
+  font-size: 30rpx;
+  padding: 14rpx 0;
+}
+.arrow {
+  width: 92%;
+  background: #fff;
+  padding: 11rpx 22rpx 11rpx 11rpx;
+}
+.arrow::after {
+  position: absolute;
+  right: 1.5%;
+  top: calc(50% - 5.5rpx);
+  content: "";
+  display: inline-block;
+  width: 13rpx;
+  height: 13rpx;
+  border-top: .08rem solid #444;
+  border-right: .08rem solid #444;
+  transform: rotate(45deg);
+}
+.block-vessel {
+  position: relative;
+  color: #444;
+  font-size: 27rpx;
+  margin-bottom: 17rpx;
+}
+.van-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+/* 时效 */
+.margin-bottom {
+  margin-bottom: 24rpx;
+  background-color: #fff;
+  padding: 20rpx 24rpx;
+  line-height: 40rpx;
+}
+.column-name {
+  color: #858585;
+  font-size: 24rpx;
+  padding-right: 14rpx;
+  min-width: 67rpx;
+}
+.aging {
+    color: #1d1d1d;
+    font-size: 24rpx;
+}
+.aging>view {
+  font-weight: bold;
+}
+.chosen{
+  color: red;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+/* 送至 */
+.column {
+  background-color: #fff;
+  padding: 20rpx 24rpx;
+  line-height: 40rpx;
+}
+.send-area {
+  color: #383838;
+  font-size: 24rpx;
+}
+.diqu>text{
+  padding-right: 11rpx;
+}
+.xianhuo {
+  color: #ff0f0f;
+  padding-top: 6rpx;
+  font-size: 24rpx;
+}
+.zuobiao:before{
+  content: "\e637";
+  color: red;
+}

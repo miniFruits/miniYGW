@@ -1,3 +1,4 @@
+
 <view  class="top">
 <view class="top-bar active" bindtap="handleSelect">依谷热卖</view>
 <view class="top-bar" wx:for = "{{classify}}" wx:key="{{tid}}" bindtap="handleSelect">

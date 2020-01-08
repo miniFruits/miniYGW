@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "components":true,
+  "usingComponents": {
+  "my_gussetLikeList":"/component/GussetLike/GussetLike"
+  }
 }
