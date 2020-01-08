@@ -13,7 +13,7 @@
 <view class="empty">
    <view class="cartimgwrap">
      <image  class="cartimg" src="http://m.egu365.com/img/cart.svg"></image>
-    <view class="imgtag">去逛逛</view>
+    <view class="imgtag" bindtap="handlepage">去逛逛</view>
    </view>
 </view>
 <my_gussetLikeList></my_gussetLikeList>

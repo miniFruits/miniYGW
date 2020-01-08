@@ -54,7 +54,6 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
   },
 
   /**
@@ -62,5 +61,12 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  // 去逛逛
+  handlepage(){
+    console.log(1)
+    wx.switchTab({
+      url: '/pages/home/home',
+    })
   }
 })

@@ -21,14 +21,18 @@
 .gusse_like_list{
 display: flex;
 flex-wrap: wrap;
-padding: 0 16.552rpx 0 0;
 }
-.gusse_like_item{
+.gusse_like_item:nth-child(odd){
   width: 50%;
    box-sizing: border-box;
   padding: 16.552rpx 0 0 14.482rpx ;
   background:#fff;
-
+}
+.gusse_like_item:nth-child(even){
+  width: 50%;
+   box-sizing: border-box;
+  padding: 16.552rpx 14.482rpx 0 14.482rpx ;
+  background:#fff;
 }
 .gusse_like_item_img{
   width:100%;
