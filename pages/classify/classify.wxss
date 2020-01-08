@@ -35,7 +35,7 @@ page{
   color: #666;
   background-color: transparent;
 }
-
+ 
 .cart::before{
   content: "\e6af";
   color: #fff;
