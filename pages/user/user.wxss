@@ -14,6 +14,7 @@ page {
   background: #f0f2f5;
 }
 
+
 .user {
   height: 1000%;
   width: 100%;
