@@ -114,8 +114,8 @@ margin-top: 42rpx;
   width:702rpx!important; 
   height:138rpx;
 }
-/* 尝鲜季 */
 
+/* 尝鲜季 */
 .hot-sale{
   height: 600rpx;
   position: relative;
@@ -128,72 +128,16 @@ margin-top: 42rpx;
 .hot-sale  .bg-img{
     position: absolute;
 }
-
-.cxj{
- width: 97%;
-  position: absolute;
-  bottom: 8rpx;
-  left:0;
-  right: 0;
-  margin: auto;
-  z-index: 3;
-   height: 346rpx;
-   background: #fff;
-   border-radius: 8rpx;
-}
-.cxj .new{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 88rpx;
-  height: 96rpx;
-}
-.cxj-title{
-   height: 98rpx;
- 
-}
-.cxj-title .title{
-  height: 60rpx;
-  display: block;
-  font-size: 32rpx;
-  text-align: center;
-  line-height: 60rpx;
-  color: #42e32f;
-}
-.cxj-title .title-2{
-  height: 28rpx;
-  display: block;
-  font-size: 24rpx;
-  text-align: center;
-  line-height:  28rpx;
-  color: #394b37;
-}
-.cxj-inner{
-  height: 238rpx;
-  display: flex;
-  justify-content: space-around;
+/* 热销榜 */
+.hot-list{
+  width: 100%;
+  height: 400rpx;
   position: relative;
 }
-
-.cxj-item{
-  width: 172rpx;
-  height: 238rpx;
-  border: .1rem solid #f4f3f3;
+.hot-list image{
+  width: 100%;
+  height: 400rpx;
 }
-.cxj-item image{
-  width: 168rpx;
-  height: 168rpx;
-}
-.cxj-item text{
-  display: block;
-  width: 140rpx;
-  height: 46rpx;
-  line-height: 46rpx;
-  font-size: 24rpx;
-  overflow: hidden;
-  text-overflow:ellipsis;
-  white-space: nowrap;
-  border-radius: .1rem;
-  background-color: #f4f4f4;
-  margin: 0 auto;
+.yellow-img{
+  position: absolute;
 }

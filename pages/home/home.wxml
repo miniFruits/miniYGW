@@ -84,24 +84,23 @@
         </block>
 </swiper>
 
-<!-- 时令热销 -->
+<!-- 尝鲜季 -->
 <view class="hot-sale">
-  
    <image src="{{mouth_img}}" class="bg-img"></image>
-   <view class="cxj">
-   <image src="../../assets/images/new.png"  class="new" ></image>
-      <view class="cxj-title">
-         <text class="title">尝鲜季</text>
-         <text class="title-2">购鲜，每月一次的尝鲜之旅</text>
-      </view>
-      <view class="cxj-inner">
-     
-        <block wx:for="{{cxjList.bcPublishedGoodsEos}}">    
-           <view class="cxj-item">
-              <image src="{{item.bseGoodsEo.goodsImg}}"></image>
-              <text>{{item.goodsName}}</text>
-            </view>
-        </block>
-      </view>
-   </view>
+       <activeShow  
+       title="尝鲜季" 
+       subtitle="购鲜，每月一次的尝鲜之旅"
+       cxjList="{{cxjList}}"
+       imgSrc="/assets/images/new.png"
+       ></activeShow>
 </view>
+<view class="hot-list">
+ <image src="{{yellow}}" class="yellow-img"></image>
+  <activeShow 
+  title="热销榜" 
+  subtitle="热卖，单品销量排行榜"
+   cxjList="{{hotList}}"
+   imgSrc="/assets/images/hot.png"
+  ></activeShow>
+</view>
+
