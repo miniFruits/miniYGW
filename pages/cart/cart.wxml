@@ -5,21 +5,25 @@
 <image src="http://sh1.hoopchina.com.cn/fis_static/shihuomobile/static/common/widget/header/head_back_b142dc1.png"
 ></image>
 </view>
- <view class="cartheadmid">购物车</view>
-<view class="cartheadright">  <image src="//sh1.hoopchina.com.cn/fis_static/shihuomobile/static/common/widget/header/head_list_4a4f511.png"></image></view>
+ <view class="cartheadmid">{{title}}</view>
+<view class="cartheadright">  <image src="//sh1.hoopchina.com.cn/fis_static/shihuomobile/static/common/widget/header/head_list_4a4f511.png" 
+ontap="handleshow"
+></image></view>
 </view>
 <view class="cart_content">
 <!--当购物车为空时-->
 <view class="empty">
    <view class="cartimgwrap">
      <image  class="cartimg" src="http://m.egu365.com/img/cart.svg"></image>
-    <view class="imgtag">去逛逛</view>
+    <view class="imgtag" bindtap="handlepage">去逛逛</view>
    </view>
 </view>
 <my_gussetLikeList></my_gussetLikeList>
 
 <!-- 底部结算 -->
-<!-- <view class="cart_bottom">
+
+</view>
+<view class="cart_bottom">
 <text class="allselect "></text>
  <view class="cart_bottom_left">
  全选
@@ -34,5 +38,25 @@
  <view class="cart_bottom_right">
  去结算
  </view>
-</view> -->
+</view> 
+<view class="cartmask" style="display:{{mask}}" ontap="handlenone">
+    <view class="cart_mask_list">
+      <view class="cart_mask_list_item" ontap="handlepage">
+      <view class='cart_mask_list_item_img_wrap'>
+      <image class='cart_mask_list_item_img' src="../../assets/images/home.png"></image>
+      </view>
+      首页</view>
+      <view class="cart_mask_list_item" ontap="handleclassify"><view class='cart_mask_list_item_img_wrap'>
+      <image class='cart_mask_list_item_img' src="../../assets/images/classify.png"></image>
+      </view>分类</view>
+      <view class="cart_mask_list_item" ontap="handlezhai"><view class='cart_mask_list_item_img_wrap'>
+      <image class='cart_mask_list_item_img' src="../../assets/images/card.png"></image>
+      </view>宅配</view>
+      <view class="cart_mask_list_item"><view class='cart_mask_list_item_img_wrap'>
+      <image class='cart_mask_list_item_img' src="../../assets/images/cart.png"></image>
+      </view>购物车</view>
+      <view class="cart_mask_list_item" ontap="handleprofile"><view class='cart_mask_list_item_img_wrap'>
+      <image class='cart_mask_list_item_img' src="../../assets/images/my.png"></image>
+      </view>我的</view>
+    </view>
 </view>

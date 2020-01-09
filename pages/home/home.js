@@ -20,6 +20,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+<<<<<<< HEAD
     //  wx.request({
     //    url: 'http://api.egu365.com/goods/classify',
     //    success:(result)=>{
@@ -65,6 +66,18 @@ Page({
     //       })
     //     }
     //   }),
+
+    wx.showTabBar(),
+     wx.request({
+       url: 'http://api.egu365.com/goods/classify',
+       success:(result)=>{
+         console.log(result.data.list)
+          this.setData({
+            classify: result.data.list
+          })
+       }
+     })
+
     wx.request({
       url:"http://123.57.7.195/api/movie",
       success:(result)=>{

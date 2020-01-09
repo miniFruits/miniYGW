@@ -1,12 +1,11 @@
-// pages/cart/cart.js
+// pages/homedelivery/homedelivery.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-     mask:"none",
-     title:"购物车"
+    title:"宅配服务"
   },
 
   /**
@@ -27,7 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    wx.hideTabBar()
+
   },
 
   /**
@@ -55,6 +54,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+
   },
 
   /**
@@ -63,8 +63,7 @@ Page({
   onShareAppMessage: function () {
 
   },
-  // 去逛逛
-  handlepage(){
+  handlepage() {
     wx.switchTab({
       url: '/pages/home/home',
     })
@@ -85,15 +84,11 @@ Page({
       url: "/pages/user/user",
     })
   },
-  handleshow(){
-    this.setData({
-      mask:"block",
+  handleback(){
+    console.log(1)
+    wx.switchTab({
+      url: '/pages/cart/cart',
     })
-  },
-  handlenone(){
-    this.setData({
-      mask: "none",
-    })
-  },
+  }
 
 })

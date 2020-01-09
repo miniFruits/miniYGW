@@ -3,13 +3,13 @@
     "pages/home/home",
     "pages/classify/classify",
     "pages/cardexchange/cardexchange",
-    "pages/cart/cart",
     "pages/user/user",
-    "pages/details/details"
+    "pages/details/details",
+    "pages/cart/cart",
+    "pages/homedelivery/homedelivery"
   ],
-
   "tabBar": {
-    "selectedColor": "#fc0909", 
+    "selectedColor": "#fc0909",
     "list": [
       {
         "pagePath": "pages/home/home",

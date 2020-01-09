@@ -20,6 +20,7 @@ Component({
     attached:function(){
       this.loadfirst()
       this.loadcontent()
+      wx.showTabBar()
     }
   },
 
