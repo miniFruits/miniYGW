@@ -141,3 +141,5 @@ margin-top: 42rpx;
 .yellow-img{
   position: absolute;
 }
+
+/* 今日推荐 */

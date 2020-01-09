@@ -106,16 +106,24 @@
 
 <!-- 新鲜水果 -->
 
+
   <!-- <recomendItem
      fruits="{{fruits}}"
      ></recomendItem> -->
 <recomend>
   <recomendItem 
   fruits="{{fruits}}"
+
   imgSrc="{{imgSrcs}}"
+
+  imgsrc= "{{imgSrcs[0].bgImg1}}"
+  ></recomendItem>
+  <recomendItem 
+  fruits="{{vegetables}}"
+  imgsrc= "{{imgSrcs[1].bgImg1}}"
+
   ></recomendItem>
 </recomend>
 
 
     
-
