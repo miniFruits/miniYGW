@@ -1,13 +1,68 @@
-<view>
+<view class="genre-list">
   <view class="header">
     <view class="nav-l">
-
+      <view class="iconfont back"></view>
     </view>
-    <view class="nav-title">
+    <view class="nav-title" bindtap="tosearch">
+      <view class="search-box">
+        <view class="van-search">
+          <view class="search-content">
+            <view class="search-sell">
+              <view class="search-icon iconfont "></view>
+              <view class="search-input">
+                <input placeholder="鳗鱼特惠" disabled="false" />
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
     </view>
     <view class="nav-r">
+      <view class="iconfont more"></view>
+    </view>
+
+  </view>
+
+  <view class="bodyed">
+    <view class="body-content">
+      <!-- 头部列表渲染 -->
+      <view class="{{titlexindex===index?'body-item ellipsis body-item-light':'body-item ellipsis'}}" wx:for="{{titlelist}}" wx:key="tid" data-tid="{{item.tid}}" bindtap="titleclick" data-indexs="{{index}}">{{item.tname}}</view>
     </view>
   </view>
-  456
-  <view bind:tap="handleclick">详情</view>
+
+  <view class="content">
+    <view class="flx-container">
+      <view class="menu">
+        <!-- 左边列表渲染 -->
+        <view class="{{index===indexflag?'menu-item menu-item-light':'menu-item'}}" wx:for="{{leftlist}}" wx:key="tid" bindtap="leftclick" data-tid="{{item.tid}}" data-indexs="{{index}}">
+          {{item.tname}}
+        </view>
+      </view>
+      <scroll-view class="box-content" scroll-y="true" bindscrolltolower="lowdata">
+        <view class="menu-content-list"> 
+          <!-- 内容的渲染 -->
+          <view class="flx" wx:for="{{contentlist}}" wx:key="id" data-tid="{{item.id}}" bindtap="clicktodetails">
+            <view class="goods-img">
+              <image src="{{item.bigImg}}" />
+            </view>
+            <view class="goods-info">
+              <view class="goods-name ellipsis">{{item.goodsName}}</view>
+              <view class="goods-slogan ellipsis">{{item.slogan}}</view>
+              <view class="self-support">
+                自营 
+                <view class="morrow">次日达</view>
+                <view class="express">深圳平湖仓</view>
+              </view>
+              <view class="price-cart flx">
+                <view class="goods-price flx-1">￥{{item.salePrice}}</view>
+                <view class="iconfont cart"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+      
+    </view>
+  </view>
+  
 </view>
