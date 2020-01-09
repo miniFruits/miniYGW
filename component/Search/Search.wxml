@@ -1,0 +1,4 @@
+<!--component/Search/Search.wxml-->
+<view>
+  这是公共的搜索组件
+</view>

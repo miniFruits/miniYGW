@@ -4,7 +4,7 @@
 <image class="guss_like_img" src="http://m.egu365.com/img/guess_you_like.jpg"></image>
 <view class="gusse_like_list">
 
-<view class="gusse_like_item" wx:for="{{list}}" wx:key="{{id}}">
+<view class="gusse_like_item" wx:for="{{list}}" wx:key="{{item.id}}">
   <image class='gusse_like_item_img'src="{{item.bigImg}}">
   </image>
   <view class="gusse_like_item_title">{{item.goodsName}}</view>

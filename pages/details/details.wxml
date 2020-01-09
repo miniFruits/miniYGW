@@ -3,7 +3,7 @@
   <view class="nav">
     <view class="nav-l">
       <view class="icon icon-zuo lucency">
-        <image src="//sh1.hoopchina.com.cn/fis_static/shihuomobile/static/common/widget/header/head_back_b142dc1.png"></image>
+        <view class="iconfont back"></view>
       </view>
     </view>
     <view class="nav-title">
@@ -11,7 +11,7 @@
     </view>
     <view class="nav-r">
       <view class="icon icon-omit lucency">
-        <image src="//sh1.hoopchina.com.cn/fis_static/shihuomobile/static/common/widget/header/head_list_4a4f511.png"></image>
+       <view class="iconfont more"></view>
       </view>
     </view>
   </view>
@@ -40,7 +40,8 @@
         <view class="lab flx-1 ellipsis"></view>
         <view class="collect">
           <view class="icon icon-collect">
-          <image src="//s0.meituan.net/bs/?f=myfe/canary:/asgard/images/movie/star-not-graded.png"></image></view>
+            <view class="iconfont star"></view>
+          </view>
           <view>收藏</view>
         </view>
       </view>
@@ -49,7 +50,62 @@
         <view class="morrow">次日达</view>
         <view class="express">深圳平湖仓</view>
       </view>
-      <view class="goods-name flx"></view>
+      <view class="goods-name flx">和の鳗A级蒲烧鳗鱼中腹--150g 段装 黄金部位 糯感极强 细腻饱满 日本优质鳗鱼 地道蒲烧 星级美味 加热即享</view>
+    </view>
+    <!-- 优惠 -->
+    <view class="goods-promotion flx">
+      <view class="column-name">优惠</view>
+      <view class="promotion" bindtap="youhuiShow">
+        <view class="flx jian">
+          <view class="manjian">
+            <view class="van-tag van-tag--plain van-hairline--surround">满减</view>
+          </view>
+          <view class="ellipsis man">满390减78，满312减62.4，满234减46.8，满156减31.2，满78减15.6</view>
+        </view>
+      </view>
+      <!-- 遮罩 -->
+      <view class="eject van-popup van-popup--bottom" style="z-index: 2029;display:{{youhui}}"> 
+        <view class="eject-nav flx">
+          <view class="name flx-1">优惠</view>
+          <view class="close-bt">
+            <view class="iconfont close" bindtap="youhuiHidden"></view>
+          </view>
+        </view>
+        <view class="eject-sub">
+          <view class="block">
+            <view class="block-title">满减</view>
+            <view class="block-vessel arrow">满390减78，满312减62.4，满234减46.8，满156减31.2，满78减15.6</view>
+          </view>
+        </view>
+      </view>
+      <view class="van-overlay" style="z-index: 2028;display:{{youhui}}" bindtap="youhuiHidden"></view>
+    </view>
+    <!-- 时效 -->
+    <view class="margin-bottom flx">
+      <view class="column-name">时效</view>
+      <view class="aging">
+        <text>当日16：00前下单，预计次日送达！</text>
+        <view>预售商品按预设时间配送，不便之处，敬请谅解！</view>
+      </view>
+    </view>
+    <!-- 已选 -->
+    <view class="margin-bottom flx">
+      <view class="column-name">已选</view>
+      <view class="chosen">150g，1袋</view>
+    
+    </view>
+    <!-- 送至 -->
+    <view class="column flx">
+      <view class="column-name">送至</view>
+      <view class="check-delivery send-area">
+        <view class="diqu">
+          <text class="iconfont zuobiao"></text>
+          <text>广东</text>
+          <text>深圳市</text>
+          <text>福田区</text>
+        </view>
+        <view class="xianhuo">现货</view>
+      </view>      
     </view>
   </view>
   <!-- 底部导航 -->

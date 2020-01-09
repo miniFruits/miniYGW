@@ -1,11 +1,11 @@
-// pages/classification/classification.js
-Component({
+// pages/homedelivery/homedelivery.js
+Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    title:"宅配服务"
   },
 
   /**
@@ -33,7 +33,7 @@ Component({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    
+
   },
 
   /**
@@ -62,5 +62,33 @@ Component({
    */
   onShareAppMessage: function () {
 
+  },
+  handlepage() {
+    wx.switchTab({
+      url: '/pages/home/home',
+    })
+  },
+  handleclassify() {
+    wx.switchTab({
+      url: '/pages/classify/classify',
+    })
+  },
+  handlezhai() {
+    wx.navigateTo({
+      url: '/pages/homedelivery/homedelivery',
+    })
+  },
+  handleprofile() {
+    console.log(1)
+    wx.switchTab({
+      url: "/pages/user/user",
+    })
+  },
+  handleback(){
+    console.log(1)
+    wx.switchTab({
+      url: '/pages/cart/cart',
+    })
   }
+
 })
