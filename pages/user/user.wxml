@@ -1,91 +1,28 @@
-<scroll-view class="user">
-  <view class="nav nav-t">
-    <view class="nav-l none">
-      <image class="nav-img" src="../../assets/images/not_user.jpg"></image>
+<scroll-view class="user" scroll-y="true" bindscroll="scroll">
+  <view class="box">
+    <view class="nav nav-t" style="background:rgba(255,255,255,{{Opacity}});box-shadow: 0 1px 2px rgba(192,192,192,{{Opacity}});">
+      <view class="nav-l" style="opacity:{{Opacity}};">
+        <image class="nav-img" src="../../assets/images/not_user.jpg"></image>
+      </view>
+      <view class="nav-title" style="opacity:{{Opacity}};">
+        <text class="my">我的</text>
+      </view>
+      <view class="nav-r" style="opacity:{{iconOpac}};color:{{iconColor}}">
+        <view class="iconfont icon-set icon-color"></view>
+      </view>
     </view>
-    <view class="nav-title none">
-      <text class="my">我的</text>
-    </view>
-    <view class="nav-r">
-      <view class="iconfont icon-set icon-color"></view>
-    </view>
-  </view>
-  <view class="content-nt">
-    <view class="user-wrap">
-      <image src="../../assets/images/user_bg.png" class="bg"></image>
-      <view class="user-ht flx">
-        <image src="../../assets/images/not_user.jpg" class="us"></image>
-        <view class="user-t flx-l">
-          <view class="greet">晚上好</view>
-          <view class="ellipsis">点击登录/注册用户</view>
+    <view class="content-nt">
+      <view class="user-wrap">
+        <image src="../../assets/images/user_bg.png" class="bg"></image>
+        <view class="user-ht flx">
+          <image src="../../assets/images/not_user.jpg" class="us"></image>
+          <view class="user-t flx-l">
+            <view class="greet">晚上好</view>
+            <view class="ellipsis">点击登录/注册用户</view>
+          </view>
         </view>
       </view>
-    </view>
-    <view class="card-view flx">
-      <view class="img">
-        <image src="http://m.egu365.com/img/user_order_01.png" class="order"></image>
-        <view class="item-name">待收货</view>
-      </view>
-      <view class="img">
-        <image src="http://m.egu365.com/img/user_order_02.png" class="order"></image>
-        <view class="item-name">待付款</view>
-      </view>
-      <view class="img">
-        <image src="http://m.egu365.com/img/user_order_03.png" class="order"></image>
-        <view class="item-name">已完成</view>
-      </view>
-      <view class="img">
-        <image src="http://m.egu365.com/img/user_order_04.png" class="order"></image>
-        <view class="item-name">已取消</view>
-      </view>
-      <view class="img">
-        <image src="http://m.egu365.com/img/user_order_05.png" class="order"></image>
-        <view class="item-name">全部订单</view>
-      </view>
-    </view>
-    <view class="card-view flx">
-      <view class="img">
-        <image src="http://m.egu365.com/img/user_two_01.png" class="order"></image>
-        <view class="item-name">我的卡券</view>
-      </view>
-      <view class="img">
-        <image src="http://m.egu365.com/img/user_two_02.png" class="order"></image>
-        <view class="item-name">我的宅配</view>
-      </view>
-      <view class="img">
-        <image src="http://m.egu365.com/img/user_two_03.png" class="order"></image>
-        <view class="item-name">我的收藏</view>
-      </view>
-      <view class="img">
-        <image src="http://m.egu365.com/img/user_two_04.png" class="order"></image>
-        <view class="item-name">我的余额  </view>
-      </view>
-      <view class="img">
-        <image src="http://m.egu365.com/img/user_two_05.png" class="order"></image>
-        <view class="item-name">优惠券</view>
-      </view>
-    </view>
-    <view class="card-view flx">
-      <view class="img">
-        <image src="http://m.egu365.com/img/user_third_02.png" class="order"></image>
-        <view class="item-name">收货地址</view>
-      </view>
-      <view class="img">
-        <image src="http://m.egu365.com/img/user_third_03.png" class="order"></image>
-        <view class="item-name">绑定手机</view>
-      </view>
-      <view class="img">
-        <image src="http://m.egu365.com/img/user_third_04.png" class="order"></image>
-        <view class="item-name">修改密码</view>
-      </view>
-      <view class="img">
-        <image src="http://m.egu365.com/img/user_third_05.png" class="order"></image>
-        <view class="item-name">修改邮箱</view>
-      </view>
-      <view class="img">
-        <image src="http://m.egu365.com/img/service.png" class="order"></image>
-        <view class="item-name">在线客服</view>
-      </view>
+      <CardView></CardView>
     </view>
   </view>
 </scroll-view>

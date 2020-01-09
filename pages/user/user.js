@@ -1,38 +1,27 @@
 Component({
 
-  behaviors: [],
-
-  properties: {
-    myProperty: { // 属性名
-      type: String,
-      value: ''
-    },
-    myProperty2: String // 简化的定义方式
-  },
-
-  data: {}, // 私有数据，可用于模板渲染
-
-  lifetimes: {
-    // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
-    attached: function() {},
-    moved: function() {},
-    detached: function() {},
-  },
-
-  // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
-  attached: function() {}, // 此处attached的声明会被lifetimes字段中的声明覆盖
-  ready: function() {},
-
-  pageLifetimes: {
-    // 组件所在页面的生命周期函数
-    show: function() {},
-    hide: function() {},
-    resize: function() {},
+  data: {
+    Opacity: 0,
+    iconOpac: 1,
+    iconColor: '#fff',
   },
 
   methods: {
-    onPageScroll(e) {
-      console.log('滚起来')
+    scroll(e) {
+      // console.log(e.detail.scrollTop)
+      if (e.detail.scrollTop <= 99) {
+        this.setData({
+          Opacity: ((e.detail.scrollTop / 99) >= 1) ? 1 : (e.detail.scrollTop / 99),
+          iconOpac: ((e.detail.scrollTop / 99) >= 1) ? 1 : (e.detail.scrollTop / 99),
+          iconColor: '#000',
+        })
+      } else if (e.detail.scrollTop == 0) {
+        this.setData({
+          Opacity: 0,
+          iconOpac: 1,
+          iconColor: '#fff',
+        })
+      }
     },
   }
 

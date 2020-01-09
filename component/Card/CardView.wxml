@@ -1,0 +1,6 @@
+<view class="card-view flx" wx:for="{{list}}" wx:key="index">
+  <view class="img" wx:for="{{item}}" wx:key="index">
+    <image src="{{item.url}}" class="order"></image>
+    <view class="item-name">{{item.title}}</view>
+  </view>
+</view>
