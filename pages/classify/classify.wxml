@@ -3,14 +3,14 @@
     <view class="nav-l">
       <view class="iconfont back"></view>
     </view>
-    <view class="nav-title">
+    <view class="nav-title" bindtap="tosearch">
       <view class="search-box">
         <view class="van-search">
           <view class="search-content">
             <view class="search-sell">
               <view class="search-icon iconfont "></view>
               <view class="search-input">
-                <input placeholder="鳗鱼特惠" />
+                <input placeholder="鳗鱼特惠" disabled="false" />
               </view>
             </view>
           </view>
@@ -38,28 +38,29 @@
           {{item.tname}}
         </view>
       </view>
-      <view class="menu-content-list">
-        <!-- 内容的渲染 -->
-        <view class="flx" wx:for="{{contentlist}}" wx:key="id" data-tid="{{item.id}}" bindtap="clicktodetails">
-          <view class="goods-img">
-            <image src="{{item.bigImg}}" />
-          </view>
-          <view class="goods-info">
-            <view class="goods-name ellipsis">{{item.goodsName}}</view>
-            <view class="goods-slogan ellipsis">{{item.slogan}}</view>
-            <view class="self-support">
-              自营 
-              <view class="morrow">次日达</view>
-              <view class="express">深圳平湖仓</view>
+      <scroll-view class="box-content" scroll-y="true" bindscrolltolower="lowdata">
+        <view class="menu-content-list"> 
+          <!-- 内容的渲染 -->
+          <view class="flx" wx:for="{{contentlist}}" wx:key="id" data-tid="{{item.id}}" bindtap="clicktodetails">
+            <view class="goods-img">
+              <image src="{{item.bigImg}}" />
             </view>
-            <view class="price-cart flx">
-              <view class="goods-price flx-1">￥{{item.salePrice}}</view>
-              <view class="iconfont cart"></view>
+            <view class="goods-info">
+              <view class="goods-name ellipsis">{{item.goodsName}}</view>
+              <view class="goods-slogan ellipsis">{{item.slogan}}</view>
+              <view class="self-support">
+                自营 
+                <view class="morrow">次日达</view>
+                <view class="express">深圳平湖仓</view>
+              </view>
+              <view class="price-cart flx">
+                <view class="goods-price flx-1">￥{{item.salePrice}}</view>
+                <view class="iconfont cart"></view>
+              </view>
             </view>
           </view>
         </view>
-        
-      </view>
+      </scroll-view>
       
     </view>
   </view>
