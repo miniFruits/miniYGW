@@ -111,7 +111,14 @@
      fruits="{{fruits}}"
      ></recomendItem> -->
 <recomend>
-  <recomendItem fruits="{{fruits}}"></recomendItem>
+  <recomendItem 
+  fruits="{{fruits}}"
+  imgsrc= "{{imgSrcs[0].bgImg1}}"
+  ></recomendItem>
+  <recomendItem 
+  fruits="{{vegetables}}"
+  imgsrc= "{{imgSrcs[1].bgImg1}}"
+  ></recomendItem>
 </recomend>
 
 

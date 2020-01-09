@@ -10,7 +10,8 @@ Component({
     }
   },
   properties: {
-    fruits:Array
+    fruits:Array,
+    imgsrc:String
   },
 
   /**

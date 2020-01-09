@@ -1,0 +1,11 @@
+<view class="recomend-day">
+   <image src="{{imgsrc}}" class="bg-img"></image>
+   <view class="more">更多》</view>
+   <view class="recom-inner" >
+     <view class="item" wx:for = "{{fruits}}" wx:key="*this">
+    <image src="{{item.bseGoodsEo.goodsImg}}"></image>
+    <text class="title">{{item.goodsName}}</text>
+    <text class="subtitle">￥{{item.mallPrice}}</text>
+  </view>
+   </view>
+</view>
