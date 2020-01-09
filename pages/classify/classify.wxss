@@ -1,4 +1,4 @@
-/* pages/classification/classification.wxss */
+
 page{
   height: 100%;
 }
@@ -280,3 +280,27 @@ page{
   border-radius: 50%;
 }
 
+.list-toast{
+  width: 195.8rpx;
+  height: 66rpx;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  bottom: 40rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: #fff;
+  font-size: 22.75rpx;
+  background-color: hsla(0,0%,40%,.88);
+  transition: 3s;
+}
+
+.list-toast .word{
+  width: 195.8rpx;
+  height: 66rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

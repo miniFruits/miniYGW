@@ -55,7 +55,7 @@
               </view>
               <view class="price-cart flx">
                 <view class="goods-price flx-1">￥{{item.salePrice}}</view>
-                <view class="iconfont cart"></view>
+                <view class="iconfont cart" data-tid="{{item.id}}" data-price="{{item.salePrice}}" data-name="{{item.goodsName}}" data-img="{{item.bigImg}}" data-goodsstandard="{{item.goodsStandard}}" catchtap="addcart"></view>
               </view>
             </view>
           </view>
@@ -64,5 +64,11 @@
       
     </view>
   </view>
-  
+  <!-- 轻提示 -->
+ 
 </view>
+ <view class="{{noneflag==='flex'?'list-toast animated fadeIn':'list-toast animated fadeOut'}}" style="display:{{noneflag}};">
+    <view class="word">
+      加入购物车成功
+    </view>
+  </view>

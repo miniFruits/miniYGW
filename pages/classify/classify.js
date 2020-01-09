@@ -1,9 +1,6 @@
 
 Component({
-
-  /**
-   * 页面的初始数据
-   */
+  //页面的初始数据
   data: {
     biglist:[],
     leftlist:[],
@@ -13,13 +10,18 @@ Component({
     titlexindex:0,
     contentlist:[],
     tid:'0200000000',
-    allid:'0200000000'
+    allid:'0200000000',
+    goodslist:[],
+    noneflag:'none',
+    timer:null
   },
 
   lifetimes:{
     attached:function(){
-      this.loadfirst()
-      this.loadcontent()
+      wx.showTabBar({})
+      this.loadfirst()      //加载首屏ID
+      this.loadcontent()    //加载具体内容
+      this.getgoodlist()    //获取本地的购物车数据
     }
   },
 
@@ -32,7 +34,6 @@ Component({
           this.setData({
             biglist: result.data.list
           })
-          // console.log(this.data.biglist)
           this.leftfilter()
           this.titlefilter()
         }
@@ -47,6 +48,7 @@ Component({
           this.setData({
             contentlist:result.data.list
           })
+          console.log(result.data.list)
         }
       })
     },
@@ -129,7 +131,76 @@ Component({
       wx.navigateTo({
         url: '/component/Search/Search'
       })
+    },
+    getgoodlist(){    //获取本地的购物车数据
+      wx.getStorage({
+        key: 'goodslist',
+        success:(result)=>{
+          this.setData({
+            goodslist: result.data
+          })
+        },
+      })
+    },
 
+    addcart(e){    //添加到购物车
+      this.setData({
+        timer:null
+      })
+      let newgoodslist = this.data.goodslist;   //拿到整体的购物车数据
+      let flag=0;
+      let sign=0;
+      let id = e.currentTarget.dataset.tid;
+      let name = e.currentTarget.dataset.name;
+      let price = e.currentTarget.dataset.price;
+      let img = e.currentTarget.dataset.img;
+      let goodsstandard = e.currentTarget.dataset.goodsstandard;
+
+      for(var i=0;i<newgoodslist.length;i++){   //去重循环比较
+        if (id!=newgoodslist[i].id){
+          flag++;   //没有重复则++
+        }else{
+          sign=i;   //找到重复的那个元素的下标
+        }
+      }
+
+      if (flag === newgoodslist.length){    //判断比较次数，相等则没有重复
+        let newgoods = {
+          id: id,
+          name: name,
+          price: price,
+          img: img,
+          goodsstandard: goodsstandard,
+          num:1,
+        }
+        newgoodslist.push(newgoods);
+        this.setData({
+          goodslist: newgoodslist
+        })
+        wx.setStorage({
+          key: 'goodslist',
+          data: newgoodslist
+        })
+      }else{
+        newgoodslist[sign].num++;
+        this.setData({
+          goodslist: newgoodslist
+        })
+        wx.setStorage({
+          key: 'goodslist',
+          data: newgoodslist
+        })
+      }
+      //轻提示
+      this.setData({
+        noneflag: 'flex'
+      })
+      let timer = this.data.timer;
+      timer=setTimeout(()=>{
+        this.setData({
+          noneflag: 'none'
+        })
+      },3000)
     }
   }
 })
