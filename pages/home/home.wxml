@@ -104,3 +104,15 @@
   ></activeShow>
 </view>
 
+<!-- 新鲜水果 -->
+
+    
+  <!-- <recomendItem
+     fruits="{{fruits}}"
+     ></recomendItem> -->
+<recomend>
+  <recomendItem fruits="{{fruits}}"></recomendItem>
+</recomend>
+
+
+    

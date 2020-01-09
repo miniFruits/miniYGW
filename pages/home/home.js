@@ -13,7 +13,10 @@ Page({
      mouth_img:'',
      cxjList:null,
      hotList:null,
-     yellow:String
+     yellow:String,
+     fruits:Array,
+     imgSrcs:Array,
+     vegetables:Array
   },
 
   /**
@@ -111,6 +114,33 @@ Page({
           console.log(result.data.list[0].img)
           this.setData({
             yellow: result.data.list[0].img
+          })
+        }
+      }),
+      wx.request({
+      url: 'http://api.egu365.com/news/adviseGoods?seat=96',
+        success: (result) => {
+          console.log(result.data.list)
+          this.setData({
+            fruits: result.data.list
+          })
+        }
+      }),
+      wx.request({
+        url: 'http://api.egu365.com/news/adviseSeats?type=10',
+        success: (result) => {
+          console.log(result.data.list)
+          this.setData({
+            imgSrcs: result.data.list
+          })
+        }
+      }),
+      wx.request({
+        url: 'http://api.egu365.com/news/adviseGoods?seat=97',
+        success: (result) => {
+          console.log(result.data.list)
+          this.setData({
+            vegetables: result.data.list
           })
         }
       })

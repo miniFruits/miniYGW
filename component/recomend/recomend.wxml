@@ -1,0 +1,22 @@
+
+
+<view class="recomend-day">
+ <image 
+    src="{{item.bgImg1}}"
+    class="bg-img"
+    ></image>
+
+      <view class="more">
+      查看更多》
+      </view>  
+    <view class="recom-inner">
+      <block wx:for="{{fruits}}" wx:key="*this">
+        <view class="item">
+            <image src="{{item.bseGoodsEo.goodsImg}}"></image>
+            <text class="title">{{item.goodsName}}</text>
+            <text class="subtitle">￥{{item.mallPrice}}</text>
+        </view>
+        </block>
+      </view>
+
+    </view>

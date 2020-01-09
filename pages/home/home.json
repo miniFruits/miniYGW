@@ -1,6 +1,8 @@
 {
   "usingComponents": {
     "mp-searchbar": "/miniprogram_npm/weui-miniprogram/searchbar/searchbar",
-     "activeShow":"/component/activeShow/activeShow"
+     "activeShow":"/component/activeShow/activeShow",
+     "recomend":"/component/recomendBox/recomendBox",
+     "recomendItem":"/component/recomend/recomend"
   }
 }
