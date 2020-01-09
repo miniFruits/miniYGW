@@ -1,0 +1,19 @@
+<!--component/GussetLike.wxml-->
+<view class="gusselike">
+<image class="guss_like_img" src="http://m.egu365.com/img/guess_you_like.jpg"></image>
+<view class="gusse_like_list">
+
+<view class="gusse_like_item" wx:for="{{list}}" wx:key="{{id}}">
+  <image class='gusse_like_item_img'src="{{item.bigImg}}">
+  </image>
+  <view class="gusse_like_item_title">{{item.goodsName}}</view>
+<view class="gusse_like_item_info">
+<view class="price_wrap">
+<text class="price_tag">￥</text>
+<text class="price price_tag">{{item.salePrice}}</text>
+</view>
+<text class="cart_add iconfont"></text>
+</view>
+</view>
+</view>
+</view>

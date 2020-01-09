@@ -6,9 +6,10 @@
     "pages/cart/cart",
     "pages/user/user",
     "pages/details/details"
-
   ],
+
   "tabBar": {
+    "selectedColor": "#fc0909", 
     "list": [
       {
         "pagePath": "pages/home/home",

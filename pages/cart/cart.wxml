@@ -1,52 +1,26 @@
 <!--pages/cart/cart.wxml-->
+<!-- 购物车头部 -->
 <view class="carthead">
-<view class="cartheadleft">1</view>
+<view class="cartheadleft">
+<image src="http://sh1.hoopchina.com.cn/fis_static/shihuomobile/static/common/widget/header/head_back_b142dc1.png"
+></image>
+</view>
  <view class="cartheadmid">购物车</view>
-<view class="cartheadright">2</view>
+<view class="cartheadright">  <image src="//sh1.hoopchina.com.cn/fis_static/shihuomobile/static/common/widget/header/head_list_4a4f511.png"></image></view>
 </view>
 <view class="cart_content">
-
+<!--当购物车为空时-->
 <view class="empty">
    <view class="cartimgwrap">
      <image  class="cartimg" src="http://m.egu365.com/img/cart.svg"></image>
     <view class="imgtag">去逛逛</view>
    </view>
 </view>
+<my_gussetLikeList></my_gussetLikeList>
 
-
-<view class="gusselike">
-<image class="guss_like_img" src="http://m.egu365.com/img/guess_you_like.jpg"></image>
-<view class="gusse_like_list">
-
-<view class="gusse_like_item">
-  <image class='gusse_like_item_img'src="http://oss.egu365.com/upload/184459badbde48109d2acd3314115d0e.jpg">
-  </image>
-  <view class="gusse_like_item_title">和の鳗A级蒲烧鳗鱼鳗鱼碎肉200g</view>
-<view class="gusse_like_item_info">
-<view class="price_wrap">
-<text class="price_tag">￥</text>
-<text class="price price_tag">68.00</text>
-</view>
-<text class="cart_add"></text>
-</view>
-</view>
-
-<view class="gusse_like_item">
-  <image class='gusse_like_item_img'src="http://oss.egu365.com/upload/184459badbde48109d2acd3314115d0e.jpg">
-  </image>
-  <view class="gusse_like_item_title">和の鳗A级蒲烧鳗鱼鳗鱼碎肉200g</view>
-<view class="gusse_like_item_info">
-<view class="price_wrap">
-<text class="price_tag">￥</text>
-<text class="price price_tag">68.00</text>
-</view>
-<text class="cart_add"></text>
-</view>
-</view>
-
-</view>
-</view>
-<view class="cart_bottom">
+<!-- 底部结算 -->
+<!-- <view class="cart_bottom">
+<text class="allselect "></text>
  <view class="cart_bottom_left">
  全选
  </view>
@@ -60,5 +34,5 @@
  <view class="cart_bottom_right">
  去结算
  </view>
-</view>
+</view> -->
 </view>
