@@ -11,21 +11,15 @@
     </view>
     <view class="nav-r">
       <view class="icon icon-omit lucency">
-       <view class="iconfont more"></view>
+        <view class="iconfont more"></view>
       </view>
     </view>
   </view>
   <!-- 内容区 -->
   <view class="content-nt">
-  <!-- 轮播图 -->
+    <!-- 轮播图 -->
     <view class="van-swipe">
-       <swiper 
-        indicator-dots="{{indicatorDots}}"
-        autoplay="{{autoplay}}" 
-        interval="{{interval}}" 
-        duration="{{duration}}"
-        class="banner"
-       >
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="banner">
         <block wx:for="{{background}}" wx:key="*this">
           <swiper-item>
             <image src="{{item.imgSrc}}" class="img-box"></image>
@@ -46,7 +40,7 @@
         </view>
       </view>
       <view class="self-support">
-        自营 
+        自营
         <view class="morrow">次日达</view>
         <view class="express">深圳平湖仓</view>
       </view>
@@ -64,7 +58,7 @@
         </view>
       </view>
       <!-- 遮罩 -->
-      <view class="eject van-popup van-popup--bottom" style="z-index: 2029;display:{{youhui}}"> 
+      <view class="eject van-popup van-popup--bottom" style="z-index: 2029;display:{{youhui}}">
         <view class="eject-nav flx">
           <view class="name flx-1">优惠</view>
           <view class="close-bt">
@@ -92,7 +86,6 @@
     <view class="margin-bottom flx">
       <view class="column-name">已选</view>
       <view class="chosen">150g，1袋</view>
-    
     </view>
     <!-- 送至 -->
     <view class="column flx">
@@ -105,7 +98,63 @@
           <text>福田区</text>
         </view>
         <view class="xianhuo">现货</view>
-      </view>      
+      </view>
+    </view>
+    <!-- 重量 -->
+    <view class="column flx">
+      <view class="column-name">重量</view>
+      <view class="weight">170g/袋</view>
+    </view>
+    <!-- 运费 -->
+    <view class="margin-bottom flx">
+      <view class="column-name">运费</view>
+      <view class="send-fee">
+        <view>根据地区计算</view>
+        <view>全场满199元包邮（限深圳市），单笔不足运费8元起， 生鲜类仅限深圳同城！</view>
+      </view>
+    </view>
+    <!-- 提示 -->
+    <view class="margin-bottom flx">
+      <view class="column-name">提示</view>
+      <view class="send-fee">
+        <view>产品图片及其描述仅作参考，请您以收到的实物为准！</view>
+        <view>
+          收货后商品如有损坏，请您当场拍下图片，并保留相关商品，
+                在24小时之内及时联系售后客服，以便我们给您更换完好的
+                商品！如非质量问题，概不退换！
+        </view>
+      </view>
+    </view>
+    <!-- 底部导航 -->
+    <view class="goods-depict van-tabs van-tabs--line">
+      <!-- <view class="van-tabs__wrap van-hairline--top-bottom">
+        <view class="van-tabs__nav van-tabs__nav--line">
+          <view class="van-tabs__line"></view>
+          <view class="van-tab van-tab--active">
+            <view class="van-ellipsis">商品介绍</view>
+          </view>
+           <view class="van-tab">
+            <view class="van-ellipsis">规格参数</view>
+          </view>
+           <view class="van-tab">
+            <view class="van-ellipsis">售后保障</view>
+          </view>
+        </view>
+      </view> -->
+      <Tabbar></Tabbar>
+      <!-- <view class="van-tabs__content">
+        <view class="van-tab__pane">
+          <image src="http://oss.egu365.com/upload/398e254672fa41bc920d085dab3ee663.jpg"></image>
+           <image src="http://oss.egu365.com/upload/b5ff21bdab744655b8b57b663daadc4e.jpg"></image>
+            <image src="http://oss.egu365.com/upload/caef1dbe43e846fbb01791072c15cdf4.jpg"></image>
+        </view>
+        <view class="van-tab__pane">
+         22222
+        </view>
+        <view class="van-tab__pane">
+         3333333
+        </view>
+      </view> -->
     </view>
   </view>
   <!-- 底部导航 -->
