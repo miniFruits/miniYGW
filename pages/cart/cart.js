@@ -69,25 +69,9 @@ Page({
       url: '/pages/home/home',
     })
   },
-  handleclassify() {
-    wx.switchTab({
-      url: '/pages/classify/classify',
-    })
-  },
-  handlezhai() {
-    wx.navigateTo({
-      url: '/pages/homedelivery/homedelivery',
-    })
-  },
-  handleprofile() {
-    console.log(1)
-    wx.switchTab({
-      url: "/pages/user/user",
-    })
-  },
-  handleshow(){
+  handleshow() {
     this.setData({
-      mask:"block",
+      mask: "block",
     })
   },
   handlenone(){

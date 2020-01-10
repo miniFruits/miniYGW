@@ -77,7 +77,7 @@ Component({
     },
     handledetails(){
       wx.navigateTo({
-        url: '/pages/details/details',
+        url: '/pages/details/details?tid=' 
       })
 
     },
