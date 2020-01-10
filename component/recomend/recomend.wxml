@@ -8,4 +8,5 @@
     <text class="subtitle">￥{{item.mallPrice}}</text>
   </view>
    </view>
+   <text class="cart_add iconfont" catchtap="handlecarts"></text>
 </view>
