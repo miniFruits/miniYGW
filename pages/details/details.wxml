@@ -7,7 +7,7 @@
       </view>
     </view>
     <view class="nav-title">
-      <text>和の鳗A级蒲烧鳗鱼中腹--150g</text>
+      <text>{{info.goodsName}}</text>
     </view>
     <view class="nav-r">
       <view class="icon icon-omit lucency">
@@ -30,7 +30,7 @@
     <!-- 价格信息 -->
     <view class="price-name">
       <view class="price-lab-collect flx">
-        <view class="price">78.00</view>
+        <view class="price">{{info.mallPrice}}</view>
         <view class="lab flx-1 ellipsis"></view>
         <view class="collect">
           <view class="icon icon-collect">
@@ -44,7 +44,7 @@
         <view class="morrow">次日达</view>
         <view class="express">深圳平湖仓</view>
       </view>
-      <view class="goods-name flx">和の鳗A级蒲烧鳗鱼中腹--150g 段装 黄金部位 糯感极强 细腻饱满 日本优质鳗鱼 地道蒲烧 星级美味 加热即享</view>
+      <view class="goods-name flx">{{info.goodsName}} {{info.param2}}</view>
     </view>
     <!-- 优惠 -->
     <view class="goods-promotion flx">
@@ -103,7 +103,7 @@
     <!-- 重量 -->
     <view class="column flx">
       <view class="column-name">重量</view>
-      <view class="weight">170g/袋</view>
+      <view class="weight">{{info.grossWeight}}/{{info.goodsUnit}}</view>
     </view>
     <!-- 运费 -->
     <view class="margin-bottom flx">
@@ -158,5 +158,56 @@
     </view>
   </view>
   <!-- 底部导航 -->
-  <view class="van-goods-action"></view>
+  <view class="bg-w van-goods-action">
+    <view class="van-goods-action-mini-btn van-hairline">
+      <image class="van-icon" src="/assets/images/home.png"></image>
+      首页
+    </view>
+    <view class="van-goods-action-mini-btn van-hairline">
+      <image class="van-icon" src="/assets/images/classify.png"></image>
+      分类
+    </view>
+    <view class="van-goods-action-mini-btn van-hairline">
+      <view class="van-icon">
+        <image class="" src="/assets/images/cart.png"></image>
+        <view class="van-info">0</view>
+      </view>
+      购物车
+    </view>
+    <button class="van-button van-button--warning van-button--large van-button--square van-goods-action-big-btn">
+      <view class="van-button__text">加入购物车</view>
+    </button>
+    <button class="van-button van-button--danger van-button--large van-button--square van-goods-action-big-btn">
+      <view class="van-button__text">立即购买</view>
+    </button>
+  </view>
+  <!-- 加购 -->
+  <view class="sku van-popup van-popup--bottom">
+    <view class="van-icon van-icon-close sku-close">
+      <view class="iconfont close" bindtap="youhuiHidden"></view>
+    </view>
+    <view class="sku-goods flx">
+      <view class="sku-img">
+        <image src="http://oss.egu365.com/upload/1aab5068651641208e15c14145a388e9.jpg"></image>
+      </view>
+      <view class="flx-1 sku-pn">
+        <view class="sku-name">和の鳗A级蒲烧鳗鱼中腹--150g</view>
+        <view class="sku-price">78.00</view>
+      </view>
+    </view>
+    <view class="column flx">
+      <view class="column-name">规格</view>
+      <view class="flx standard flx-wrap-w">
+        <view class="ellipsis sku-act sku-active">150g</view>
+      </view>
+    </view>
+    <view class="margin-bottom flx">
+      <view class="column-name flx-1">数量</view>
+      <view class="van-stepper">
+        <view class="van-stepper__minus van-stepper__minus--disabled"></view>
+        <input type="number" class="van-stepper__input"></input>
+        <view class="van-stepper__plus"></view>
+      </view>
+    </view>
+  </view>
 </view>
