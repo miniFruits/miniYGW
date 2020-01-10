@@ -11,6 +11,36 @@ ontap="handleshow"
 ></image></view>
 </view>
 <view class="cart_content">
+<!-- 当购物车不为空时 -->
+<view class="cart-buy-item">
+  <view class="cart-buy-item-title">
+   <text class="cart-buy-item-title-text">自营商品</text> 
+  </view>
+  <view class="cart-buy-item-content">
+  <view class="cart-buy-item-content-singleseletor"></view>
+  
+   <image class="cart-buy-item-content-img"            src="http://oss.egu365.com/upload/6acc7e790a4a49ab882795337b9f3c5d.jpg"></image>
+   <view class="cart-buy-item-content-info">
+    <view class="cart-buy-item-content-info-title">
+   SWEET番茄350g*4礼盒装
+   </view>
+   <view class="cart-buy-item-content-info-tag">
+    <text class="cart-buy-item-content-info-tag-1">次日达</text>
+    <text class="cart-buy-item-content-info-tag-2">1400g</text>
+   </view>
+   <view class="cart-buy-item-content-info-price">
+     <text class="cart-buy-item-content-info-price-tag">￥</text>
+     <text class="cart-buy-item-content-info-price-num">79.00</text>
+     <view class="cart-buy-item-content-info-price-btn">
+     <text class="cart-buy-item-content-info-price-btn-text">-</text>
+     <text class="cart-buy-item-content-info-price-btn-text">1</text>
+     <text class="cart-buy-item-content-info-price-btn-text">+</text>
+     </view>
+   </view>
+   </view>
+  </view>
+  
+</view>
 <!--当购物车为空时-->
 <view class="empty">
    <view class="cartimgwrap">
@@ -40,23 +70,5 @@ ontap="handleshow"
  </view>
 </view> 
 <view class="cartmask" style="display:{{mask}}" ontap="handlenone">
-    <view class="cart_mask_list">
-      <view class="cart_mask_list_item" ontap="handlepage">
-      <view class='cart_mask_list_item_img_wrap'>
-      <image class='cart_mask_list_item_img' src="../../assets/images/home.png"></image>
-      </view>
-      首页</view>
-      <view class="cart_mask_list_item" ontap="handleclassify"><view class='cart_mask_list_item_img_wrap'>
-      <image class='cart_mask_list_item_img' src="../../assets/images/classify.png"></image>
-      </view>分类</view>
-      <view class="cart_mask_list_item" ontap="handlezhai"><view class='cart_mask_list_item_img_wrap'>
-      <image class='cart_mask_list_item_img' src="../../assets/images/card.png"></image>
-      </view>宅配</view>
-      <view class="cart_mask_list_item"><view class='cart_mask_list_item_img_wrap'>
-      <image class='cart_mask_list_item_img' src="../../assets/images/cart.png"></image>
-      </view>购物车</view>
-      <view class="cart_mask_list_item" ontap="handleprofile"><view class='cart_mask_list_item_img_wrap'>
-      <image class='cart_mask_list_item_img' src="../../assets/images/my.png"></image>
-      </view>我的</view>
-    </view>
+   <Mask_list></Mask_list>
 </view>

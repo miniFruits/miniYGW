@@ -1,0 +1,20 @@
+<!--component/Sidenav/Sidenav.wxml-->
+ <view class="cart_mask_list">
+      <view class="cart_mask_list_item" ontap="handlepage">
+      <view class='cart_mask_list_item_img_wrap'>
+      <image class='cart_mask_list_item_img' src="../../assets/images/home.png"></image>
+      </view>
+      首页</view>
+      <view class="cart_mask_list_item" ontap="handleclassify"><view class='cart_mask_list_item_img_wrap'>
+      <image class='cart_mask_list_item_img' src="../../assets/images/classify.png"></image>
+      </view>分类</view>
+      <view class="cart_mask_list_item" ontap="handlezhai"><view class='cart_mask_list_item_img_wrap'>
+      <image class='cart_mask_list_item_img' src="../../assets/images/card.png"></image>
+      </view>宅配</view>
+      <view class="cart_mask_list_item"><view class='cart_mask_list_item_img_wrap'>
+      <image class='cart_mask_list_item_img' src="../../assets/images/cart.png"></image>
+      </view>购物车</view>
+      <view class="cart_mask_list_item" ontap="handleprofile"><view class='cart_mask_list_item_img_wrap'>
+      <image class='cart_mask_list_item_img' src="../../assets/images/my.png"></image>
+      </view>我的</view>
+    </view>

@@ -31,6 +31,84 @@
 background: #f0f2f5;
 height: 100%;
 }
+.cart-buy-item{
+  width: 100%;
+  background: #fff;
+}
+.cart-buy-item-title{
+  padding: 24rpx 15rpx;
+  height: 96rpx;
+  box-sizing: border-box;
+  background: #f00;
+}
+.cart-buy-item-title-text{
+  padding: 0 0 0 18.750rpx;
+}
+.cart-buy-item-content{
+  height: 244.2rpx;
+  padding: 12rpx 12rpx 12rpx 0;
+  display: flex;
+  align-items: center;
+}
+.cart-buy-item-content-singleseletor{
+  width:79.5rpx;
+  height: 224.2rpx;
+  background: #ff0;
+}
+.cart-buy-item-content-info{
+  flex: 1;
+  background: #00f;
+}
+.cart-buy-item-content-img{
+  height: 220.2rpx;
+  width: 220.2rpx;
+}
+.cart-buy-item-content-info-title{
+  height: 78.6rpx;
+  color: #323232;
+  font-size: 29.4rpx;
+  background: #f0f;
+}
+.cart-buy-item-content-info-tag{
+  padding: 12rpx 0 0 0;
+}
+.cart-buy-item-content-info-tag-1{
+  color: #fff;
+  background: #E30408;
+  font-size:19.2rpx; 
+  padding: 2rpx 9rpx;
+  margin: 0 12rpx 0 0;
+  border-radius: 10rpx;
+}
+.cart-buy-item-content-info-tag-2{
+  color: #fff;
+  background: #ccc;
+  font-size:19.2rpx; 
+  padding: 2rpx 9rpx;
+  margin: 0 12rpx 0 0;
+  border-radius: 10rpx;
+}
+.cart-buy-item-content-info-price{
+  display: flex;
+  align-items: center;
+}
+.cart-buy-item-content-info-price-tag{
+  color: #f00;
+}
+.cart-buy-item-content-info-price-num{
+  color: #f00;
+}
+.cart-buy-item-content-info-price-btn{
+  display: flex;
+}
+.cart-buy-item-content-info-price-btn-text{
+  width:60rpx;
+  height: 52.5rpx;
+  background: #f2F3F5;
+  display: block;
+  text-align: center;
+  margin: 19.rpx 1.9rpx 1.9rpx 0;
+}
 .cart_content{
   position: relative;
   background: #f0f2f5;
@@ -123,41 +201,4 @@ height: 100%;
   background: rgba(0, 0, 0, 0.4);
   height: 100%;
   width: 100%;
-}
-.cart_mask_list{
-  width: 210rpx;
-  height: 408.1rpx;
-  background: #fff;
-  position: absolute;
-  right: 20rpx;
-  top: 102.5rpx;
-}
-.cart_mask_list::before{
-  content: " ";
-  position: absolute;
-  top: -32rpx;
-  right: 10rpx;
-  width: 0;
-  height: 0;
-  border: 16rpx solid ;
-  border-color: transparent transparent #fff transparent;
-}
-.cart_mask_list_item_img_wrap{
-  display: flex;
-  width: 72rpx;
-  align-items: center;
-  }
-.cart_mask_list_item_img{
-  width: 36rpx;
-  height: 36rpx;
-  margin: 0 18rpx; 
-}
-.cart_mask_list_item{
- height: 81.62rpx; 
- display: flex;
- vertical-align: center;
- line-height: 81.62rpx;
- font-size: 26.4rpx;
- color: #666;
- border-bottom: 2rpx solid #eee;
 }
