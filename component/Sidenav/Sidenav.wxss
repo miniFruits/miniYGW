@@ -6,6 +6,7 @@
   position: absolute;
   right: 20rpx;
   top: 102.5rpx;
+  z-index: 2029;
 }
 .cart_mask_list::before{
   content: " ";

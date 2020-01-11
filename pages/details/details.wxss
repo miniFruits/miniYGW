@@ -337,8 +337,8 @@
   color: #383838;
   font-size: 24rpx;
 }
-.diqu > text {
-  padding-right: 11rpx;
+.diqu {
+  display: flex;
 }
 .xianhuo {
   color: #ff0f0f;
@@ -520,7 +520,6 @@
 /* 加购 */
 .sku {
   background-color: #fff;
-  z-index: 2003;
 }
 .van-popup--bottom {
   width: 100%;
@@ -577,35 +576,35 @@
 .column,
 .margin-bottom {
   background-color: #fff;
-  padding: 0.76rem 0.86205rem;
-  line-height: 1.4rem;
+  padding: 21rpx 24rpx;
+  line-height: 40rpx;
 }
 .sku .column-name {
   color: #3a3a3a;
 }
 .standard {
-  font-size: 0.97rem;
-  padding-top: 1.5rem;
+  font-size: 27.2rpx;
+  padding-top: 42rpx;
 }
 .flx-wrap-w {
   flex-wrap: wrap;
 }
 .standard .sku-act {
-  max-width: 22rem;
-  padding: 0.2rem 0.9rem;
+  max-width: 616rpx;
+  padding: 5.6rpx 25rpx;
   margin-right: 1rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 28rpx;
   background-color: #f0f0f0;
-  border-radius: 0.4rem;
+  border-radius: 11rpx;
 }
 .standard .sku-active {
   color: #fff;
   background-color: #ff3434;
 }
-.sku .margin-bottom[data-v-718e2bd4] {
-  margin-bottom: 1rem;
+.sku .margin-bottom {
+  margin-bottom: 28rpx;
 }
-.sku .column-name[data-v-718e2bd4] {
+.sku .column-name {
   color: #3a3a3a;
 }
 .van-stepper {
@@ -613,18 +612,18 @@
   display: flex;
 }
 .van-stepper__minus {
-  border-radius: 0.25rem 0 0 0.25rem;
+  border-radius: 7rpx 0 0 7rpx;
 }
 .van-stepper__minus,
 .van-stepper__plus {
-  width: 20px;
-  height: 20px;
+  width: 49rpx;
+  height: 49rpx;
   box-sizing: border-box;
   background-color: #f2f3f5;
   border: 0;
-  margin: 0.0625rem;
+  margin: 1.75rpx;
   position: relative;
-  padding: 0.3125rem;
+  padding: 8.75rpx;
   vertical-align: middle;
 }
 .van-stepper__minus--disabled,
@@ -641,8 +640,8 @@
   right: 0;
   bottom: 0;
   background-color: #666;
-  width: 0.5625rem;
-  height: 0.0625rem;
+  width: 15rpx;
+  height: 3rpx;
 }
 .van-stepper__plus::after {
   content: "";
@@ -653,22 +652,21 @@
   right: 0;
   bottom: 0;
   background-color: #666;
-  width: 0.0625rem;
-  height: 0.5625rem;
+  width: 3rpx;
+  height: 15rpx;
 }
 .van-stepper__input {
-  width: 1.875rem;
-  height: 1.625rem;
-  padding: 0.0625rem;
+  width: 52.5rpx;
+  height: 45.5rpx;
+  padding: 1.75rpx;
   border: 0;
-  margin: 0.0625rem;
+  margin: 1.75rpx;
   background-color: #f2f3f5;
-  border-width: 0.0625rem 0;
+  border-width: 1.75rpx 0;
   border-radius: 0;
   box-sizing: content-box;
   color: #666;
-  font-size: 0.875rem;
+  font-size: 24.5rpx;
   vertical-align: middle;
   text-align: center;
-  -webkit-appearance: none;
 }

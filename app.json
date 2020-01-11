@@ -6,7 +6,6 @@
     "pages/user/user",
     "pages/details/details",
     "pages/cart/cart",
-   
     "pages/homedelivery/homedelivery"
   ],
   "tabBar": {
