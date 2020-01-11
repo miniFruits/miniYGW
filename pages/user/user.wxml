@@ -14,12 +14,12 @@
     <view class="content-nt">
       <view class="user-wrap">
         <image src="../../assets/images/user_bg.png" class="bg"></image>
-        <view class="user-ht flx">
+        <view class="user-ht flx" bindtap="handleTap">
           <image src="../../assets/images/not_user.jpg" class="us"></image>
-          <view class="user-t flx-l">
+          <view  class="user-t flx-l">
             <view class="greet">晚上好</view>
             <view class="ellipsis">点击登录/注册用户</view>
-          </view>
+          </view >
         </view>
       </view>
       <CardView></CardView>
