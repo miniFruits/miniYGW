@@ -1,6 +1,8 @@
 {
   "component": true,
   "usingComponents": {
-    "Tabbar": "/component/Tabbar/Tabbar"
+    "Tabbar": "/component/Tabbar/Tabbar",
+    "CityPicker":"/component/CityPicker/CityPicker",
+    "SideNav":"/component/Sidenav/Sidenav"
   }
 }

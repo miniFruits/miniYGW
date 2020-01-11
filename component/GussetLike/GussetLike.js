@@ -75,9 +75,9 @@ Component({
         scrollTop: event.detail.scrollTop
       });
     },
-    handledetails(){
+    handledetails(e){
       wx.navigateTo({
-        url: '/pages/details/details?tid=' 
+        url: '/pages/details/details?tid=' + e.currentTarget.dataset.tid
       })
 
     },

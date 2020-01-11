@@ -1,9 +1,17 @@
-<view class="goods-detail">
+<wxs module="we">
+  var toFixed = function (value) {
+  return parseFloat(value).toFixed(2);
+  }
+  module.exports = {
+    toFixed :toFixed
+  }
+</wxs>
+<view class="goods-detail"> 
   <!-- 导航 -->
   <view class="nav">
     <view class="nav-l">
       <view class="icon icon-zuo lucency">
-        <view class="iconfont back"></view>
+        <view class="iconfont back" bindtap="back"></view>
       </view>
     </view>
     <view class="nav-title">
@@ -11,10 +19,11 @@
     </view>
     <view class="nav-r">
       <view class="icon icon-omit lucency">
-        <view class="iconfont more"></view>
+        <view class="iconfont more" bindtap="navShow"></view>
       </view>
     </view>
   </view>
+  <SideNav style="display:{{nav}}"></SideNav>
   <!-- 内容区 -->
   <view class="content-nt">
     <!-- 轮播图 -->
@@ -30,7 +39,7 @@
     <!-- 价格信息 -->
     <view class="price-name">
       <view class="price-lab-collect flx">
-        <view class="price">{{info.mallPrice}}</view>
+        <view class="price">{{we.toFixed(info.mallPrice)}}</view>
         <view class="lab flx-1 ellipsis"></view>
         <view class="collect">
           <view class="icon icon-collect">
@@ -72,7 +81,7 @@
           </view>
         </view>
       </view>
-      <view class="van-overlay" style="z-index: 2028;display:{{youhui}}" bindtap="youhuiHidden"></view>
+      <view class="van-overlay" style="z-index: 2028;display:{{mask}}" bindtap="youhuiHidden"></view>
     </view>
     <!-- 时效 -->
     <view class="margin-bottom flx">
@@ -83,9 +92,9 @@
       </view>
     </view>
     <!-- 已选 -->
-    <view class="margin-bottom flx">
+    <view class="margin-bottom flx" bindtap="guigeShow">
       <view class="column-name">已选</view>
-      <view class="chosen">150g，1袋</view>
+      <view class="chosen">{{choosedValue}}，{{num}}{{info.goodsUnit}}</view>
     </view>
     <!-- 送至 -->
     <view class="column flx">
@@ -93,9 +102,7 @@
       <view class="check-delivery send-area">
         <view class="diqu">
           <text class="iconfont zuobiao"></text>
-          <text>广东</text>
-          <text>深圳市</text>
-          <text>福田区</text>
+            <CityPicker></CityPicker>
         </view>
         <view class="xianhuo">现货</view>
       </view>
@@ -159,15 +166,15 @@
   </view>
   <!-- 底部导航 -->
   <view class="bg-w van-goods-action">
-    <view class="van-goods-action-mini-btn van-hairline">
+    <view class="van-goods-action-mini-btn van-hairline" bindtap="toHome">
       <image class="van-icon" src="/assets/images/home.png"></image>
       首页
     </view>
-    <view class="van-goods-action-mini-btn van-hairline">
+    <view class="van-goods-action-mini-btn van-hairline" bindtap="toClassify">
       <image class="van-icon" src="/assets/images/classify.png"></image>
       分类
     </view>
-    <view class="van-goods-action-mini-btn van-hairline">
+    <view class="van-goods-action-mini-btn van-hairline"bindtap="toCart">
       <view class="van-icon">
         <image class="" src="/assets/images/cart.png"></image>
         <view class="van-info">0</view>
@@ -175,38 +182,50 @@
       购物车
     </view>
     <button class="van-button van-button--warning van-button--large van-button--square van-goods-action-big-btn">
-      <view class="van-button__text">加入购物车</view>
+      <view class="van-button__text" bindtap="guigeShow">加入购物车</view>
     </button>
     <button class="van-button van-button--danger van-button--large van-button--square van-goods-action-big-btn">
-      <view class="van-button__text">立即购买</view>
+      <view class="van-button__text" bindtap="guigeShow">立即购买</view>
     </button>
   </view>
   <!-- 加购 -->
-  <view class="sku van-popup van-popup--bottom">
+  <view class="sku van-popup van-popup--bottom" style="z-index: 2029;display:{{guige}}">
     <view class="van-icon van-icon-close sku-close">
       <view class="iconfont close" bindtap="youhuiHidden"></view>
     </view>
     <view class="sku-goods flx">
       <view class="sku-img">
-        <image src="http://oss.egu365.com/upload/1aab5068651641208e15c14145a388e9.jpg"></image>
+        <image src="{{background[0].imgSrc}}"></image>
       </view>
       <view class="flx-1 sku-pn">
-        <view class="sku-name">和の鳗A级蒲烧鳗鱼中腹--150g</view>
-        <view class="sku-price">78.00</view>
+        <view class="sku-name">{{info.goodsName}}</view>
+        <view class="sku-price">{{we.toFixed(info.mallPrice)}}</view>
       </view>
     </view>
     <view class="column flx">
       <view class="column-name">规格</view>
       <view class="flx standard flx-wrap-w">
-        <view class="ellipsis sku-act sku-active">150g</view>
+        <block wx:for="{{guigeList}}">
+          <view class="ellipsis sku-act  {{choosedIndex==index?'sku-active':''}}" bindtap="choose" data-index="{{index}}" data-value="{{item.goodsStandard}}">
+            {{item.goodsStandard}}
+          </view>
+        </block>
       </view>
     </view>
     <view class="margin-bottom flx">
       <view class="column-name flx-1">数量</view>
       <view class="van-stepper">
-        <view class="van-stepper__minus van-stepper__minus--disabled"></view>
-        <input type="number" class="van-stepper__input"></input>
-        <view class="van-stepper__plus"></view>
+        <view class="van-stepper__minus" bindtap="minusNum"></view>
+        <input type="number" class="van-stepper__input" value="{{num}}"></input>
+        <view class="van-stepper__plus" bindtap="addNum"></view>
+      </view>
+    </view>
+    <view class="sku-bt flx">
+      <view class="van-button van-button--warning van-button--large">
+        <view class="van-button__text" >加入购物车</view>
+      </view>
+      <view class="van-button van-button--danger van-button--large">
+        <view class="van-button__text">立即购买</view>
       </view>
     </view>
   </view>
