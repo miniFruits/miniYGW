@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'iconfont'; /* project id 1600305 */
+  src: url('//at.alicdn.com/t/font_1600305_iy39l0yb1us.eot');
+  src: url('//at.alicdn.com/t/font_1600305_iy39l0yb1us.eot?#iefix') format('embedded-opentype'),
+         url('//at.alicdn.com/t/font_1600305_iy39l0yb1us.woff2') format('woff2'),
+         url('//at.alicdn.com/t/font_1600305_iy39l0yb1us.woff') format('woff'),
+         url('//at.alicdn.com/t/font_1600305_iy39l0yb1us.ttf') format('truetype'),
+         url('//at.alicdn.com/t/font_1600305_iy39l0yb1us.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 28.8rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.4rpx;
+  -moz-osx-font-smoothing: grayscale;
+  color: #000;
+  padding: 0 0.6rem;
+}
+
+.a::before {
+  content: "\e60f";
+}
+
+.b::before {
+  content: "\e71b";
+}
+
+.c::before {
+  content: "\e60b";
+}
+
+.d::before {
+  content: "\e618";
+}
+
+.e::before {
+  content: "\e616";
+}
+
+.menu {
+  color: #666;
+  width: 168rpx;
+  font-size: 21.2rpx;
+  text-align: left;
+  line-height: 62.4rpx;
+  left: calc(100% - 96rpx);
+  top: 240rpx;
+  border-radius: 7.2rpx;
+  overflow-y: visible;
+}
+
+.van-popup {
+  position: fixed;
+  max-height: 100%;
+  background-color: #fff;
+  transition: 0.3s ease-out;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.menu:before {
+  content: " ";
+  position: absolute;
+  top: -24rpx;
+  width: 0;
+  height: 0;
+  right: 0.6rem;
+  border: 12rpx solid #fff;
+  border-color: transparent transparent #fff;
+}
+
+.list {
+  border-bottom: 1.632rpx solid #eee;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: #000;
+  font-size: 28.8rpx;
+}

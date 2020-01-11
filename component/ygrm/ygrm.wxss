@@ -5,7 +5,9 @@
 
 image.img-box{
    width: 100%!important;
+   height: 100%!important
 }
+
 .nav{
   display: flex;
   justify-content: space-around;

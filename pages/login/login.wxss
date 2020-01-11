@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'iconfont'; /* project id 1600305 */
-  src: url('//at.alicdn.com/t/font_1600305_d1409xrctz.eot');
-  src: url('//at.alicdn.com/t/font_1600305_d1409xrctz.eot?#iefix') format('embedded-opentype'),
-         url('//at.alicdn.com/t/font_1600305_d1409xrctz.woff2') format('woff2'),
-         url('//at.alicdn.com/t/font_1600305_d1409xrctz.woff') format('woff'),
-         url('//at.alicdn.com/t/font_1600305_d1409xrctz.ttf') format('truetype'),
-         url('//at.alicdn.com/t/font_1600305_d1409xrctz.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1600305_iy39l0yb1us.eot');
+  src: url('//at.alicdn.com/t/font_1600305_iy39l0yb1us.eot?#iefix') format('embedded-opentype'),
+         url('//at.alicdn.com/t/font_1600305_iy39l0yb1us.woff2') format('woff2'),
+         url('//at.alicdn.com/t/font_1600305_iy39l0yb1us.woff') format('woff'),
+         url('//at.alicdn.com/t/font_1600305_iy39l0yb1us.ttf') format('truetype'),
+         url('//at.alicdn.com/t/font_1600305_iy39l0yb1us.svg#iconfont') format('svg');
 }
 
 page {
@@ -19,72 +19,11 @@ page {
   width: 100%;
 }
 
-.nav {
-  display: flex;
-  width: 100%;
-}
-
-.nav-l, .nav-r, .nav-title {
-  position: relative;
-  width: 66rpx;
-  height: 100%;
-  text-align: center;
-  line-height: 66rpx;
-  font-size: 21.6rpx;
-}
-
 .nav-img {
   height: 70%;
   border-radius: 50%;
   max-width: 100%;
   vertical-align: middle;
-}
-
-.nav-title {
-  color: #444;
-  font-size: 27.6rpx;
-  flex: 1;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.my {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-.iconfont {
-  font-family: "iconfont" !important;
-  font-size: 38.4rpx;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.4rpx;
-  -moz-osx-font-smoothing: grayscale;
-  color: #000;
-}
-
-.icon-set:before {
-  content: "\e74f";
-}
-
-.nav-t {
-  top: 0;
-  height: 66rpx;
-  position: fixed;
-  z-index: 100;
-}
-
-.nav-bgc {
-  background: #fff;
-  box-shadow: 0 2rpx 4rpx #ccc;
-}
-
-.icon-l:before {
-  content: "\e743";
 }
 
 .content {
@@ -159,7 +98,6 @@ page {
 .text-left {
   text-align: left;
 }
-
 
 .text-right {
   text-align: right;

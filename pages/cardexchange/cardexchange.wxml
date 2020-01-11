@@ -1,2 +1,14 @@
-<!--pages/cardexchange/cardexchange.wxml-->
-<text>pages/cardexchange/cardexchange.wxml</text>
+<view class="user-login">
+  <Head title="卡券兑换"></Head>
+  <view class="content mlogin">
+    <input placeholder="请输入卡号" focus="true" class="mt"></input>
+    <input placeholder="请输入卡密码" password="true" class="mt"></input>
+    <view class="van-button van-button--warning van-button--large mt">
+      <view class="van-button_text">去兑换</view>
+    </view>
+    <view class="flx mt">
+      <view class="flx-l text-left">手机快速注册</view>
+      <view class="flx-l text-right">忘记密码</view>
+    </view>
+  </view>
+</view>

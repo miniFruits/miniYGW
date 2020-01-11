@@ -7,7 +7,7 @@
       <view class="nav-title" style="opacity:{{Opacity}};">
         <text class="my">我的</text>
       </view>
-      <view class="nav-r" style="opacity:{{iconOpac}};color:{{iconColor}}">
+      <view class="nav-r" style="opacity:{{iconOpac}};color:{{iconColor}}" bindtap="handleTap">
         <view class="iconfont icon-set icon-color"></view>
       </view>
     </view>
@@ -16,13 +16,14 @@
         <image src="../../assets/images/user_bg.png" class="bg"></image>
         <view class="user-ht flx" bindtap="handleTap">
           <image src="../../assets/images/not_user.jpg" class="us"></image>
-          <view  class="user-t flx-l">
+          <view class="user-t flx-l">
             <view class="greet">晚上好</view>
             <view class="ellipsis">点击登录/注册用户</view>
-          </view >
+          </view>
         </view>
       </view>
       <CardView></CardView>
     </view>
+    <GussetLike></GussetLike>
   </view>
 </scroll-view>

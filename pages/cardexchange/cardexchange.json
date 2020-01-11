@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "Head": "../../component/Head/Head"
+  }
 }
