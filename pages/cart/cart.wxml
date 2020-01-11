@@ -12,17 +12,27 @@ ontap="handleshow"
 </view>
 <view class="cart_content">
 <!-- 当购物车不为空时 -->
-<view class="cart-buy-item">
-  <view class="cart-buy-item-title">
+<view class="cart-buy-item" wx:if="{{goodList.length>0}}">
+  <view class="cart-buy-item-title" ontap="handleAllselect">
+    <view class="cart-buy-item-selector"> 
+     <view class="cart-buy-item-selectored" style='display:{{display}}' catchtap="handleAllselect"></view>
+    </view>
    <text class="cart-buy-item-title-text">自营商品</text> 
   </view>
-  <view class="cart-buy-item-content">
-  <view class="cart-buy-item-content-singleseletor"></view>
-  
-   <image class="cart-buy-item-content-img"            src="http://oss.egu365.com/upload/6acc7e790a4a49ab882795337b9f3c5d.jpg"></image>
+  <!-- 购物车内容 -->
+  <view class="cart-buy-item-content" wx:for="{{goodList}}" wx:key="*this">
+  <view class="cart-buy-item-content-singleseletor">
+  <view class="cart-buy-item-single-selector"  ontap="handlesingle"  data-id="{{item.id}}" data-index="{{index}}" data-show="true"> 
+     <view class="cart-buy-item-single-selectored" wx:if="{{item.check}}"  catchtap="handlesingle" data-index="{{index}}" data-id="{{item.id}}"></view>
+    </view>
+  </view>
+   <image class="cart-buy-item-content-img" src="{{item.img}}"></image>
    <view class="cart-buy-item-content-info">
     <view class="cart-buy-item-content-info-title">
-   SWEET番茄350g*4礼盒装
+   {{item.title}}
+   <text>
+     <image src=""></image>
+   </text>
    </view>
    <view class="cart-buy-item-content-info-tag">
     <text class="cart-buy-item-content-info-tag-1">次日达</text>
@@ -30,19 +40,21 @@ ontap="handleshow"
    </view>
    <view class="cart-buy-item-content-info-price">
      <text class="cart-buy-item-content-info-price-tag">￥</text>
-     <text class="cart-buy-item-content-info-price-num">79.00</text>
-     <view class="cart-buy-item-content-info-price-btn">
-     <text class="cart-buy-item-content-info-price-btn-text">-</text>
-     <text class="cart-buy-item-content-info-price-btn-text">1</text>
-     <text class="cart-buy-item-content-info-price-btn-text">+</text>
-     </view>
+     <text class="cart-buy-item-content-info-price-num">{{item.price}}</text>
+    <view class="fix-content"></view>
+      <view class="van-stepper">
+        <view class="van-stepper__minus van-stepper__minus--disabled" ontap="handlesub" data-id="{{item.id}}" ></view>
+        <input type="number" class="van-stepper__input" value="{{num}}"></input>
+        <view class="van-stepper__plus" ontap="handleadd" data-id="{{item.id}}"></view>
+      </view>
    </view>
    </view>
   </view>
   
+ 
 </view>
 <!--当购物车为空时-->
-<view class="empty">
+<view class="empty" wx:if="{{goodList.length===0}}">
    <view class="cartimgwrap">
      <image  class="cartimg" src="http://m.egu365.com/img/cart.svg"></image>
     <view class="imgtag" bindtap="handlepage">去逛逛</view>
@@ -54,15 +66,21 @@ ontap="handleshow"
 
 </view>
 <view class="cart_bottom">
-<text class="allselect "></text>
- <view class="cart_bottom_left">
- 全选
+<view class="cart_bottom_left">
+<view class="allselect">
+  <view class="cart-buy-item-selector"> 
+     <view class="cart-buy-item-selectored" style='display:{{display}}'></view>
+    </view>
+</view>
+ 
+ <view class="cart_bottom_left_text">全选</view>
  </view>
  <view class="cart_bottom_mid">
  <view class="cart_bottom_mid_price_wrap">
   <text class="cart_bottom_mid_all">合计：</text>
   <text class="cart_bottom_mid_pricetag">￥</text>
-  <text class="cart_bottom_mid_price">0.00</text>
+  <text class="cart_bottom_mid_price" wx:if='{{displaysingle=="block"}}'>{{totalPrice}}</text>
+  <text class="cart_bottom_mid_price" wx:elif='{{displaysingle=="none"}}'>0.00</text>
   </view>
  </view>
  <view class="cart_bottom_right">
