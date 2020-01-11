@@ -9,7 +9,7 @@
       </view>
       <view class="cxj-inner">
         <block wx:for="{{cxjList.bcPublishedGoodsEos}}" wx:key="*this">    
-           <view class="cxj-item">
+           <view class="cxj-item" data-tid="{{item.goodsId}}" bindtap="clicktodetails">
               <image src="{{item.bseGoodsEo.goodsImg}}"></image>
               <text>{{item.goodsName}}</text>            
             </view>

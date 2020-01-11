@@ -1,23 +1,28 @@
 
 <view  class="top">
-<view 
-class="top-bar active" 
-data-type="{{'依谷热卖'}}" 
-bindtap="handleSelect"
 
->依谷热卖</view>
-<view 
-class="top-bar" 
-wx:for = "{{classify}}" 
-wx:key="*this"
-data-type="{{item.tname}}" 
-data-tid="{{item.tid}}"
+<view class="top-inner" style="left: {{left}}px;">
+    <view 
+        class="top-bar active" 
+        data-type="{{'依谷热卖'}}" 
+        bindtap="handleSelect"
+        >依谷热卖</view>
+        <view 
+        class="top-bar" 
+        wx:for = "{{classify}}" 
+        wx:key="*this"
+        data-type="{{item.tname}}" 
+        data-tid="{{item.tid}}"
+        data-i="{{index-1}}"
+        bindtap="handleSelect"
+        >
+        {{item.tname}}
+      </view>
+</view>
 
-bindtap="handleSelect"
->
- {{item.tname}}
+
 </view>
-</view>
+
 <!-- 搜索框 -->
 
  <mp-searchbar 

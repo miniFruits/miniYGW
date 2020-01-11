@@ -14,7 +14,7 @@
 <view class="nav nav-top">
    <block wx:for="{{navTop}}" wx:key="*this">
         <view class="nav-top-pic">
-           <image src="{{item.img}}" class="img-box"></image>
+           <image src="{{item.img}}" ></image>
            <text>{{item.name}}</text>
         </view>
    </block>
@@ -22,7 +22,7 @@
 <view class="nav nav-middle">
     <block wx:for="{{classify}}" wx:key="*this">
         <view class="nav-middle-pic">
-           <image src="{{item.timage}}" class="img-box"></image>
+           <image src="{{item.timage}}"></image>
            <text>{{item.tname}}</text>
         </view>
     </block>
@@ -56,11 +56,13 @@
 </view>
 <!-- 第二个轮播 -->
 
-<swiper indicator-dots="{{false}}"
+<swiper 
+        indicator-dots="{{false}}"
         autoplay="{{true}}" 
         circular="{{true}}"
         indicator-active-color="green"
         class="actitive-wrapper"
+
         >
         <block wx:for="{{activeList}}" wx:key="*this">
           <swiper-item>

@@ -11,7 +11,8 @@ Component({
      tid:'',
      fruits:[],
     bjImg:String,
-    imgSrcs: Array
+    imgSrcs: Array,
+    left:0
   },
   lifetimes:{
     created() {
@@ -38,13 +39,20 @@ Component({
   },
   methods:{
     handleSelect:function(e){
-      console.log(e.currentTarget.dataset.type)
      this.setData({
        selected: e.currentTarget.dataset.type,
        tid: e.currentTarget.dataset.tid,
-       bjImg: e.currentTarget.dataset.bgImg
-     })  
+       bjImg: e.currentTarget.dataset.bgImg,
+      
+     })
+      if (e.currentTarget.dataset.i<= 5){
+        this.setData({
+          left: -(30 + ~~e.currentTarget.dataset.i * 82)
+        })
+      }
+    
     }
+     
   }
   /**
    * 生命周期函数--监听页面加载
