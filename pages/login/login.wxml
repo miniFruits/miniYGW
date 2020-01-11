@@ -1,0 +1,24 @@
+<view class="user-login">
+  <view class="nav nav-t nav-bgc">
+    <view class="nav-l">
+      <view class="iconfont icon-l icon-color"></view>
+    </view>
+    <view class="nav-title">
+      <text class="my">用户登录</text>
+    </view>
+    <view class="nav-r">
+      <view class="iconfont icon-set icon-color"></view>
+    </view>
+  </view>
+  <view class="content mlogin">
+    <input placeholder="请输入用户名/手机号/邮箱" focus="true" class="mt"></input>
+    <input placeholder="请输入6位以上的密码" password="true" class="mt"></input>
+    <view class="van-button van-button--warning van-button--large mt">
+      <view class="van-button_text">立即登录</view>
+    </view>
+    <view class="flx mt">
+      <view class="flx-l text-left">手机快速注册</view>
+      <view class="flx-l text-right">忘记密码</view>
+    </view>
+  </view>
+</view>
