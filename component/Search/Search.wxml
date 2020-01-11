@@ -1,4 +1,39 @@
-<!--component/Search/Search.wxml-->
-<view>
-  这是公共的搜索组件
+<view class="searchbox">
+
+  <view class="search">
+    <view class="content-around">
+      <view class="search-cell">
+        <view class="search-icon iconfont "></view>
+        <view class="search-value">
+          <input placeholder="鳗鱼特惠" />
+        </view>
+      </view>
+    </view>
+    <view class="search-action">
+      <view class="divcontent">取消</view>
+    </view>
+  </view>
+
+  <view class="search-list">
+    <view class="seg">
+      <view class="seg-title">热门搜索</view>
+      <view class="seg-list">
+        <view class="seg-item">
+          鳗鱼特惠
+        </view>
+      </view>
+    </view>
+
+    <view class="seg">
+      <view class="seg-title">历史记录</view>
+      <view class="seg-list">
+        <view class="seg-item">
+          狗比QGH
+        </view>
+      </view>
+    </view>
+
+    <view class="clearseg">清空历史记录</view>
+
+  </view>
 </view>
