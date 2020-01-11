@@ -7,12 +7,8 @@
   </view>
 </scroll-view>
 <view class="van-tabs__content">
+  
   <view class="van-tab__pane {{index==0?'active':''}}">
-    <image src="http://oss.egu365.com/upload/398e254672fa41bc920d085dab3ee663.jpg"></image>
-    <image src="http://oss.egu365.com/upload/b5ff21bdab744655b8b57b663daadc4e.jpg"></image>
-    <image src="http://oss.egu365.com/upload/caef1dbe43e846fbb01791072c15cdf4.jpg"></image>
-  </view>
-  <view class="van-tab__pane {{index==1?'active':''}}">
     <view class="card-view">
       <view>基本信息</view>
       <view>品牌：和の鳗</view>
@@ -34,6 +30,9 @@
       <view>存放：冷冻（-18℃以下）</view>
       <view>保质期：详见包装</view>
     </view>
+  </view>
+  <view class="van-tab__pane {{index==1?'active':''}}">
+    <rich-text nodes="{{imgInfo}}"></rich-text>
   </view>
   <view class="van-tab__pane {{index==2?'active':''}}">
     <view class="desc-sa">
