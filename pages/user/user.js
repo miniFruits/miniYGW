@@ -19,7 +19,7 @@ Component({
         this.setData({
           Opacity: 0,
           iconOpac: 1,
-          iconColor: '#f0f',
+          iconColor: '#fff',
         })
       }
     },
