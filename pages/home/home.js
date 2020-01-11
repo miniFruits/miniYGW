@@ -10,9 +10,11 @@ Component({
      selected:'依谷热卖',
      tid:'',
      fruits:[],
-    bjImg:String,
-    imgSrcs: Array,
-    left:0
+     bjImg:String,
+     imgSrcs: Array,
+     left:0,
+     suoyin:0
+     
   },
   lifetimes:{
     created() {
@@ -39,15 +41,27 @@ Component({
   },
   methods:{
     handleSelect:function(e){
+      console.log(e.currentTarget.dataset.i)
      this.setData({
        selected: e.currentTarget.dataset.type,
        tid: e.currentTarget.dataset.tid,
        bjImg: e.currentTarget.dataset.bgImg,
-      
+       suoyin: e.currentTarget.dataset.index
      })
-      if (e.currentTarget.dataset.i<= 5){
+      if (e.currentTarget.dataset.i <= 5 && e.currentTarget.dataset.i >= 0){
+        console.log(e.currentTarget.dataset.i )
         this.setData({
-          left: -(30 + ~~e.currentTarget.dataset.i * 82)
+          left: -(18 + ~~e.currentTarget.dataset.i * 82)
+        })
+      }
+      if(e.currentTarget.dataset.i > 5 ){
+        this.setData({
+          left:-444
+        })
+      }
+      if (e.currentTarget.dataset.i < 0){
+        this.setData({
+          left: 0
         })
       }
     

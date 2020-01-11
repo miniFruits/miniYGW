@@ -11,10 +11,25 @@ position: relative;
   display: flex;
   position: absolute;
   height: 77rpx;
- 
+  transition: all 1s ;
 }
 .active{
-color: red;
+  color: red;
+  font-weight: 700;
+}
+.borderLine{
+  height: 4rpx;
+  width: 98rpx;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -49rpx;
+  background: #fff;
+    transition: all 1s ;
+}
+.bactive{
+   background: red;
+     transition: all 1s ;
 }
 .top-bar{
   flex:0 0 auto;
@@ -22,11 +37,14 @@ color: red;
   height: 77rpx;
   font-size: 25.76rpx;
   padding: 0 8.75rpx;
-  font-weight: 700;
+ 
   line-height: 77rpx;
   color: #555!important;
   text-align: center;
   box-sizing: border-box;
+
+  position: relative;
+ 
 }
 .active.top-bar{
   color: #000;

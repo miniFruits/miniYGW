@@ -2,21 +2,29 @@
 <view  class="top">
 
 <view class="top-inner" style="left: {{left}}px;">
+  
     <view 
-        class="top-bar active" 
+        class="top-bar {{suoyin === 0?'active':''}}" 
         data-type="{{'依谷热卖'}}" 
         bindtap="handleSelect"
-        >依谷热卖</view>
+        data-i="{{-2}}"
+        data-index="{{0}}"
+        >
+        依谷热卖
+         <view class="borderLine {{suoyin === 0?'bactive':''}}"></view>
+        </view>
         <view 
-        class="top-bar" 
         wx:for = "{{classify}}" 
         wx:key="*this"
         data-type="{{item.tname}}" 
         data-tid="{{item.tid}}"
         data-i="{{index-1}}"
+        data-index="{{index+1}}"
         bindtap="handleSelect"
+        class="top-bar {{suoyin === index+1?'active':''}}" 
         >
         {{item.tname}}
+         <view class="borderLine {{suoyin === index+1?'bactive':''}}"></view>
       </view>
 </view>
 
