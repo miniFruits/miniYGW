@@ -1,0 +1,4 @@
+
+<view class="recomendBox">
+<slot></slot>
+</view>

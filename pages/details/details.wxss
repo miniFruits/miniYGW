@@ -1,23 +1,24 @@
 @font-face {
-  font-family: 'iconfont';  /* project id 1600172 */
-  src: url('//at.alicdn.com/t/font_1600172_6sdpobfkgfm.eot');
-  src: url('//at.alicdn.com/t/font_1600172_6sdpobfkgfm.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1600172_6sdpobfkgfm.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1600172_6sdpobfkgfm.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1600172_6sdpobfkgfm.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1600172_6sdpobfkgfm.svg#iconfont') format('svg');
+  font-family: "iconfont"; /* project id 1600172 */
+  src: url("//at.alicdn.com/t/font_1600172_6sdpobfkgfm.eot");
+  src: url("//at.alicdn.com/t/font_1600172_6sdpobfkgfm.eot?#iefix")
+      format("embedded-opentype"),
+    url("//at.alicdn.com/t/font_1600172_6sdpobfkgfm.woff2") format("woff2"),
+    url("//at.alicdn.com/t/font_1600172_6sdpobfkgfm.woff") format("woff"),
+    url("//at.alicdn.com/t/font_1600172_6sdpobfkgfm.ttf") format("truetype"),
+    url("//at.alicdn.com/t/font_1600172_6sdpobfkgfm.svg#iconfont") format("svg");
 }
-.iconfont{
-    font-family:"iconfont" !important;
-    font-size:28rpx;
-    font-style:normal;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-stroke-width: 0.2px;
-    -moz-osx-font-smoothing: grayscale;
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 28rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
 }
 /* 导航 */
 .nav {
-  background: none;
+  background: #fff;
   box-shadow: none;
   color: rgb(255, 255, 255);
   position: fixed;
@@ -27,7 +28,9 @@
   width: 100%;
   height: 77rpx;
 }
-.nav-l, .nav-r, .nav-title {
+.nav-l,
+.nav-r,
+.nav-title {
   position: relative;
   width: 77rpx;
   height: 100%;
@@ -45,7 +48,7 @@
   line-height: 58rpx;
   text-align: center;
   color: #fff;
-  background-color: rgba(0,0,0,.4);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
 }
 .back::before {
@@ -59,7 +62,7 @@
 .nav-title {
   color: #444;
   font-size: 32rpx;
-  flex: 1;   
+  flex: 1;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -77,7 +80,7 @@
   user-select: none;
   height: 750rpx;
 }
-.banner{
+.banner {
   height: 750rpx;
 }
 .img-box {
@@ -128,18 +131,17 @@
   line-height: normal;
   text-align: center;
 }
-.icon-collect{
+.icon-collect {
   width: 28rpx;
   height: 28rpx;
   line-height: 28rpx;
-  
 }
 .star::before {
   margin-left: 8rpx;
   content: "\e61d";
   font-size: 34rpx;
 }
-.self-support  {
+.self-support {
   height: 100rpx;
   line-height: 100rpx;
   color: red;
@@ -184,7 +186,7 @@
   width: calc(100% - 67rpx);
   font-size: 24rpx;
 }
-.jian{
+.jian {
   margin-bottom: 0;
 }
 .manjian {
@@ -221,14 +223,14 @@
   bottom: 0;
   right: auto;
   left: 50%;
-  transform: translate3d(-50%,0,0);
+  transform: translate3d(-50%, 0, 0);
 }
 .van-popup {
   position: fixed;
   max-height: 100%;
   overflow-y: auto;
   background-color: #fff;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
 }
 .eject-nav {
   color: #555;
@@ -244,9 +246,9 @@
   font-size: 40rpx;
   padding-left: 22rpx;
 }
-.close{
+.close {
   position: relative;
-  font: .875rem/1 vant-icon;
+  font: 0.875rem/1 vant-icon;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -282,8 +284,8 @@
   display: inline-block;
   width: 13rpx;
   height: 13rpx;
-  border-top: .08rem solid #444;
-  border-right: .08rem solid #444;
+  border-top: 0.08rem solid #444;
+  border-right: 0.08rem solid #444;
   transform: rotate(45deg);
 }
 .block-vessel {
@@ -314,13 +316,13 @@
   min-width: 67rpx;
 }
 .aging {
-    color: #1d1d1d;
-    font-size: 24rpx;
+  color: #1d1d1d;
+  font-size: 24rpx;
 }
-.aging>view {
+.aging > view {
   font-weight: bold;
 }
-.chosen{
+.chosen {
   color: red;
   font-size: 28rpx;
   font-weight: 700;
@@ -335,15 +337,336 @@
   color: #383838;
   font-size: 24rpx;
 }
-.diqu>text{
-  padding-right: 11rpx;
+.diqu {
+  display: flex;
 }
 .xianhuo {
   color: #ff0f0f;
   padding-top: 6rpx;
   font-size: 24rpx;
 }
-.zuobiao:before{
+.zuobiao:before {
   content: "\e637";
   color: red;
+}
+/* 重量 */
+.weight {
+  color: #383838;
+  font-size: 24rpx;
+}
+/* 运费 */
+.send-fee {
+  color: #383838;
+  font-size: 24rpx;
+}
+.send-fee > view:first-child {
+  color: red;
+}
+/* 底部导航 */
+/* .van-tabs--line {
+  padding-top: 77rpx;
+} */
+.van-tabs {
+  position: relative;
+}
+.van-tabs__wrap {
+  z-index: 0;
+  height: 77rpx;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  position: absolute;
+}
+.van-tabs__nav--line {
+  height: 100%;
+  padding-bottom: 26rpx;
+  box-sizing: content-box;
+  display: flex;
+  user-select: none;
+  position: relative;
+  background-color: #fff;
+}
+.van-tabs__line {
+  z-index: 1;
+  left: 0;
+  bottom: 26rpx;
+  height: 5rpx;
+  position: absolute;
+  border-radius: 5rpx;
+  background-color: #f44;
+  width: 100rpx;
+  transform: translateX(37.8906px);
+  transition-duration: 0.3s;
+}
+.van-tab--active {
+  font-weight: 500;
+  color: #666;
+}
+.van-tab {
+  flex: 1;
+  cursor: pointer;
+  min-width: 0;
+  padding: 0 8.6rpx;
+  font-size: 24.5rpx;
+  position: relative;
+  color: #666;
+  line-height: 77rpx;
+  text-align: center;
+  box-sizing: border-box;
+}
+.van-ellipsis {
+  width: max-content;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.van-tabs__content {
+  padding-top: 1.6rpx;
+}
+.van-tabs .van-tab__pane {
+  width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+.van-tab__pane image {
+  width: 100%;
+  height: 1290rpx;
+  vertical-align: middle;
+}
+/* 底部导航 */
+.van-goods-action {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  position: fixed;
+}
+.bg-w {
+  background: white;
+}
+.van-goods-action-mini-btn {
+  color: #666;
+  display: flex;
+  height: 87rpx;
+  font-size: 24rpx;
+  min-width: 15%;
+  line-height: 1;
+  text-align: center;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+}
+.van-icon {
+  position: relative;
+  text-rendering: auto;
+  width: 35rpx;
+  height: 34rpx;
+  font-size: 1.25rem;
+  margin: 0 auto 0.3125rem;
+}
+.van-icon image {
+  width: 100%;
+  height: 100%;
+}
+.van-info {
+  position: absolute;
+  right: 0;
+  top: -14rpx;
+  color: #fff;
+  font-size: 24rpx;
+  font-weight: 500;
+  font-family: PingFang SC, Helvetica Neue, Arial, sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 5rpx;
+  min-width: 28rpx;
+  line-height: 24.5rpx;
+  border: 1.6rpx solid #fff;
+  border-radius: 28rpx;
+  background-color: #f44;
+  transform: translateX(50%);
+  transform-origin: 100%;
+}
+.van-goods-action-big-btn {
+  flex: 1;
+  padding: 0;
+}
+.van-button--square {
+  border-radius: 0;
+}
+.van-button--large {
+  width: 100%;
+  height: 87.5rpx;
+  line-height: 84rpx;
+}
+.van-button--warning {
+  color: #fff;
+  background-color: #ffac0a;
+  border: 1.75rpx solid #ffac0a;
+}
+.van-button {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  text-align: center;
+}
+.van-button--danger {
+  color: #fff;
+  background-color: #f44;
+  border: 1.75rpx solid #f44;
+}
+/* 加购 */
+.sku {
+  background-color: #fff;
+}
+.van-popup--bottom {
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  right: auto;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+.van-popup {
+  position: fixed;
+  max-height: 100%;
+  overflow-y: auto;
+  transition: 0.3s ease-out;
+}
+.sku-close {
+  right: 0;
+  padding: 8.4rpx;
+  position: absolute;
+  font-size: 42rpx;
+  text-align: right;
+}
+.sku-goods {
+  margin-bottom: 28rpx;
+  padding: 21rpx 21rpx 0 21rpx;
+}
+.sku-img {
+  width: 193rpx;
+  height: 193rpx;
+}
+.sku-img > image {
+  max-width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.sku-pn {
+  font-size: 29rpx;
+  padding-left: 21rpx;
+}
+.sku-name {
+  color: #111;
+  padding-top: 28rpx;
+  height: 125rpx;
+  overflow-y: hidden;
+}
+.sku-price {
+  color: #ff3434;
+  line-height: 45rpx;
+}
+.sku-price:before {
+  content: "\FFE5";
+  font-size: 24.6rpx;
+}
+.column,
+.margin-bottom {
+  background-color: #fff;
+  padding: 21rpx 24rpx;
+  line-height: 40rpx;
+}
+.sku .column-name {
+  color: #3a3a3a;
+}
+.standard {
+  font-size: 27.2rpx;
+  padding-top: 42rpx;
+}
+.flx-wrap-w {
+  flex-wrap: wrap;
+}
+.standard .sku-act {
+  max-width: 616rpx;
+  padding: 5.6rpx 25rpx;
+  margin-right: 1rem;
+  margin-bottom: 28rpx;
+  background-color: #f0f0f0;
+  border-radius: 11rpx;
+}
+.standard .sku-active {
+  color: #fff;
+  background-color: #ff3434;
+}
+.sku .margin-bottom {
+  margin-bottom: 28rpx;
+}
+.sku .column-name {
+  color: #3a3a3a;
+}
+.van-stepper {
+  font-size: 0;
+  display: flex;
+}
+.van-stepper__minus {
+  border-radius: 7rpx 0 0 7rpx;
+}
+.van-stepper__minus,
+.van-stepper__plus {
+  width: 49rpx;
+  height: 49rpx;
+  box-sizing: border-box;
+  background-color: #f2f3f5;
+  border: 0;
+  margin: 1.75rpx;
+  position: relative;
+  padding: 8.75rpx;
+  vertical-align: middle;
+}
+.van-stepper__minus--disabled,
+.van-stepper__plus--disabled {
+  background-color: #f7f8fa;
+}
+.van-stepper__minus::before,
+.van-stepper__plus::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #666;
+  width: 15rpx;
+  height: 3rpx;
+}
+.van-stepper__plus::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #666;
+  width: 3rpx;
+  height: 15rpx;
+}
+.van-stepper__input {
+  width: 52.5rpx;
+  height: 45.5rpx;
+  padding: 1.75rpx;
+  border: 0;
+  margin: 1.75rpx;
+  background-color: #f2f3f5;
+  border-width: 1.75rpx 0;
+  border-radius: 0;
+  box-sizing: content-box;
+  color: #666;
+  font-size: 24.5rpx;
+  vertical-align: middle;
+  text-align: center;
 }

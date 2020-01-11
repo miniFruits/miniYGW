@@ -1,0 +1,23 @@
+<!--pages/homedelivery/homedelivery.wxml-->
+<!-- 购物车头部 -->
+<view class="carthead" >
+<view class="cartheadleft" ontap="handleback">
+<image src="http://sh1.hoopchina.com.cn/fis_static/shihuomobile/static/common/widget/header/head_back_b142dc1.png"
+></image>
+</view>
+ <view class="cartheadmid">{{title}}</view>
+<view class="cartheadright">  <image src="//sh1.hoopchina.com.cn/fis_static/shihuomobile/static/common/widget/header/head_list_4a4f511.png" 
+ontap="handleshow"
+></image></view>
+</view>
+<view class="home_deliver_content">
+ <image class="home_deliver_content_img" src="http://m.egu365.com/img/delivery/00.jpg"></image>
+ <image class="home_deliver_content_img" src="http://m.egu365.com/img/delivery/01.jpg"></image>
+ <image class="home_deliver_content_img" src="http://m.egu365.com/img/delivery/02.jpg"></image>
+ <image class="home_deliver_content_img" src="http://m.egu365.com/img/delivery/03.jpg"></image>
+ <image class="home_deliver_content_img" src="http://m.egu365.com/img/delivery/04.jpg"></image>
+ <image class="home_deliver_content_img" src="http://m.egu365.com/img/delivery/05.jpg"></image>
+ <image class="home_deliver_content_img" src="http://m.egu365.com/img/delivery/06.jpg"></image>
+ <image class="home_deliver_content_img" src="http://m.egu365.com/img/delivery/07.jpg"></image>
+ <image class="home_deliver_content_img" src="http://m.egu365.com/img/delivery/08.jpg"></image>
+</view>

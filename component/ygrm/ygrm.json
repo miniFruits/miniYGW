@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "activeShow": "/component/activeShow/activeShow",
+    "recomend": "/component/recomendBox/recomendBox",
+    "recomendItem": "/component/recomend/recomend"
+  }
+}

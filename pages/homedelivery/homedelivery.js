@@ -1,18 +1,18 @@
-// pages/cardexchange/cardexchange.js
+// pages/homedelivery/homedelivery.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    title:"宅配服务"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showTabBar()
+
   },
 
   /**
@@ -62,5 +62,33 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  handlepage() {
+    wx.switchTab({
+      url: '/pages/home/home',
+    })
+  },
+  handleclassify() {
+    wx.switchTab({
+      url: '/pages/classify/classify',
+    })
+  },
+  handlezhai() {
+    wx.navigateTo({
+      url: '/pages/homedelivery/homedelivery',
+    })
+  },
+  handleprofile() {
+    console.log(1)
+    wx.switchTab({
+      url: "/pages/user/user",
+    })
+  },
+  handleback(){
+    console.log(1)
+    wx.switchTab({
+      url: '/pages/cart/cart',
+    })
   }
+
 })

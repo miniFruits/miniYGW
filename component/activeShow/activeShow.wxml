@@ -1,0 +1,19 @@
+
+
+
+   <view class="cxj">
+   <image src="{{imgSrc}}"  class="new" ></image>
+      <view class="cxj-title">
+         <text class="title">{{title}}</text>
+         <text class="title-2">{{subtitle}}</text>
+      </view>
+      <view class="cxj-inner">
+        <block wx:for="{{cxjList.bcPublishedGoodsEos}}" wx:key="*this">    
+           <view class="cxj-item">
+              <image src="{{item.bseGoodsEo.goodsImg}}"></image>
+              <text>{{item.goodsName}}</text>            
+            </view>
+        </block>
+      </view>
+   </view>
+  

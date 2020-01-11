@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    "mp-searchbar": "/miniprogram_npm/weui-miniprogram/searchbar/searchbar"
+    "mp-searchbar": "/miniprogram_npm/weui-miniprogram/searchbar/searchbar",
+    "ygrm":"/component/ygrm/ygrm",
+    "otherBar":"/component/otherBar/otherBar",
+    "my_gussetLikeList": "/component/GussetLike/GussetLike"
   }
 }
