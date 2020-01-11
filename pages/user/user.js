@@ -23,6 +23,13 @@ Component({
         })
       }
     },
+
+    handleTap: function() {
+      console.log(0)
+      wx.navigateTo({
+        url: '/pages/login/login',
+      })
+    }
   }
 
 })
