@@ -7,6 +7,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    tid: {
+      type: String,
+      value: ""
+    },
     items: {
       type: Array,
       value: ["商品介绍", "规格参数", "售后保障"],
@@ -83,7 +87,9 @@ Component({
     domData: [],
     textDomData: [],
     mDataCus: [],
-    index: 0
+    index: 0,
+    imgInfo:'',
+    
   },
 
   externalClasses: ["cus"],
@@ -105,7 +111,23 @@ Component({
       });
     },
     onItemTap: function(e) {
+
       const index = e.currentTarget.dataset.index;
+      if(index == 1){
+        wx.request({
+          url: 'http://api.egu365.com/goods/desc',
+          data:{
+            id: this.data.tid
+          },
+          success :(res)=>{
+            this.setData({
+              imgInfo: res.data.obj.goodsDesc
+              // imgInfo: res.data.obj.goodsDesc.slice(3).substring(0, res.data.obj.goodsDesc.slice(3).length-6).replace(/img/g,'image')
+            })
+            console.log(this.data.imgInfo)
+          }
+        })
+      }
       let str =
         this.data.lastIndex < index
           ? "left 0.5s, right 0.2s"
@@ -171,7 +193,6 @@ Component({
               that.barLeft(that.data.mSelected, that.data.textDomData);
               that.barRight(that.data.mSelected, that.data.textDomData);
             }
-            console.log(res);
           }
         )
         .exec();

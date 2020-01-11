@@ -148,7 +148,7 @@
           </view>
         </view>
       </view> -->
-      <Tabbar></Tabbar>
+      <Tabbar tid="{{id}}"></Tabbar>
       <!-- <view class="van-tabs__content">
         <view class="van-tab__pane">
           <image src="http://oss.egu365.com/upload/398e254672fa41bc920d085dab3ee663.jpg"></image>

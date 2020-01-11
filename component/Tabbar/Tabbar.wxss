@@ -29,6 +29,7 @@
 }
 .van-tabs__content {
   padding-top: 1.6rpx;
+  margin-bottom: 100rpx;
 }
 .van-tab__pane {
   width: 100%;
