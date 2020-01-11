@@ -25,6 +25,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    clicktodetails(e) {
+      wx.navigateTo({
+        url: '/pages/details/details?tid=' + e.currentTarget.dataset.tid
+      })
+    }
   }
 })

@@ -5,7 +5,7 @@
     "pages/cardexchange/cardexchange",
     "pages/user/user",
     "pages/details/details",
-    "pages/cart/cart",   
+    "pages/cart/cart",
     "pages/homedelivery/homedelivery"
   ],
   "tabBar": {
