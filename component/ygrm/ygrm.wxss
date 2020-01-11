@@ -1,0 +1,109 @@
+/* component/ygrm/ygrm.wxss */
+/* pages/home/home.wxss */
+
+
+
+image.img-box{
+   width: 100%!important;
+   height: 100%!important
+}
+
+.nav{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.nav-top {
+margin-top: 42rpx;
+}
+
+.nav .nav-top-pic{
+    width: 96rpx;
+    
+}
+.nav .nav-top-pic image{
+ width: 96rpx;
+  height: 96rpx;
+}
+.nav .nav-top-pic text{
+    font-size: 24rpx;
+}
+.nav-middle .nav-middle-pic{
+  width: 150rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav-middle .nav-middle-pic image{
+   width: 102rpx!important;
+   height: 102rpx;
+}
+.nav-middle .nav-middle-pic text{
+   font-size: 24rpx;
+   display: block;
+}
+.problem{
+  height: 83.2rpx;
+  box-sizing: border-box;
+  padding: 16rpx 28rpx;
+}
+.problem-inner{
+  display: flex;
+}
+.problem-inner .toutiao{
+  width: 84rpx;
+  height: 24rpx;
+}
+.problem-inner .problem-img {
+  width: 38rpx;
+  height: 26rpx;
+  transform: rotate(-30deg);
+}
+
+.problem-swipper {
+  flex: 1;
+  height: 26rpx;
+}
+.problem-swipper .swiper-item{
+    font-size: 20rpx!important;
+}
+.actitive-wrapper{
+  height: 172rpx;
+ 
+}
+.actitive-wrapper swiper-item{
+  display: flex;
+  justify-content: center;
+}
+.actitive-wrapper image{
+  width:702rpx!important; 
+  height:138rpx;
+}
+
+/* 尝鲜季 */
+.hot-sale{
+  height: 600rpx;
+  position: relative;
+
+}
+/* .hot-sale image{
+  
+} */
+.hot-sale  .bg-img{
+  width: 100%;
+  height: 600rpx;
+    position: absolute;
+}
+/* 热销榜 */
+.hot-list{
+  width: 100%;
+  height: 400rpx;
+  position: relative;
+}
+.yellow-img{
+   width: 100%;
+  height: 400rpx;
+  position: absolute;
+}
+

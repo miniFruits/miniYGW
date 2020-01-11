@@ -1,0 +1,32 @@
+.card-view {
+  margin: 3.206%;
+  width: 93.588%;
+  background: #fff;
+  background-color: #fafafa;
+  box-shadow: 0 4rpx 4rpx rgba(207, 207, 207, 0.3);
+  border-radius: 4.8rpx;
+}
+
+.flx {
+  display: -webkit-flex;
+}
+
+.img {
+  width: 20%;
+  min-height: 105rpx;
+  padding: 12.414rpx 0;
+  text-align: center;
+}
+
+.order {
+  width: 67.872rpx;
+  height: 67.872rpx;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.item-name {
+  color: #282828;
+  font-size: 19.68rpx;
+  line-height: 36rpx;
+}

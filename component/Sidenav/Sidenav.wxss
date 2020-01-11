@@ -1,0 +1,39 @@
+/* component/Sidenav/Sidenav.wxss */
+.cart_mask_list{
+  width: 210rpx;
+  height: 408.1rpx;
+  background: #fff;
+  position: absolute;
+  right: 20rpx;
+  top: 102.5rpx;
+  z-index: 2029;
+}
+.cart_mask_list::before{
+  content: " ";
+  position: absolute;
+  top: -32rpx;
+  right: 10rpx;
+  width: 0;
+  height: 0;
+  border: 16rpx solid ;
+  border-color: transparent transparent #fff transparent;
+}
+.cart_mask_list_item_img_wrap{
+  display: flex;
+  width: 72rpx;
+  align-items: center;
+  }
+.cart_mask_list_item_img{
+  width: 36rpx;
+  height: 36rpx;
+  margin: 0 18rpx; 
+}
+.cart_mask_list_item{
+ height: 81.62rpx; 
+ display: flex;
+ vertical-align: center;
+ line-height: 81.62rpx;
+ font-size: 26.4rpx;
+ color: #666;
+ border-bottom: 2rpx solid #eee;
+}

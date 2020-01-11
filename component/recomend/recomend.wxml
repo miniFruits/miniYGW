@@ -1,0 +1,21 @@
+  <wxs module="filters">
+      module.exports = {
+          toFix: function (value) {
+          return parseFloat(value).toFixed(2)
+        }
+      }
+  </wxs>
+<view class="recomend-day">
+   <image src="{{imgsrc}}" class="bg-img"></image>
+   <view class="more">更多》</view>
+   <view class="recom-inner" >
+     <view class="item" wx:for = "{{fruits}}" wx:key="*this" data-tid="{{item.goodsId}}" bindtap="clicktodetails">
+    <image src="{{item.bseGoodsEo.goodsImg}}"></image>
+    <text class="title">{{item.goodsName}}</text>
+    <text class="subtitle">￥{{filters.toFix(item.mallPrice)}}</text>
+    <text class="cart_add iconfont" catchtap="handlecarts"></text>
+     </view>
+   </view>
+   
+</view>
+

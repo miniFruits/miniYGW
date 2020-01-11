@@ -4,9 +4,9 @@
   display: flex;
   background: #fff;
   box-shadow: 0 1rpx 2rpx #ccc;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 .cartheadleft{
   width: 82.5rpx;
@@ -30,6 +30,84 @@
 .cartempty{
 background: #f0f2f5;
 height: 100%;
+}
+.cart-buy-item{
+  width: 100%;
+  background: #fff;
+}
+.cart-buy-item-title{
+  padding: 24rpx 15rpx;
+  height: 96rpx;
+  box-sizing: border-box;
+  background: #f00;
+}
+.cart-buy-item-title-text{
+  padding: 0 0 0 18.750rpx;
+}
+.cart-buy-item-content{
+  height: 244.2rpx;
+  padding: 12rpx 12rpx 12rpx 0;
+  display: flex;
+  align-items: center;
+}
+.cart-buy-item-content-singleseletor{
+  width:79.5rpx;
+  height: 224.2rpx;
+  background: #ff0;
+}
+.cart-buy-item-content-info{
+  flex: 1;
+  background: #00f;
+}
+.cart-buy-item-content-img{
+  height: 220.2rpx;
+  width: 220.2rpx;
+}
+.cart-buy-item-content-info-title{
+  height: 78.6rpx;
+  color: #323232;
+  font-size: 29.4rpx;
+  background: #f0f;
+}
+.cart-buy-item-content-info-tag{
+  padding: 12rpx 0 0 0;
+}
+.cart-buy-item-content-info-tag-1{
+  color: #fff;
+  background: #E30408;
+  font-size:19.2rpx; 
+  padding: 2rpx 9rpx;
+  margin: 0 12rpx 0 0;
+  border-radius: 10rpx;
+}
+.cart-buy-item-content-info-tag-2{
+  color: #fff;
+  background: #ccc;
+  font-size:19.2rpx; 
+  padding: 2rpx 9rpx;
+  margin: 0 12rpx 0 0;
+  border-radius: 10rpx;
+}
+.cart-buy-item-content-info-price{
+  display: flex;
+  align-items: center;
+}
+.cart-buy-item-content-info-price-tag{
+  color: #f00;
+}
+.cart-buy-item-content-info-price-num{
+  color: #f00;
+}
+.cart-buy-item-content-info-price-btn{
+  display: flex;
+}
+.cart-buy-item-content-info-price-btn-text{
+  width:60rpx;
+  height: 52.5rpx;
+  background: #f2F3F5;
+  display: block;
+  text-align: center;
+  margin: 19.rpx 1.9rpx 1.9rpx 0;
 }
 .cart_content{
   position: relative;
@@ -68,6 +146,10 @@ height: 100%;
 }
 
 .cart_bottom{
+  position: fixed;
+  bottom: 0;
+  z-index: 1002;
+  width: 100%;
   height: 93.76rpx;
   display: flex;
   padding:0 0 0 30rpx;
@@ -110,4 +192,13 @@ height: 100%;
   color: #fff;
   text-align:center;
   line-height: 93.76rpx; 
+}
+.cartmask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  background: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
 }

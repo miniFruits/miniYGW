@@ -5,21 +5,55 @@
 <image src="http://sh1.hoopchina.com.cn/fis_static/shihuomobile/static/common/widget/header/head_back_b142dc1.png"
 ></image>
 </view>
- <view class="cartheadmid">购物车</view>
-<view class="cartheadright">  <image src="//sh1.hoopchina.com.cn/fis_static/shihuomobile/static/common/widget/header/head_list_4a4f511.png"></image></view>
+ <view class="cartheadmid">{{title}}</view>
+<view class="cartheadright">  <image src="//sh1.hoopchina.com.cn/fis_static/shihuomobile/static/common/widget/header/head_list_4a4f511.png" 
+ontap="handleshow"
+></image></view>
 </view>
 <view class="cart_content">
+<!-- 当购物车不为空时 -->
+<view class="cart-buy-item">
+  <view class="cart-buy-item-title">
+   <text class="cart-buy-item-title-text">自营商品</text> 
+  </view>
+  <view class="cart-buy-item-content">
+  <view class="cart-buy-item-content-singleseletor"></view>
+  
+   <image class="cart-buy-item-content-img"            src="http://oss.egu365.com/upload/6acc7e790a4a49ab882795337b9f3c5d.jpg"></image>
+   <view class="cart-buy-item-content-info">
+    <view class="cart-buy-item-content-info-title">
+   SWEET番茄350g*4礼盒装
+   </view>
+   <view class="cart-buy-item-content-info-tag">
+    <text class="cart-buy-item-content-info-tag-1">次日达</text>
+    <text class="cart-buy-item-content-info-tag-2">1400g</text>
+   </view>
+   <view class="cart-buy-item-content-info-price">
+     <text class="cart-buy-item-content-info-price-tag">￥</text>
+     <text class="cart-buy-item-content-info-price-num">79.00</text>
+     <view class="cart-buy-item-content-info-price-btn">
+     <text class="cart-buy-item-content-info-price-btn-text">-</text>
+     <text class="cart-buy-item-content-info-price-btn-text">1</text>
+     <text class="cart-buy-item-content-info-price-btn-text">+</text>
+     </view>
+   </view>
+   </view>
+  </view>
+  
+</view>
 <!--当购物车为空时-->
 <view class="empty">
    <view class="cartimgwrap">
      <image  class="cartimg" src="http://m.egu365.com/img/cart.svg"></image>
-    <view class="imgtag">去逛逛</view>
+    <view class="imgtag" bindtap="handlepage">去逛逛</view>
    </view>
 </view>
 <my_gussetLikeList></my_gussetLikeList>
 
 <!-- 底部结算 -->
-<!-- <view class="cart_bottom">
+
+</view>
+<view class="cart_bottom">
 <text class="allselect "></text>
  <view class="cart_bottom_left">
  全选
@@ -34,5 +68,7 @@
  <view class="cart_bottom_right">
  去结算
  </view>
-</view> -->
+</view> 
+<view class="cartmask" style="display:{{mask}}" ontap="handlenone">
+   <Mask_list></Mask_list>
 </view>

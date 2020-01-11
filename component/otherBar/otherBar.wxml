@@ -1,0 +1,38 @@
+<!--component/otherBar/otherBar.wxml-->
+<scroll-view 
+
+class="scrollBox"
+scroll-y="true"
+bindscrolltolower="lower" 
+>
+<view 
+class="other-bar"
+style="background: url({{imgSrcs}}) no-repeat; background-size: 100%;"
+>
+<!-- <image 
+src="http://oss.egu365.com/upload/fresh-fruit-bg2-190314.jpg"
+class="bg-img"
+></image> -->
+<view class="outer">
+  <block wx:for="{{fruits}}" wx:key="*this">   
+  <view class="item">
+     <image src="{{item.bigImg}}"
+       class="item-img"
+     ></image>
+     <text class="title">{{item.goodsName}}</text>
+     <view class="info">
+      <text class="subtitle1">自营</text>
+      <text class="subtitle2">次日达</text>
+      <text class="subtitle3">深圳平湖仓</text>
+     </view>
+     <view class="price">
+        <text>￥268.00</text>
+    <image src="" class="cart-img"></image>
+     </view>
+   </view>
+
+</block>
+  </view>
+</view>
+
+</scroll-view>

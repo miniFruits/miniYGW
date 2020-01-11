@@ -1,9 +1,10 @@
 <!--component/GussetLike.wxml-->
-<view class="gusselike">
+<scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}rpx;" bindscrolltolower="bindDownLoad" bindscroll="scroll">
+<view class="gusselike" >
 <image class="guss_like_img" src="http://m.egu365.com/img/guess_you_like.jpg"></image>
 <view class="gusse_like_list">
 
-<view class="gusse_like_item" wx:for="{{list}}" wx:key="{{id}}">
+<view class="gusse_like_item" wx:for="{{list}}" wx:key="{{item.id}}" bindtap="handledetails" data-tid="{{item.id}}">
   <image class='gusse_like_item_img'src="{{item.bigImg}}">
   </image>
   <view class="gusse_like_item_title">{{item.goodsName}}</view>
@@ -12,8 +13,9 @@
 <text class="price_tag">￥</text>
 <text class="price price_tag">{{item.salePrice}}</text>
 </view>
-<text class="cart_add iconfont"></text>
+<text class="cart_add iconfont" catchtap="handlecarts"></text>
 </view>
 </view>
 </view>
 </view>
+</scroll-view>

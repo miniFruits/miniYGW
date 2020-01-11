@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+     mask:"none",
+     title:"购物车"
   },
 
   /**
@@ -26,7 +27,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.hideTabBar()
   },
 
   /**
@@ -54,7 +55,6 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
   },
 
   /**
@@ -62,5 +62,22 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  // 去逛逛
+  handlepage(){
+    wx.switchTab({
+      url: '/pages/home/home',
+    })
+  },
+  handleshow() {
+    this.setData({
+      mask: "block",
+    })
+  },
+  handlenone(){
+    this.setData({
+      mask: "none",
+    })
+  },
+
 })

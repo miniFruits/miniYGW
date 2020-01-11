@@ -1,0 +1,4 @@
+/* component/recomendBox/recomendBox.wxss */
+.recomendBox{
+  width: 100%;
+}

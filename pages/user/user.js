@@ -1,66 +1,35 @@
-// pages/user/user.js
-Page({
+Component({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    Opacity: 0,
+    iconOpac: 1,
+    iconColor: '#fff',
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  methods: {
+    scroll(e) {
+      // console.log(e.detail.scrollTop)
+      if (e.detail.scrollTop <= 99) {
+        this.setData({
+          Opacity: ((e.detail.scrollTop / 99) >= 1) ? 1 : (e.detail.scrollTop / 99),
+          iconOpac: ((e.detail.scrollTop / 99) >= 1) ? 1 : (e.detail.scrollTop / 99),
+          iconColor: '#000',
+        })
+      } else if (e.detail.scrollTop == 0) {
+        this.setData({
+          Opacity: 0,
+          iconOpac: 1,
+          iconColor: '#fff',
+        })
+      }
+    },
 
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    handleTap: function() {
+      console.log(0)
+      wx.navigateTo({
+        url: '/pages/login/login',
+      })
+    }
   }
+
 })

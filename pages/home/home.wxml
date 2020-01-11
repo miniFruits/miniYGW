@@ -1,10 +1,36 @@
 
 <view  class="top">
-<view class="top-bar active" bindtap="handleSelect">依谷热卖</view>
-<view class="top-bar" wx:for = "{{classify}}" wx:key="{{tid}}" bindtap="handleSelect">
- {{item.tname}}
+
+<view class="top-inner" style="left: {{left}}px;">
+  
+    <view 
+        class="top-bar {{suoyin === 0?'active':''}}" 
+        data-type="{{'依谷热卖'}}" 
+        bindtap="handleSelect"
+        data-i="{{-2}}"
+        data-index="{{0}}"
+        >
+        依谷热卖
+         <view class="borderLine {{suoyin === 0?'bactive':''}}"></view>
+        </view>
+        <view 
+        wx:for = "{{classify}}" 
+        wx:key="*this"
+        data-type="{{item.tname}}" 
+        data-tid="{{item.tid}}"
+        data-i="{{index-1}}"
+        data-index="{{index+1}}"
+        bindtap="handleSelect"
+        class="top-bar {{suoyin === index+1?'active':''}}" 
+        >
+        {{item.tname}}
+         <view class="borderLine {{suoyin === index+1?'bactive':''}}"></view>
+      </view>
 </view>
+
+
 </view>
+
 <!-- 搜索框 -->
 
  <mp-searchbar 
@@ -13,95 +39,30 @@
  placeholder="鳗鱼特惠"
  ext-class="box"
  ></mp-searchbar>
-<!-- 第一个轮播 -->
-<swiper indicator-dots="{{true}}"
-        autoplay="{{true}}" 
-        circular="{{true}}"
-        indicator-active-color="green"
-        >
-        <block wx:for="{{swipper}}" wx:key="*this">
-          <swiper-item>
-            <image src="{{item.img}}" class="img-box"></image>
-          </swiper-item>
-        </block>
-</swiper>
-<!-- 金刚区 -->
-<view class="nav nav-top">
-   <block wx:for="{{navTop}}" wx:key="*this">
-        <view class="nav-top-pic">
-           <image src="{{item.img}}" class="img-box"></image>
-           <text>{{item.name}}</text>
-        </view>
-   </block>
-</view>
-<view class="nav nav-middle">
-    <block wx:for="{{classify}}" wx:key="*this">
-        <view class="nav-middle-pic">
-           <image src="{{item.timage}}" class="img-box"></image>
-           <text>{{item.tname}}</text>
-        </view>
-    </block>
-    <view class="nav-middle-pic">
-           <image src="http://oss.egu365.com/upload/mobile-all-categories.jpg" class="img-box"></image>
-           <text>全部分类</text>
-        </view>
-</view>
 
-<!-- 依谷头条 -->
-<view class="problem">
-   <view class="problem-inner">
-      <image src="http://m.egu365.com/img/notice_bg.jpg" class="toutiao"></image>
-      <image src="../../assets/images/problem.png" class="problem-img"></image>
-     
-       <swiper 
-       indicator-dots="{{false}}"
-        autoplay="{{true}}"
-        vertical="{{true}}"
-        circular="{{true}}"
-        class="problem-swipper"
-        >
-        <block wx:for="{{problemList}}" wx:key="*this">
-          <swiper-item>
-            <view class="swiper-item"> {{item.name}}</view>
-          </swiper-item>
-        </block>
-      </swiper>
-      
-   </view>
-</view>
-<!-- 第二个轮播 -->
 
-<swiper indicator-dots="{{false}}"
-        autoplay="{{true}}" 
-        circular="{{true}}"
-        indicator-active-color="green"
-        class="actitive-wrapper"
-        >
-        <block wx:for="{{activeList}}" wx:key="*this">
-          <swiper-item>
-            <image src="{{item.img}}" class="img-box"></image>
-          </swiper-item>
-        </block>
-</swiper>
+<ygrm wx:if="{{selected === '依谷热卖'}}"
+imgSrcs="{{imgSrcs}}"
+></ygrm>
+<otherBar wx:if="{{selected === '新鲜水果'}}" 
+tid="{{tid}}" 
+seat="{{96}}"
+bjImg="{{bjImg}}"
+imgSrcs="{{imgSrcs[0].bgImg2}}"
+></otherBar>
+<otherBar wx:if="{{selected === '绿色蔬菜'}}" tid="{{tid}}" seat="{{97}}" imgSrcs="{{imgSrcs[1].bgImg2}}"></otherBar>
+<otherBar wx:if="{{selected === '粮油调味'}}" tid="{{tid}}" seat="{{98}}" imgSrcs="{{imgSrcs[2].bgImg2}}"></otherBar>
+<otherBar wx:if="{{selected === '干货特产'}}" tid="{{tid}}" seat="{{99}}" imgSrcs="{{imgSrcs[3].bgImg2}}"></otherBar>
+<otherBar wx:if="{{selected === '零食饮料'}}" tid="{{tid}}" seat="{{100}}" imgSrcs="{{imgSrcs[4].bgImg2}}"></otherBar>
+<otherBar wx:if="{{selected === '美酒茗茶'}}" tid="{{tid}}" seat="{{101}}" imgSrcs="{{imgSrcs[5].bgImg2}}"></otherBar>
+<otherBar wx:if="{{selected === '礼品礼劵'}}" tid="{{tid}}" seat="{{102}}" imgSrcs="{{imgSrcs[6].bgImg2}}"></otherBar>
+<otherBar wx:if="{{selected === '家居厨卫'}}" tid="{{tid}}" seat="{{103}}" imgSrcs="{{imgSrcs[7].bgImg2}}"></otherBar>
+<otherBar wx:if="{{selected === '创意家电'}}" tid="{{tid}}" seat="{{104}}" imgSrcs="{{imgSrcs[8].bgImg2}}"></otherBar>
 
-<!-- 时令热销 -->
-<view class="hot-sale">
-  
-   <image src="{{mouth_img}}" class="bg-img"></image>
-   <view class="cxj">
-   <image src="../../assets/images/new.png"  class="new" ></image>
-      <view class="cxj-title">
-         <text class="title">尝鲜季</text>
-         <text class="title-2">购鲜，每月一次的尝鲜之旅</text>
-      </view>
-      <view class="cxj-inner">
-     
-        <block wx:for="{{cxjList.bcPublishedGoodsEos}}">    
-           <view class="cxj-item">
-              <image src="{{item.bseGoodsEo.goodsImg}}"></image>
-              <text>{{item.goodsName}}</text>
-            </view>
-        </block>
-      </view>
-   </view>
-</view>
+<my_gussetLikeList></my_gussetLikeList>
+
+
+
+
+
+    

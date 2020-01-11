@@ -1,0 +1,148 @@
+<!-- 第一个轮播 -->
+<swiper indicator-dots="{{true}}"
+        autoplay="{{true}}" 
+        circular="{{true}}"
+        indicator-active-color="green"
+        >
+        <block wx:for="{{swipper}}" wx:key="*this">
+          <swiper-item>
+            <image src="{{item.img}}" class="img-box"></image>
+          </swiper-item>
+        </block>
+</swiper>
+<!-- 金刚区 -->
+<view class="nav nav-top">
+   <block wx:for="{{navTop}}" wx:key="*this">
+        <view class="nav-top-pic">
+           <image src="{{item.img}}" ></image>
+           <text>{{item.name}}</text>
+        </view>
+   </block>
+</view>
+<view class="nav nav-middle">
+    <block wx:for="{{classify}}" wx:key="*this">
+        <view class="nav-middle-pic">
+           <image src="{{item.timage}}"></image>
+           <text>{{item.tname}}</text>
+        </view>
+    </block>
+    <view class="nav-middle-pic">
+           <image src="http://oss.egu365.com/upload/mobile-all-categories.jpg" class="img-box"></image>
+           <text>全部分类</text>
+        </view>
+</view>
+
+<!-- 依谷头条 -->
+<view class="problem">
+   <view class="problem-inner">
+      <image src="http://m.egu365.com/img/notice_bg.jpg" class="toutiao"></image>
+      <image src="../../assets/images/problem.png" class="problem-img"></image>
+     
+       <swiper 
+       indicator-dots="{{false}}"
+        autoplay="{{true}}"
+        vertical="{{true}}"
+        circular="{{true}}"
+        class="problem-swipper"
+        >
+        <block wx:for="{{problemList}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item"> {{item.name}}</view>
+          </swiper-item>
+        </block>
+      </swiper>
+      
+   </view>
+</view>
+<!-- 第二个轮播 -->
+
+<swiper 
+        indicator-dots="{{false}}"
+        autoplay="{{true}}" 
+        circular="{{true}}"
+        indicator-active-color="green"
+        class="actitive-wrapper"
+
+        >
+        <block wx:for="{{activeList}}" wx:key="*this">
+          <swiper-item>
+            <image src="{{item.img}}" class="img-box"></image>
+          </swiper-item>
+        </block>
+</swiper>
+
+<!-- 尝鲜季 -->
+<view class="hot-sale">
+   <image src="{{mouth_img}}" class="bg-img"></image>
+       <activeShow  
+       title="尝鲜季" 
+       subtitle="购鲜，每月一次的尝鲜之旅"
+       cxjList="{{cxjList}}"
+       imgSrc="/assets/images/new.png"
+       ></activeShow>
+</view>
+<view class="hot-list">
+ <image src="{{yellow}}" class="yellow-img"></image>
+  <activeShow 
+  title="热销榜" 
+  subtitle="热卖，单品销量排行榜"
+   cxjList="{{hotList}}"
+   imgSrc="/assets/images/hot.png"
+  ></activeShow>
+</view>
+
+<!-- 新鲜水果 -->
+
+
+  <!-- <recomendItem
+     fruits="{{fruits}}"
+     ></recomendItem> -->
+<recomend>
+  <recomendItem 
+  fruits="{{fruits}}"
+
+  imgSrc="{{imgSrcs}}"
+
+  imgsrc= "{{imgSrcs[0].bgImg1}}"
+  ></recomendItem>
+
+  <recomendItem 
+  fruits="{{vegetables}}"
+  imgsrc= "{{imgSrcs[1].bgImg1}}"
+  ></recomendItem>
+
+  <recomendItem 
+  fruits="{{seasoning}}"
+  imgsrc= "{{imgSrcs[2].bgImg1}}"
+  ></recomendItem>
+
+  <recomendItem 
+  fruits="{{specialties}}"
+  imgsrc= "{{imgSrcs[3].bgImg1}}"
+  ></recomendItem>
+
+   <recomendItem 
+  fruits="{{drink}}"
+  imgsrc= "{{imgSrcs[4].bgImg1}}"
+  ></recomendItem>
+
+    <recomendItem 
+  fruits="{{ wine}}"
+  imgsrc= "{{imgSrcs[5].bgImg1}}"
+  ></recomendItem>
+
+    <recomendItem 
+  fruits="{{ gift}}"
+  imgsrc= "{{imgSrcs[6].bgImg1}}"
+  ></recomendItem>
+
+     <recomendItem 
+  fruits="{{ kitchen}}"
+  imgsrc= "{{imgSrcs[7].bgImg1}}"
+  ></recomendItem>
+
+    <recomendItem 
+  fruits="{{ appliances}}"
+  imgsrc= "{{imgSrcs[8].bgImg1}}"
+  ></recomendItem>
+</recomend>

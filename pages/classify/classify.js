@@ -108,7 +108,7 @@ Component({
     },
     clicktodetails(e){    //点击跳转到详情页事件
       wx.navigateTo({
-        url: '/pages/details/details?tid=' + e.currentTarget.dataset.tid
+        url: '/pages/details/details?tid=' + e.currentTarget.dataset.id
       })
     },
     lowdata(){      //加载更多数据

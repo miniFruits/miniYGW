@@ -1,6 +1,7 @@
 {
   "components":true,
   "usingComponents": {
-  "my_gussetLikeList":"/component/GussetLike/GussetLike"
+  "my_gussetLikeList":"/component/GussetLike/GussetLike",
+  "Mask_list":"/component/Sidenav/Sidenav"
   }
 }

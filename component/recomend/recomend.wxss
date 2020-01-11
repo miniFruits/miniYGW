@@ -1,0 +1,98 @@
+/* component/recomend/recomend.wxss */
+@font-face {
+  font-family: 'iconfont';  /* project id 1435227 */
+  src: url('//at.alicdn.com/t/font_1435227_lbaujazef6.eot');
+  src: url('//at.alicdn.com/t/font_1435227_lbaujazef6.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1435227_lbaujazef6.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1435227_lbaujazef6.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1435227_lbaujazef6.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1435227_lbaujazef6.svg#iconfont') format('svg');
+}
+.iconfont{
+ font-family:"iconfont" !important;
+ font-size:16px;font-style:normal;
+ -webkit-font-smoothing: antialiased;
+ -webkit-text-stroke-width: 0.2px;
+ -moz-osx-font-smoothing: grayscale;
+ }
+ .cart_add{
+  width: 45rpx;
+  height:45rpx;
+  margin-right: 16rpx;
+  background: #f00; 
+    text-align: center;
+   line-height: 45rpx; 
+   border-radius: 50%;
+   position: absolute;
+   bottom: 10rpx;
+   right: 10rpx;
+   z-index: 555;
+}
+.cart_add:before{
+   content: "\e602";
+   color: #fff;
+ }
+.recomend-day{
+  height: 516rpx;
+  position: relative;
+ 
+}
+.more{
+  height: 28rpx;
+  display: block;
+  width: 100%;
+  font-size: 24rpx;
+  position: absolute;
+  top: 94rpx;
+  text-align:center;
+  color: #fff; 
+}
+
+.recomend-day .bg-img{
+  width: 100%;
+  position: absolute;
+
+}
+.recom-inner{
+  height: 342rpx;
+  width: 100%;
+  position: absolute;
+  bottom: 40rpx;
+  display: flex;
+   overflow-x: scroll;
+   overflow-y:hidden;
+
+}
+.item{
+  width:226rpx ;
+  height: 342rpx;
+  margin-left: 10rpx;
+  border-radius: 6rpx;
+  background: #fff;
+
+  position: relative;
+}
+.item image{
+  width:226rpx ;
+  height:226rpx ;
+  border-radius: 6rpx;
+}
+.recom-inner .title{
+  display: block;
+  height: 50rpx;
+  font-size: 26rpx;
+  padding-left:8rpx;
+  padding-right: 8rpx; 
+  width: 100%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.recom-inner .subtitle{
+  height: 64rpx;
+  display: block;
+  font-size: 28rpx;
+  padding-left:8rpx;
+  padding-right: 8rpx; 
+  color: red;
+}

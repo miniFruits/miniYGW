@@ -4,7 +4,7 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    
   },
 
   /**
@@ -12,42 +12,77 @@ Component({
    */
   data: {
    list:[],
-   pageNo: 1,
-    pages:99,
+   pageNo:1,
+   pageall:99,
+   scrollHeight:2512,
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-    onLoad(options) {
-      // 页面初次加载，请求第一页数据
-      this.fetchArticleList(1)
-    },
-    onReachBottom() {
-      // 下拉触底，先判断是否有请求正在进行中
-      // 以及检查当前请求页数是不是小于数据总页数，如符合条件，则发送请求
-      if (!this.loading && this.data.page < this.data.pages) {
-        this.fetchArticleList(this.data.pageNo + 1)
-      }
-    },
-
-    fetchArticleList(pageNo) {
-      this.loading = true
-
-      // 向后端请求指定页码的数据
-      return getArticles(pageNo).then(res => {
-        const articles = res.items
-        this.setData({
-          pageNo: pageNo,     //当前的页号
-          pages: res.pages,  //总页数
-          articles: this.data.articles.concat(articles)
-        })
-      }).catch(err => {
-        console.log("==> [ERROR]", err)
-      }).then(() => {
-        this.loading = false
+    //   该方法绑定了页面滑动到底部的事件
+    bindDownLoad: function (options) {
+      let that = this;
+      wx.startPullDownRefresh({
+        success() {
+          console.log(that)
+          if(that.data.pageNo<that.data.pageall){
+          wx.request({
+            url: `http://api.egu365.com/goods/list?sorts=hits+asc&pageNo=${that.data.pageNo}`,
+            success(res) {
+              console.log(res.data.list)
+              that.setData({
+                pageNo:that.data.pageNo+1,
+                list: [
+                  ...that.data.list,
+                  ...res.data.list
+                ]
+              })
+            },
+            fail(){
+              wx.showToast({
+                title: '没有更多数据',
+                icon: 'success',
+                duration: 2000
+              })
+            }
+          })
+          }
+        }
       })
+      // 当停止下拉是提示是否加载成功
+      wx.stopPullDownRefresh({
+        success() {
+          wx.showToast({
+            title: '数据加载成功',
+            icon: 'success',
+            duration: 2000
+          })
+        },
+        fail(){
+          wx.showToast({
+            title: '数据加载失败',
+            icon: 'success',
+            duration: 2000
+          })
+        }
+      })
+    },
+    //   该方法绑定了页面滚动时的事件
+    scroll: function (event) {
+      this.setData({
+        scrollTop: event.detail.scrollTop
+      });
+    },
+    handledetails(e){
+      wx.navigateTo({
+        url: '/pages/details/details?tid=' + e.currentTarget.dataset.tid
+      })
+
+    },
+    handlecarts(){
+      console.log(1)
     }
   },
   /**
@@ -56,15 +91,15 @@ Component({
   attached: function (options){
     let that=this
     wx.request({
-      url: `http://api.egu365.com/goods/list?sorts=hits+asc&pageNo=${this.data.pageNo}`,
-   success (res) {
-    console.log(res.data.list)
-     that.setData({
+      url: `http://api.egu365.com/goods/list?sorts=hits+asc&pageNo=${that.data.pageNo}`,
+    success (res) {
+      console.log(res.data.list)
+      that.setData({
+       pageNo:2,
        list: res.data.list
      })
-  }
+   }
   })
-  
   },
   
 })

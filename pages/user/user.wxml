@@ -1,2 +1,28 @@
-<!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<scroll-view class="user" scroll-y="true" bindscroll="scroll">
+  <view class="box">
+    <view class="nav nav-t" style="background:rgba(255,255,255,{{Opacity}});box-shadow: 0 1px 2px rgba(192,192,192,{{Opacity}});">
+      <view class="nav-l" style="opacity:{{Opacity}};">
+        <image class="nav-img" src="../../assets/images/not_user.jpg"></image>
+      </view>
+      <view class="nav-title" style="opacity:{{Opacity}};">
+        <text class="my">我的</text>
+      </view>
+      <view class="nav-r" style="opacity:{{iconOpac}};color:{{iconColor}}">
+        <view class="iconfont icon-set icon-color"></view>
+      </view>
+    </view>
+    <view class="content-nt">
+      <view class="user-wrap">
+        <image src="../../assets/images/user_bg.png" class="bg"></image>
+        <view class="user-ht flx" bindtap="handleTap">
+          <image src="../../assets/images/not_user.jpg" class="us"></image>
+          <view  class="user-t flx-l">
+            <view class="greet">晚上好</view>
+            <view class="ellipsis">点击登录/注册用户</view>
+          </view >
+        </view>
+      </view>
+      <CardView></CardView>
+    </view>
+  </view>
+</scroll-view>
