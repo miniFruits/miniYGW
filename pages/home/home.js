@@ -21,7 +21,7 @@ Component({
       wx.request({
         url: 'http://api.egu365.com/goods/classify',
         success: (result) => {
-          console.log(result.data.list)
+        
           this.setData({
             classify: result.data.list
           })
@@ -41,7 +41,7 @@ Component({
   },
   methods:{
     handleSelect:function(e){
-      console.log(e.currentTarget.dataset.i)
+     
      this.setData({
        selected: e.currentTarget.dataset.type,
        tid: e.currentTarget.dataset.tid,

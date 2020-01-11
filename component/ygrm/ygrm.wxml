@@ -1,5 +1,10 @@
+
 <!-- 第一个轮播 -->
-<swiper indicator-dots="{{true}}"
+<view class="shouye">
+
+
+<swiper 
+        indicator-dots="{{true}}"
         autoplay="{{true}}" 
         circular="{{true}}"
         indicator-active-color="green"
@@ -14,14 +19,14 @@
 <view class="nav nav-top">
    <block wx:for="{{navTop}}" wx:key="*this">
         <view class="nav-top-pic">
-           <image src="{{item.img}}" ></image>
+           <image src="{{item.img}}"></image>
            <text>{{item.name}}</text>
         </view>
    </block>
 </view>
 <view class="nav nav-middle">
     <block wx:for="{{classify}}" wx:key="*this">
-        <view class="nav-middle-pic">
+        <view class="nav-middle-pic" data-tid="{{item.id}}" bindtap="handleCate">
            <image src="{{item.timage}}"></image>
            <text>{{item.tname}}</text>
         </view>
@@ -146,3 +151,4 @@
   imgsrc= "{{imgSrcs[8].bgImg1}}"
   ></recomendItem>
 </recomend>
+</view>

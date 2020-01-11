@@ -25,6 +25,7 @@ Component({
       wx.request({
         url:`http://api.egu365.com/goods/list?tid=${this.data.tid}&sorts=hits+asc&seat=${this.data.seat}&pageNo=1`,
         success: (result) => {
+          console.log(result.data.list)
           this.setData({
             fruits: result.data.list
           })
@@ -53,7 +54,12 @@ Component({
          })
        }
      })
-   }
+   },
+    clicktodetails(e) {
+      wx.navigateTo({
+        url: '/pages/details/details?tid=' + e.currentTarget.dataset.tid
+      })
+    }
   }
 
 })

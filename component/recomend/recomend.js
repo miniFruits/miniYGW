@@ -9,11 +9,20 @@ Component({
       type: 'parent'
     }
   },
+  // properties: {
+  //   fruits:Array,
+  //   imgsrc:String
+  // },
   properties: {
-    fruits:Array,
-    imgsrc:String
+    fruits: {
+      type: Array,
+      value:[],
+      observer: function (newVal) {
+     
+      }
+    },
+    imgsrc: String
   },
-
   /**
    * 组件的初始数据
    */
@@ -29,6 +38,15 @@ Component({
       wx.navigateTo({
         url: '/pages/details/details?tid=' + e.currentTarget.dataset.tid
       })
+    }
+  },
+ 
+  lifetimes: {
+    attached: function () {
+    
+    },
+    ready: function () {
+     
     }
   }
 })

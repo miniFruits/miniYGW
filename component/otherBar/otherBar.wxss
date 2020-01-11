@@ -1,5 +1,6 @@
 .scrollBox{
   height: 1310px;
+    margin-top: 76px;
 }
 .other-bar{
   display: flex;

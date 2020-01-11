@@ -33,7 +33,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    handleCate(){
+      wx.reLaunch({
+        url: '/pages/classify/classify'
+      })
+    }
   },
   lifetimes: {
     attached: function () {
@@ -53,7 +57,7 @@ Component({
         wx.request({
           url: 'http://api.egu365.com/news/recomImg?seat=122&expiry=true',
           success: (result) => {
-            console.log(result.data.list[0])
+           
             this.setData({
               mouth_img: result.data.list[0].img
             })
@@ -62,7 +66,7 @@ Component({
         wx.request({
           url: 'http://api.egu365.com/news/adviseAll?id=94&pageSize=4',
           success: (result) => {
-            console.log(result.data.obj)
+         
             this.setData({
               cxjList: result.data.obj
             })
@@ -71,7 +75,7 @@ Component({
         wx.request({
           url: 'http://api.egu365.com/news/adviseAll?id=95&pageSize=3',
           success: (result) => {
-            console.log(result.data.obj)
+          
             this.setData({
               hotList: result.data.obj
             })
@@ -80,7 +84,7 @@ Component({
         wx.request({
           url: 'http://api.egu365.com/news/recomImg?seat=123&expiry=true',
           success: (result) => {
-            console.log(result.data.list[0].img)
+          
             this.setData({
               yellow: result.data.list[0].img
             })
@@ -89,7 +93,7 @@ Component({
         wx.request({
           url: 'http://api.egu365.com/news/adviseGoods?seat=96',
           success: (result) => {
-            console.log(result.data.list)
+            
             this.setData({
               fruits: result.data.list
             })
@@ -99,7 +103,7 @@ Component({
         wx.request({
           url: 'http://api.egu365.com/news/adviseGoods?seat=97',
           success: (result) => {
-            console.log(result.data.list)
+            
             this.setData({
               vegetables: result.data.list
             })
@@ -108,7 +112,7 @@ Component({
         wx.request({
           url: 'http://api.egu365.com/news/adviseGoods?seat=98',
           success: (result) => {
-            console.log(result.data.list)
+            
             this.setData({
               seasoning: result.data.list
             })
@@ -117,7 +121,7 @@ Component({
         wx.request({
           url: 'http://api.egu365.com/news/adviseGoods?seat=99',
           success: (result) => {
-            console.log(result.data.list)
+           
             this.setData({
               specialties: result.data.list
             })
@@ -126,7 +130,7 @@ Component({
         wx.request({
           url: 'http://api.egu365.com/news/adviseGoods?seat=100',
           success: (result) => {
-            console.log(result.data.list)
+            
             this.setData({
               drink: result.data.list
             })
@@ -135,7 +139,7 @@ Component({
         wx.request({
           url: 'http://api.egu365.com/news/adviseGoods?seat=100',
           success: (result) => {
-            console.log(result.data.list)
+          
             this.setData({
               wine: result.data.list
             })
@@ -144,7 +148,7 @@ Component({
         wx.request({
           url: 'http://api.egu365.com/news/adviseGoods?seat=100',
           success: (result) => {
-            console.log(result.data.list)
+            
             this.setData({
               gift: result.data.list
             })
@@ -153,7 +157,7 @@ Component({
         wx.request({
           url: 'http://api.egu365.com/news/adviseGoods?seat=100',
           success: (result) => {
-            console.log(result.data.list)
+            
             this.setData({
               kitchen: result.data.list
             })
@@ -162,7 +166,7 @@ Component({
         wx.request({
           url: 'http://api.egu365.com/news/adviseGoods?seat=101',
           success: (result) => {
-            console.log(result.data.list)
+           
             this.setData({
               kitchen: result.data.list
             })
@@ -171,7 +175,7 @@ Component({
         wx.request({
           url: 'http://api.egu365.com/news/adviseGoods?seat=101',
           success: (result) => {
-            console.log(result.data.list)
+           
             this.setData({
               appliances: result.data.list
             })

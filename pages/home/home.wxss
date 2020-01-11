@@ -1,10 +1,18 @@
 /* pages/home/home.wxss */
+.sy-top{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1000;
+}
 .top{
 width: 100%;
 overflow-x: scroll;
 display: flex;
 position: relative;
   height: 77rpx;
+
 }
 .top-inner{
   width: max-content;

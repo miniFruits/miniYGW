@@ -1,6 +1,11 @@
 /* component/ygrm/ygrm.wxss */
 /* pages/home/home.wxss */
-
+.shouye{
+  margin-top: 76px;
+}
+.list-box{
+  height: 3314px;
+}
 
 
 image.img-box{

@@ -1,8 +1,7 @@
 
+<view class="sy-top">
 <view  class="top">
-
 <view class="top-inner" style="left: {{left}}px;">
-  
     <view 
         class="top-bar {{suoyin === 0?'active':''}}" 
         data-type="{{'依谷热卖'}}" 
@@ -27,8 +26,6 @@
          <view class="borderLine {{suoyin === index+1?'bactive':''}}"></view>
       </view>
 </view>
-
-
 </view>
 
 <!-- 搜索框 -->
@@ -39,8 +36,7 @@
  placeholder="鳗鱼特惠"
  ext-class="box"
  ></mp-searchbar>
-
-
+</view>
 <ygrm wx:if="{{selected === '依谷热卖'}}"
 imgSrcs="{{imgSrcs}}"
 ></ygrm>
@@ -59,7 +55,7 @@ imgSrcs="{{imgSrcs[0].bgImg2}}"
 <otherBar wx:if="{{selected === '家居厨卫'}}" tid="{{tid}}" seat="{{103}}" imgSrcs="{{imgSrcs[7].bgImg2}}"></otherBar>
 <otherBar wx:if="{{selected === '创意家电'}}" tid="{{tid}}" seat="{{104}}" imgSrcs="{{imgSrcs[8].bgImg2}}"></otherBar>
 
-<my_gussetLikeList></my_gussetLikeList>
+<!-- <my_gussetLikeList></my_gussetLikeList> -->
 
 
 

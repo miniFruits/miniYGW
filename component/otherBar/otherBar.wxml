@@ -15,7 +15,7 @@ class="bg-img"
 ></image> -->
 <view class="outer">
   <block wx:for="{{fruits}}" wx:key="*this">   
-  <view class="item">
+  <view class="item" data-tid="{{item.id}}" bindtap="clicktodetails">
      <image src="{{item.bigImg}}"
        class="item-img"
      ></image>
