@@ -1,0 +1,13 @@
+<view class="nav nav-t nav-bgc">
+  <view class="nav-l" bindtap="Back">
+    <view class="iconfont icon-l icon-color"></view>
+  </view>
+  <view class="nav-title">
+    <text class="my">{{Title}}</text>
+  </view>
+  <view class="nav-r" bindtap="Tab">
+    <view class="iconfont icon-set icon-color"></view>
+  </view>
+  <Overmask style="display:{{show}};" bindtap="hide"></Overmask>
+  <Menu style="display:{{show}};"></Menu>
+</view>

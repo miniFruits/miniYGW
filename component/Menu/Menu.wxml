@@ -1,0 +1,17 @@
+<view class="menu van-popup">
+  <view class="list" bindtap="Goto" data-to="home/home">
+    <view class="iconfont a"></view>首页
+  </view>
+  <view class="list" bindtap="Goto" data-to="classify/classify">
+    <view class="iconfont b"></view>分类
+  </view>
+  <view class="list" bindtap="Goto" data-to="/cardexchange/cardexchange">
+    <view class="iconfont c"></view>宅配
+  </view>
+  <view class="list" bindtap="Goto" data-to="cart/cart">
+    <view class="iconfont d"></view>购物车
+  </view>
+  <view class="list" bindtap="Goto" data-to="user/user">
+    <view class="iconfont e"></view>我的
+  </view>
+</view>

@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "CardView": "../../component/Card/CardView"
+    "CardView": "../../component/Card/CardView",
+    "GussetLike":"../../component/GussetLike/GussetLike"
   }
 }
