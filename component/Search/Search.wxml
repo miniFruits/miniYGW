@@ -5,12 +5,12 @@
       <view class="search-cell">
         <view class="search-icon iconfont "></view>
         <view class="search-value">
-          <input placeholder="鳗鱼特惠" />
+          <input placeholder="鳗鱼特惠" bindinput="feedin" bindconfirm="submitbutton" value="{{resultlist}}" />
         </view>
       </view>
     </view>
     <view class="search-action">
-      <view class="divcontent">取消</view>
+      <view class="divcontent" bindtap="cancel" >取消</view>
     </view>
   </view>
 
@@ -18,8 +18,8 @@
     <view class="seg">
       <view class="seg-title">热门搜索</view>
       <view class="seg-list">
-        <view class="seg-item">
-          鳗鱼特惠
+        <view class="seg-item" wx:for="{{list}}" bindtap="hot" data-valueitem="{{item}}" wx:key="{{item}}">
+          {{item}}
         </view>
       </view>
     </view>

@@ -6,7 +6,8 @@
     "pages/user/user",
     "pages/details/details",
     "pages/cart/cart",
-    "pages/homedelivery/homedelivery"
+    "pages/homedelivery/homedelivery",
+    "pages/searchresult/searchresult"
   ],
   "tabBar": {
     "selectedColor": "#fc0909",
