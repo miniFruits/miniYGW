@@ -84,6 +84,7 @@ height: 100%;
 .cart-buy-item-title-text{
   padding: 0 0 0 18.750rpx;
 }
+
 .cart-buy-item-content{
   height: 244.2rpx;
   padding: 12rpx 12rpx 12rpx 0;
@@ -108,6 +109,19 @@ height: 100%;
   height: 78.6rpx;
   color: #323232;
   font-size: 29.4rpx;
+  display: flex;
+  position: relative;
+}
+.delete{
+position: absolute;
+top: 4rpx;
+right: 0;
+width: 36rpx;
+height: 36rpx;
+}
+.delete image{
+  width: 100%;
+  height: 100%;
 }
 .cart-buy-item-content-info-tag{
   padding: 12rpx 0 0 0;

@@ -6,16 +6,15 @@ Page({
   data: {
      mask:"none",
      title:"购物车",
-     num:1,
      display:"block",
      displaysingle:"block",
-    totalPrice:"0.00",
+     totalPrice:"0.00",
      goodList:[
        {
        id:1,
        img:"http://oss.egu365.com/upload/6acc7e790a4a49ab882795337b9f3c5d.jpg",
        title:"SWEET番茄350g*4礼盒装",
-       price:"79.00",
+       price:79.00,
        count:5,
        check:true,
        num:2,
@@ -23,18 +22,18 @@ Page({
          id:2,
          img: "http://oss.egu365.com/upload/f755ea55b02b40499ed366c1beb5ef11.jpg",
          title: "精选紫番茄1kg",
-         price: "19.80",
+         price: 19.80,
          count:2,
          check: true,
-         num: 3,
+         num: 1,
      },{
          id:3,
          img: "http://oss.egu365.com/upload/c3bee7a25fcc456ca5cb51f29eb06184.jpg",
          title: "空运南京红颜草莓300g（礼盒）",
-         price: "48.00",
+         price: 48.00,
          count:8,
          check: true,
-         num: 2,
+         num:1,
      }
      ],
   },
@@ -50,6 +49,8 @@ Page({
       }
     })
   },
+  onLoad(){
+    this.calculateTotal()  },
   // 去逛逛
   handlepage(){
     wx.switchTab({
@@ -69,17 +70,27 @@ Page({
   },
   // 点击全选
   handleAllselect(){
+    let arr=[];
+    for (var i=0; i < this.data.goodList.length;i++){
+      this.data.goodList[i].check=true;
+    }
     console.log(this.data.goodList)
-    if (this.data.display=="none"){
-      this.setData({
-     display:"block",
-      })
-    } 
-    else if (this.data.display=="block"){
-      this.setData({
-        display: "none"
-      })
-   }
+      if (this.data.display == "none") {
+        this.setData({
+          display: "block",
+          goodList: this.data.goodList
+        })
+      }
+      else if (this.data.display == "block") {
+        for (var i = 0; i < this.data.goodList.length; i++) {
+          console.log(this.data.goodList[i].check)
+          this.data.goodList[i].check = false;
+        }
+        this.setData({
+          display: "none",
+          goodList: this.data.goodList
+        })
+      }
     this.calculateTotal()
   },
   // 点击选择单选框
@@ -88,44 +99,61 @@ Page({
     let selected = this.data.goodList[index].check; 
     this.data.goodList[index].check=!selected
     this.setData({
-          goodList: this.data.goodList
+        goodList: this.data.goodList
     })
-    for (var i = 0; i < this.data.goodList.length; i++) {
-      console.log(this.data.goodList[i].check)
-      if (this.data.goodList[i].check) {
+    let st =[];
+    for (var i = 0; i < this.data.goodList.length; i++){
+      if (this.data.goodList[i].check){
+        st.push(this.data.goodList[i].check)
+      }
+      if (st.length==this.data.goodList.length) {
         this.setData({
           display: "block",
         })
-      } else {
+      } else{
         this.setData({
           display: "none"
         })
       }
     }
+    this.calculateTotal()
   },
   // 点击添加
   handleadd(e){
-    console.log(e.target)
-    for (var i = 0; i < this.data.goodList.length; i++){
-      if (e.currentTarget.dataset.id == this.data.goodList[i].id){
-        var count = this.data.goodList[i].count;
-        console.log(count)
-      } 
-    }
-    if (this.data.num<count){
+    let index = e.target.dataset.index
+    var count = this.data.goodList[index].count;
+    let num = this.data.goodList[index].num; 
+
+    if (this.data.goodList[index].num<count){
+      this.data.goodList[index].num++;
       this.setData({
-        num: this.data.num + 1,
+        goodList: this.data.goodList
       })
     }
     this.calculateTotal()
   },
   // 点击减少
-  handlesub(){
-    if(this.data.num>1){
-    this.setData({
-      num: this.data.num - 1,
-    })
+  handlesub(e){
+    let index = e.target.dataset.index
+    var count = this.data.goodList[index].count;
+    let num = this.data.goodList[index].num;
+
+    if (this.data.goodList[index].num >1) {
+      this.data.goodList[index].num--;
+      this.setData({
+        goodList: this.data.goodList
+      })
     }
+    this.calculateTotal()
+  },
+  // 删除条目
+  handledelete(e){
+    console.log(e.currentTarget.dataset.index)
+    let index = e.currentTarget.dataset.index
+    this.data.goodList.splice(index,1) 
+    this.setData(
+      { goodList: this.data.goodList}
+    )
     this.calculateTotal()
   },
   // 计算总价
@@ -133,14 +161,27 @@ Page({
     var goodList = this.data.goodList;
     var totalCount = 0;
     var totalPrice = 0;
+    var Price=[];
+    var TPrice= 0.00;
+    if(this.data.display=="block"){
     for (var i = 0; i < goodList.length; i++) {
-      var good = goodList[i];
-      if (this.data.display == "block") {
-        totalCount=this.data.num,
-        totalPrice = goodList[i].price
+      if (goodList[i].check){
+        Price.push(goodList[i].num * goodList[i].price) 
       }
     }
-    var TPrice = totalCount * totalPrice ;
+     TPrice= Price.reduce(function getSum(total, num) {
+        return total + num;
+      },0)
+    }else{
+      for (var i = 0; i < goodList.length; i++) {
+        if (goodList[i].check) {
+          Price.push(goodList[i].num * goodList[i].price)
+        }
+      }
+      TPrice = Price.reduce(function getSum(total, num) {
+        return total + num;
+      }, 0)
+    }
     this.setData({
       totalPrice: TPrice
     })

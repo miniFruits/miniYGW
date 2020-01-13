@@ -30,9 +30,9 @@ ontap="handleshow"
    <view class="cart-buy-item-content-info">
     <view class="cart-buy-item-content-info-title">
    {{item.title}}
-   <text>
-     <image src=""></image>
-   </text>
+   <view class="delete" bind:tap="handledelete" data-index="{{index}}">
+     <image src="/assets/images/delete.png"></image>
+   </view>
    </view>
    <view class="cart-buy-item-content-info-tag">
     <text class="cart-buy-item-content-info-tag-1">次日达</text>
@@ -43,9 +43,9 @@ ontap="handleshow"
      <text class="cart-buy-item-content-info-price-num">{{item.price}}</text>
     <view class="fix-content"></view>
       <view class="van-stepper">
-        <view class="van-stepper__minus van-stepper__minus--disabled" ontap="handlesub" data-id="{{item.id}}" ></view>
-        <input type="number" class="van-stepper__input" value="{{num}}"></input>
-        <view class="van-stepper__plus" ontap="handleadd" data-id="{{item.id}}"></view>
+        <view class="van-stepper__minus van-stepper__minus--disabled" ontap="handlesub" data-id="{{item.id}}"  data-index="{{index}}"></view>
+        <input type="number" class="van-stepper__input" value="{{item.num}}"></input>
+        <view class="van-stepper__plus" ontap="handleadd" data-id="{{item.id}}" data-index="{{index}}"></view>
       </view>
    </view>
    </view>
@@ -67,13 +67,13 @@ ontap="handleshow"
 </view>
 <view class="cart_bottom">
 <view class="cart_bottom_left">
-<view class="allselect">
-  <view class="cart-buy-item-selector"> 
-     <view class="cart-buy-item-selectored" style='display:{{display}}'></view>
+<view class="allselect" >
+  <view class="cart-buy-item-selector" ontap="handleAllselect"> 
+     <view class="cart-buy-item-selectored" style='display:{{display}}' catchtap="handleAllselect"></view>
     </view>
 </view>
  
- <view class="cart_bottom_left_text">全选</view>
+ <view class="cart_bottom_left_text" >全选</view>
  </view>
  <view class="cart_bottom_mid">
  <view class="cart_bottom_mid_price_wrap">
