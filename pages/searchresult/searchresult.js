@@ -11,7 +11,18 @@ Component({
    * 组件的初始数据
    */
   data: {
+    num:1,
+    list:[]
+  },
 
+  lifetimes:{
+    ready: function () {
+      let num=this.data.num;
+      wx.request({
+        url: 'http://api.egu365.com/goods/list?sorts=goods_name+asc&key=' + encodeURI(this.options.key) +`&pageNo=${num}`,
+      })
+      console.log()
+    }
   },
 
   /**

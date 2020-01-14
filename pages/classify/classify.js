@@ -191,10 +191,12 @@ Component({
           data: newgoodslist
         })
       }
+
       //轻提示
       this.setData({
         noneflag: 'flex'
       })
+      //过渡动画效果
       let timer = this.data.timer;
       timer=setTimeout(()=>{
         this.setData({

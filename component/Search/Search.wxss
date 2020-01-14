@@ -1,1 +1,130 @@
 /* component/Search/Search.wxss */
+page{
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 1596607 */
+  src: url('//at.alicdn.com/t/font_1596607_lusyb3k2d98.eot');
+  src: url('//at.alicdn.com/t/font_1596607_lusyb3k2d98.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1596607_lusyb3k2d98.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1596607_lusyb3k2d98.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1596607_lusyb3k2d98.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1596607_lusyb3k2d98.svg#iconfont') format('svg');
+}
+
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.search-icon::before{
+  content: "\e65c";
+  color: #666;
+  background-color: transparent;
+  font-size: 26rpx;
+}
+
+.searchbox{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.search{
+  width: 100%;
+  background: #fff;
+  padding: 26rpx 23.4rpx 8.6rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.content-around{
+  flex: 1;
+  background-color: #f7f8fa;
+  padding-left: 16.25rpx;
+  display: flex;
+  border-radius: 32rpx;
+}
+
+.search-cell{
+  box-sizing: border-box;
+  color: #666;
+  line-height: 51.2rpx;
+  overflow: hidden;
+  display: flex;
+  padding: 8.125rpx 16.25rpx 8.125rpx;
+  font-size: 26rpx;
+}
+
+.search-icon{
+  margin-right: 6.2rpx;
+}
+
+.search-value{
+  color: #666;
+  text-align: left;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.search-action{
+  font-size: 26rpx;
+  color: #666;
+  padding: 0 16.25rpx;
+  line-height: 54.4rpx;
+}
+
+.search-list{
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.seg{
+  text-align: left;
+  width: 100%;
+  margin-bottom: 2%;
+  color: #888;
+}
+
+.seg-title{
+  width: 100%;
+  font-size: 30rpx;
+  padding: 26rpx 26rpx 13rpx 26rpx;
+}
+
+.seg-list{
+  width: 100%;
+  padding: 0 26rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.seg-item{
+  color: #777;  
+  background: #f6f6f6;
+  border-radius: 26rpx;
+  padding:0 26rpx;
+  line-height: 46.8rpx;
+  height: 46.8rpx;
+  margin:13rpx 13rpx 0;
+  font-size: 24rpx;
+}
+
+.clearseg{
+  margin: 10% 30%;
+  width: 38%;
+  height: 52rpx;
+  line-height: 52rpx;
+  font-size: 26rpx;
+  border: 1px solid #d9d9d9;
+  border-radius: 26rpx;
+  text-align: center;
+  color: #888;
+}
